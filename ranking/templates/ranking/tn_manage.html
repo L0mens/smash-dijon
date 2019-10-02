@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}PR Dijonnais - Tournois Management{% endblock %}
+{% block content %}
+    <h1 class="title">Gestion des tournois</h1>
+
+    {% if form_save %} 
+    <article class="message is-success">
+        <div class="message-body">Le tournoi a été ajouté</div>
+    </article>
+    {% endif %}
+    <section class="message">
+        <div class="message-header">
+            <span>Ajouter un tournoi</span>
+            <span class="icon is-small" id="hide-form-add-tn">
+                <i  class="fas fa-chevron-circle-down"></i>
+            </span>
+        </div>
+        <div class="message-body">
+            <form id="form-add-tournament" action="{% url "tnmanage" %}" method="post" class="not-display">
+                {% csrf_token %}
+                {% for field in form.visible_fields %}
+                <div class="field">
+                    {{ field.label }}
+                    <div class="control">
+                    {{ field }}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="control">
+                    <input type="submit" value="Ajouter" class="button is-primary"/>
+                </div>
+            </form>
+        </div>
+    </section>
+    <table class="table is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Slug</th>
+                <th>Event</th>
+                <th>Etat</th>
+                <th>Saison</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tournoi in all_tournaments %}
+            <tr>
+                <td>{{ tournoi.name }}</td>
+                <td>{{ tournoi.slug }}</td>
+                <td>{{ tournoi.event }}</td>
+                <td>{{ tournoi.state.state }}</td>
+                <td>
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span>Saisons</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </div>
+                        
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                            {% for saison in tournoi.saison.all %}
+                            <div class="dropdown-item">{{ saison }}</div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </td>
+                <td> 
+                    <a class="option-add"><span class="icon"><i class="fas fa-check" aria-hidden="true"></i></span></a>
+                    <a class="option-edit"><span class="icon"><i class="fas fa-edit" aria-hidden="true"></i></span></>
+                    <a class="option-delete"><span class="icon"><i class="fas fa-trash-alt" aria-hidden="true"></i></span></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

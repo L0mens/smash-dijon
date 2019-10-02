@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Site du Power Ranking Dijonnais - A propos{% endblock %}
+{% block content %}
+
+<section class="section">
+    <h1 class="title is-2">A propos du site (Alpha)</h1>
+    <div class="container">
+        <div class="content">
+            <h2 class="title">Objectifs</h2>
+            <p>Ce site a pour mission de calculer et d'afficher le classement des joueurs de la région de Dijon. 
+                Il pourra être accompagné de moyen de promouvoir la scène Dijonnaise et alentour de Smash Ultimate</p>
+            <h2 class="title">Me contacter</h2>
+            <p>Un soucis dans votre perso affiché, une demande particulière ou quoi que ce soit, vous pourrez me trouver (lomens)
+            sur les discord de GLITCH et des SVB. Sinon, vous pouvez me trouver sur twitter sous le tag l0mens</p>
+            <h2 class="title">Méthode de calcul</h2>
+            <p>Pour classer les joueurs, une adaptation de la méthode ELO est employé. 
+            La valeur k est actuellement fixe à 40. Ceci pourra être révisé si besoin. Le match nul n'existe pas. 
+            Un match en looser side n'équivaut qu'à 85% de la valeur modifié du ELO 
+            (Car le nombre de match en looser side est plus élevé). Cette valeur semble correcte sur la durée mais pourrait être modifiée.
+            Le score d'un set complet n'influe pas sur les points distribués.
+
+            </p>
+            <h2 class="title">Eligibilité d'un tournoi au PR</h2>
+            <ul>
+                <li>Avoir plus de 16 participants</li>
+                <li>Avoir une majorité de joueurs habitués locaux (Ex : Etape solary non éligible)</li>
+                <li>Etre enregistré sur SmashGG</li>
+                <li>Etre dans la région de Dijon</li>
+            </ul>
+            <h2 class="title">Roadmap du site</h2>
+            <ul>
+                <li>Amélioration du design</li>
+                <li>Gérer les streams</li>
+                <li>Possibiliter de s'enregistrer et d'afficher son main</li>
+            </ul>
+        </div>
+   </div>
+</section>
+{% endblock %}

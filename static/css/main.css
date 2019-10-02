@@ -1,0 +1,50 @@
+body{
+    margin : 0;
+}
+
+header nav .navbar-menu{
+    background: #D20E8C;
+}
+
+header nav .navbar-item, .navbar-link {
+    color: black ;
+}
+header nav .navbar-brand{
+    background: #D20E8C;
+}
+
+.not-display{
+    display: none;
+}
+
+/*
+    Home
+*/
+.table-rank td, .table-rank th {
+    text-align: center !important;
+}
+
+.table-rank img {
+    width: 20px;
+    height: 20px;
+}
+
+#side-home{
+    color : black;
+}
+
+#side-home hr{
+    background-color: rgb(55, 55, 55);
+}
+
+.first-rank{
+    background: gold;
+}
+
+.second-rank{
+    background: silver;
+}
+
+.third-rank{
+    background: peru;
+}

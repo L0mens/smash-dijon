@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <title>{% block title %}{% endblock %}</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static '/css/main.css' %}">
+   <link rel="icon" type="image/png" href="{% static '/img/ladder.png' %}" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Super_Smash_Bros._Ultimate_logo.svg" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./">
+          Accueil
+        </a>
+        <a class="navbar-item" href="./vod">
+          VODs
+        </a>
+        <a class="navbar-item" href="./about">
+            A propos
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        {% if user.is_authenticated %}
+        <div class="navbar-item">
+            <p class='navbar-item'> Bienvenue {{ user.username }}</p>
+        </div>
+        <div class="navbar-item">
+            <div class="buttons">
+                <a href="./logout" class="button is-light">Logout</a>
+            </div>
+        </div>
+                    {% if user.is_staff %}
+            
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Manage</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin">Admin</a>
+                            <a class="navbar-item" href="./tournaments">Tournois</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% else %}
+        <div class="navbar-item">
+                <div class="buttons">
+                <a href="./login" class="button is-light">Login</a>
+            </div>
+        </div>
+                {% endif %}
+            
+            
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+       {% block content %}{% endblock %}
+   <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Fait par Lomens pour la commu smash dijonnaise
+          </p>
+        </div>
+      </footer>
+    <script src="{% static '/js/main.js' %}"></script>
+</body>
+</html>
