@@ -21,6 +21,18 @@
           {% endfor %}
       </div>
     </article>
+    <article class="message is-dark">
+      <div class="message-header">
+        <p>Tounois terminés</p>
+      </div>
+      <div class="message-body">
+          {% for tournoi in tn_finish %}
+            <p>{{ tournoi.date|date:"d M Y" }}</p>
+            <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
+            <hr>
+          {% endfor %}
+      </div>
+    </article>
   </section>
     <section class="section column is-10">
               <div class="container">
