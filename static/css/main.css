@@ -48,3 +48,22 @@ header nav .navbar-brand{
 .third-rank{
     background: peru;
 }
+
+/* 
+    VOD
+*/
+
+/* TODO Version 4K et mobile à revoir
+*/
+.video-con iframe{
+    min-height: 238px;
+}
+
+.one-tn-vods{
+    margin : 40px 0 ; 
+    padding: 10px;
+}
+
+.all-tn-vods{
+    padding: 0 !important;
+}

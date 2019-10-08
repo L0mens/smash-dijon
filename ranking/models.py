@@ -95,7 +95,10 @@ class Character(models.Model):
 
 class Vod(models.Model):
     video_url = models.URLField(default="", null=True)
+    id_watch_video = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     tournament = models.ForeignKey('Tournament', on_delete=models.CASCADE)
-    player_one = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_one")
-    player_two = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_two")
+    # player_one = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_one")
+    # player_two = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_two")
+    def __str__(self):
+        return f"{self.title}"

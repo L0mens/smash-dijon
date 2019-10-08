@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys
-from .models import Competitor,Elo,Saison,Tournament,Tournament_state
+from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -56,6 +56,14 @@ def about(request):
     return render(request, 'ranking/a_propos.html', locals())
 
 def vod(request):
+    all_tournaments = Tournament.objects.all()
+    vods_by_tournament = {}
+
+    for tournoi in all_tournaments:
+        vods = Vod.objects.filter(tournament=tournoi)
+        if vods:
+            vods_by_tournament[tournoi.name] = vods
+
     return render(request, 'ranking/vod.html', locals())
 
 @permission_required('ranking.add_tournament')
@@ -70,6 +78,10 @@ def tournament_manage(request):
     all_tournaments = Tournament.objects.all().order_by('date').reverse()
     
     return render(request, 'ranking/tn_manage.html', locals())
+
+@permission_required('ranking.add_tournament')
+def vods_manage(request):
+    return render(request, 'ranking/vod_manage.html', locals())
 
 @csrf_exempt
 def test_post(request):
@@ -158,7 +170,6 @@ def update_with_smashgg(request):
                         olds_elos = Elo.objects.filter(competitor=already_competitor)
                         new_elo = Elo(competitor=already_competitor, saison=saison, elo=1500, nb_tournament=1)
                         #Trouver les anciens persos
-                        #TODO NOT TESTED
                         if olds_elos:
                             for old in olds_elos:
                                 new_elo.main_char = old.main_char

@@ -2,8 +2,27 @@
 {% block title %}Site du Power Ranking Dijonnais{% endblock %}
 {% block content %}
 <section class="section">
-    <h1 class="title">
+    <h1 class="title is-2">
         VOD des matchs
     </h1>
+    <p>Pour trouver directement le tournoi voulu, faites Ctrl + F, puis tapez le nom du tournoi recherché</p>
+    <section class="section all-tn-vods">
+    {% for tn_name,vod_info in vods_by_tournament.items %}
+        <div class="one-tn-vods">
+            <h2 class="title is-3">{{ tn_name }}</h2>
+            <div class="columns is-multiline">
+                {% for vod in vod_info %}
+                    <div class="column is-3 video-card">
+                        <h3 class="title is-6"><a href="{{ vod.video_url }}">{{ vod.title }}</a></h3>
+                        <div class="video-con">
+                            <iframe width="560" height="238" src="https://www.youtube.com/embed/{{ vod.id_watch_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>    
+    {% endfor %}
+    </section>
 </section>
 {% endblock %}
+
