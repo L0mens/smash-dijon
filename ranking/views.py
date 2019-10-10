@@ -57,7 +57,7 @@ def about(request):
     return render(request, 'ranking/a_propos.html', locals())
 
 def vod(request):
-    all_tournaments = Tournament.objects.all()
+    all_tournaments = Tournament.objects.all().order_by('date').reverse()
     vods_by_tournament = {}
 
     for tournoi in all_tournaments:
@@ -87,7 +87,7 @@ def vods_manage(request):
     if request.GET.get('playlist_id') and request.GET.get('tournament_id'):
         tournament_of_vod = Tournament.objects.get(id=request.GET.get('tournament_id'))
         playlist_name = request.GET.get('playlist_name', "")
-
+        #TODO Gérer l'OAuth 2.0 pour éviter le prompt dans la console
         playlist_exist = Vodplaylist.objects.filter(youtube_id=request.GET.get('playlist_id'))
         if not playlist_exist:
             datas = (youtube.get_playlist_items(playlist_id=request.GET.get('playlist_id') , nb_result=32, session=request.session))
