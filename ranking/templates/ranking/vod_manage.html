@@ -1,4 +1,26 @@
 {% extends "base.html" %}
 {% block title %}PR Dijonnais - VODs Management{% endblock %}
 {% block content %}
+<section class="section">
+    <h1 class="title is-2">
+        Ajouter des VODs
+    </h1>
+
+    <form action="/" method="GET">
+        <div>
+            <label for="playlisturl">Playlist URL</label>
+            <input type="text" name="playlisturl" id="playlist-url-vod-form">
+        </div>
+        <div>
+            <label for="tournament">Tournoi</label>
+            <select name="tournament" id="tournament-select-vod-form">
+                {% for tn in tournament_list %}
+                    <option value="{{ tn.name }}">{{ tn.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+    </form>
+</section>
+    
 {% endblock %}

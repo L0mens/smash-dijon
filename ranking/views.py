@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys
+from infos import youtube
 from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod
 from .forms import TounrmamentAddForm, ConnexionForm
 
@@ -81,6 +82,11 @@ def tournament_manage(request):
 
 @permission_required('ranking.add_tournament')
 def vods_manage(request):
+    tournament_list = Tournament.objects.all().order_by('date').reverse()
+    if request.GET.get('playlist_id'):
+        datas = (youtube.get_playlist_items(playlist_id="PL4huRo0jwsIRAl2w-nhy9-kUDQhMAm5MK", nb_result=32, session=request.session))
+        for vid_infos in datas['items']:
+            print(vid_infos['contentDetails']['videoId'],vid_infos['snippet']['title'])
     return render(request, 'ranking/vod_manage.html', locals())
 
 @csrf_exempt
