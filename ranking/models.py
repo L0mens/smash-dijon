@@ -97,8 +97,15 @@ class Vod(models.Model):
     video_url = models.URLField(default="", null=True)
     id_watch_video = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
+    playlist = models.ForeignKey('Vodplaylist', on_delete=models.CASCADE, null=True)
     tournament = models.ForeignKey('Tournament', on_delete=models.CASCADE)
     # player_one = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_one")
     # player_two = models.ForeignKey('Elo', on_delete=models.SET_NULL, null=True, related_name="player_two")
     def __str__(self):
         return f"{self.title}"
+
+class Vodplaylist(models.Model):
+    youtube_id = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, default="")
+    def __str__(self):
+        return f"{self.youtube_id} {self.name}"

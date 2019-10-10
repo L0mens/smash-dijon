@@ -5,19 +5,37 @@
     <h1 class="title is-2">
         Ajouter des VODs
     </h1>
+    {% if succes %} 
+    <article class="message is-success">
+        <div class="message-body">Succes</div>
+    </article>
+    {% endif %}
 
-    <form action="/" method="GET">
-        <div>
-            <label for="playlisturl">Playlist URL</label>
-            <input type="text" name="playlisturl" id="playlist-url-vod-form">
+    {% if error_on_create_vod %} 
+    <article class="message is-danger">
+        <div class="message-body">Erreur sur certaines VODs</div>
+    </article>
+    {% endif %}
+
+    <form action="" method="GET">
+        <div class="field">
+            <label class="label" for="playlist_id">Playlist URL</label>
+            <input class="input" type="text" name="playlist_id" id="playlist-url-vod-form">
         </div>
-        <div>
-            <label for="tournament">Tournoi</label>
-            <select name="tournament" id="tournament-select-vod-form">
+        <div class="field">
+            <label class="label" for="playlist_name">Playlist Name</label>
+            <input class="input" type="text" name="playlist_name" id="playlist-name-vod-form">
+        </div>
+        <div class="field">
+            <label class="label" for="tournament_id">Tournoi</label>
+            <select class="select" name="tournament_id" id="tournament-select-vod-form">
                 {% for tn in tournament_list %}
-                    <option value="{{ tn.name }}">{{ tn.name }}</option>
+                    <option value="{{ tn.id }}">{{ tn.name }}</option>
                 {% endfor %}
             </select>
+        </div>        
+        <div class="field">
+            <input class="button is-primary" type="submit" value="Ajouter VODs">
         </div>
         
     </form>

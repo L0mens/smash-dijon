@@ -9,7 +9,7 @@ from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys
 from infos import youtube
-from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod
+from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -83,10 +83,23 @@ def tournament_manage(request):
 @permission_required('ranking.add_tournament')
 def vods_manage(request):
     tournament_list = Tournament.objects.all().order_by('date').reverse()
-    if request.GET.get('playlist_id'):
+    error_on_create_vod = {}
+    if request.GET.get('playlist_id') and request.GET.get('tournament'):
+        tournament_of_vod = Tournament.objects.get(id=request.GET.get('tournament'))
+        playlist_name = request.GET.get('playlist_name', "")
         datas = (youtube.get_playlist_items(playlist_id="PL4huRo0jwsIRAl2w-nhy9-kUDQhMAm5MK", nb_result=32, session=request.session))
+        if len(datas.get("items", 0)) > 0:
+            play = Vodplaylist.objects.create(name=playlist_name, youtube_id=request.GET.get('playlist_id'))
+        
         for vid_infos in datas['items']:
-            print(vid_infos['contentDetails']['videoId'],vid_infos['snippet']['title'])
+            video_url = f"https://youtu.be/{vid_infos['contentDetails']['videoId']}"
+            video_id = vid_infos['contentDetails']['videoId']
+            title = vid_infos['snippet']['title']
+            vod,created = Vod.objects.get_or_create(video_url=video_url, id_watch_video=video_id, title=title, playlist=play, tournament=tournament_of_vod)
+            if not created:
+                error_on_create_vod[video_id] = title
+        if not error_on_create_vod:
+            succes = True
     return render(request, 'ranking/vod_manage.html', locals())
 
 @csrf_exempt
