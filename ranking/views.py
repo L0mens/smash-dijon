@@ -84,22 +84,25 @@ def tournament_manage(request):
 def vods_manage(request):
     tournament_list = Tournament.objects.all().order_by('date').reverse()
     error_on_create_vod = {}
-    if request.GET.get('playlist_id') and request.GET.get('tournament'):
-        tournament_of_vod = Tournament.objects.get(id=request.GET.get('tournament'))
+    if request.GET.get('playlist_id') and request.GET.get('tournament_id'):
+        tournament_of_vod = Tournament.objects.get(id=request.GET.get('tournament_id'))
         playlist_name = request.GET.get('playlist_name', "")
-        datas = (youtube.get_playlist_items(playlist_id="PL4huRo0jwsIRAl2w-nhy9-kUDQhMAm5MK", nb_result=32, session=request.session))
-        if len(datas.get("items", 0)) > 0:
-            play = Vodplaylist.objects.create(name=playlist_name, youtube_id=request.GET.get('playlist_id'))
-        
-        for vid_infos in datas['items']:
-            video_url = f"https://youtu.be/{vid_infos['contentDetails']['videoId']}"
-            video_id = vid_infos['contentDetails']['videoId']
-            title = vid_infos['snippet']['title']
-            vod,created = Vod.objects.get_or_create(video_url=video_url, id_watch_video=video_id, title=title, playlist=play, tournament=tournament_of_vod)
-            if not created:
-                error_on_create_vod[video_id] = title
-        if not error_on_create_vod:
-            succes = True
+
+        playlist_exist = Vodplaylist.objects.filter(youtube_id=request.GET.get('playlist_id'))
+        if not playlist_exist:
+            datas = (youtube.get_playlist_items(playlist_id=request.GET.get('playlist_id') , nb_result=32, session=request.session))
+            if len(datas.get("items", 0)) > 0:
+                play = Vodplaylist.objects.create(name=playlist_name, youtube_id=request.GET.get('playlist_id'))
+            
+            for vid_infos in datas['items']:
+                video_url = f"https://youtu.be/{vid_infos['contentDetails']['videoId']}"
+                video_id = vid_infos['contentDetails']['videoId']
+                title = vid_infos['snippet']['title']
+                vod,created = Vod.objects.get_or_create(video_url=video_url, id_watch_video=video_id, title=title, playlist=play, tournament=tournament_of_vod)
+                if not created:
+                    error_on_create_vod[video_id] = title
+            if not error_on_create_vod:
+                succes = True
     return render(request, 'ranking/vod_manage.html', locals())
 
 @csrf_exempt

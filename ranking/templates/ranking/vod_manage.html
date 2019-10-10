@@ -17,6 +17,12 @@
     </article>
     {% endif %}
 
+    {% if playlist_exist %} 
+    <article class="message is-danger">
+        <div class="message-body">La playlist existe déjà</div>
+    </article>
+    {% endif %}
+
     <form action="" method="GET">
         <div class="field">
             <label class="label" for="playlist_id">Playlist URL</label>
