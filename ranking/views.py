@@ -20,8 +20,10 @@ def home(request):
     compet_by_saison = {}
     nb_tn_by_saison = {}
     for saison in saisons_dijon:
-        compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison).order_by('elo').reverse()
-        nb_tn_by_saison[f"{saison.title}{saison.number}"] = Tournament.objects.filter(saison=saison, state=calculated).count()
+        total_tn = Tournament.objects.filter(saison=saison, state=calculated).count()
+        eligible = (total_tn/3)
+        compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible).order_by('elo').reverse()
+        nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
     
     tn_coming = Tournament.objects.filter(date__gt=timezone.now()).order_by('date')
     tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).order_by('-date')

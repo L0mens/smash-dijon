@@ -9,16 +9,17 @@
         <p>Tounois à venir</p>
       </div>
       <div class="message-body">
-          {% for tournoi in tn_coming %}
-            <p>{{ tournoi.date|date:"d M Y" }}</p>
-            <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
-            {% if tournoi.association.logo_url %}
-            <a href="{{tournoi.association.site_url}}"><img src="{{ tournoi.association.logo_url }}" alt="logo {{ tournoi.association }}" class="logo-asso"></a>
-            {% else %}
-            <p><a href="{{tournoi.association.site_url}}">{{ tournoi.association }}</a></p>
-            {% endif %}
-            <hr>
-          {% endfor %}
+        {% for tournoi in tn_coming %}
+        <p>{{ tournoi.date|date:"d M Y" }}</p>
+        <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
+        {% if tournoi.association.logo_url %}
+        <a href="{{tournoi.association.site_url}}"><img src="{{ tournoi.association.logo_url }}"
+            alt="logo {{ tournoi.association }}" class="logo-asso"></a>
+        {% else %}
+        <p><a href="{{tournoi.association.site_url}}">{{ tournoi.association }}</a></p>
+        {% endif %}
+        <hr>
+        {% endfor %}
       </div>
     </article>
     <article class="message is-dark">
@@ -26,83 +27,87 @@
         <p>Tounois terminés</p>
       </div>
       <div class="message-body">
-          {% for tournoi in tn_finish %}
-            <p>{{ tournoi.date|date:"d M Y" }}</p>
-            <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
-            <hr>
-          {% endfor %}
+        {% for tournoi in tn_finish %}
+        <p>{{ tournoi.date|date:"d M Y" }}</p>
+        <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
+        <hr>
+        {% endfor %}
       </div>
     </article>
   </section>
-    <section class="section column is-10">
-              <div class="container">
-                <h1 class="title">
-                  Classement global Dijon (Beta)
-                </h1>
-                <div id="saison-tabs" class="tabs is-centered is-boxed is-medium">
-                        <ul>
-                              {% for saison in saisons_dijon %}
-                              <li {% if forloop.counter == 1 %} class="is-active"{% endif %}>
-                                <a>
-                                  <span>{{ saison.title }} {{ saison.number }}</span>
-                                </a>
-                              </li>
-                              {% endfor %}
-                        </ul>
-                    </div>
-              </div>
-              {% for key,ranking in compet_by_saison.items %}
-              <div class="table-container {% if forloop.counter > 1 %} not-display{% endif %}">
-              <table id="table-rank-{{ key|lower }}" class="table table-rank is-fullwidth ">
-                  <thead>
-                      <tr>
-                          <th>Rank</th>
-                          <th>Pseudo</th>
-                          <th>Persos</th>
-                          <th>Tournois</th>
-                          <th>Participation</th>
-                          <th>Matchs joués</th>
-                          <th>Gagné</th>
-                          <th>Perdu</th>                          
-                          <th>Elo</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {% for info in ranking %}
-                        {% if forloop.counter == 1 %}
-                        <tr class="first-rank">
-                        {% elif forloop.counter == 2 %}
-                        <tr class="second-rank">
-                        {% elif forloop.counter == 3 %}
-                        <tr class="third-rank">
-                        {% else %}
-                        <tr>
-                        {% endif %}
-                            <td>{{ forloop.counter }}</td>
-                            <td>{{ info.competitor }}</td>
-                            <td>
-                              {% if info.main_char %}
-                              <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_00.png" alt="{{ info.main_char.name_en }}">
-                              {% endif %}
-                              {% if info.second_char %}
-                              <img src="/static/img/stockimg/chara_2_{{ info.second_char.icon_static }}_00.png" alt="{{ info.second_char.name_en }}">
-                              {% endif %}
-                              {% if info.third_char %}
-                              <img src="/static/img/stockimg/chara_2_{{ info.third_char.icon_static }}_00.png" alt="{{ info.third_char.name_en }}">
-                              {% endif %}
-                            </td>
-                            <td>{{ info.nb_tournament }}</td>
-                            <td><progress class="progress is-success" value="{% divide_percent info.nb_tournament nb_tn_by_saison|get_key:key  %}" max="100"></progress></td>
-                            <td>{{ info.nb_match_win|add:info.nb_match_lose }}</td>
-                            <td>{{ info.nb_match_win }}</td>
-                            <td>{{ info.nb_match_lose }}</td>
-                            <td>{{ info.elo }}</td>
-                        </tr>
-                      {% endfor %}
-                    </tbody>
-              </table>
-              </div>
-              {% endfor %}
-    </section>
-  </div>
+  <section class="section column is-10">
+    <div class="container">
+      <h1 class="title">
+        Classement global Dijon (Beta)
+      </h1>
+      <div id="saison-tabs" class="tabs is-centered is-boxed is-medium">
+        <ul>
+          {% for saison in saisons_dijon %}
+          <li {% if forloop.counter == 1 %} class="is-active" {% endif %}>
+            <a>
+              <span>{{ saison.title }} {{ saison.number }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% for key,ranking in compet_by_saison.items %}
+    <div class="table-container {% if forloop.counter > 1 %} not-display{% endif %}">
+      <table id="table-rank-{{ key|lower }}" class="table table-rank is-fullwidth ">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Pseudo</th>
+            <th>Persos</th>
+            <th>Tournois</th>
+            <th>Participation</th>
+            <th>Matchs joués</th>
+            <th>Gagné</th>
+            <th>Perdu</th>
+            <th>Elo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for info in ranking %}
+          {% if forloop.counter == 1 %}
+          <tr class="first-rank">
+            {% elif forloop.counter == 2 %}
+          <tr class="second-rank">
+            {% elif forloop.counter == 3 %}
+          <tr class="third-rank">
+            {% else %}
+          <tr>
+            {% endif %}
+            <td>{{ forloop.counter }}</td>
+            <td>{{ info.competitor }}</td>
+            <td>
+              {% if info.main_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_00.png"
+                alt="{{ info.main_char.name_en }}">
+              {% endif %}
+              {% if info.second_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.second_char.icon_static }}_00.png"
+                alt="{{ info.second_char.name_en }}">
+              {% endif %}
+              {% if info.third_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.third_char.icon_static }}_00.png"
+                alt="{{ info.third_char.name_en }}">
+              {% endif %}
+            </td>
+            <td>{{ info.nb_tournament }}</td>
+            <td><progress class="progress is-success"
+                value="{% divide_percent info.nb_tournament nb_tn_by_saison|get_key:key  %}" max="100"></progress></td>
+            <td>{{ info.nb_match_win|add:info.nb_match_lose }}</td>
+            <td>{{ info.nb_match_win }}</td>
+            <td>{{ info.nb_match_lose }}</td>
+            <td>{{ info.elo }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endfor %}
+  </section>
+</div>
 {% endblock %}
