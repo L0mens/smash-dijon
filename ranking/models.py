@@ -4,8 +4,8 @@ from datetime import datetime
 # Create your models here.
 
 class Competitor(models.Model):
-    name = models.CharField(max_length=42)
-    tag = models.CharField(max_length=10, null=True)
+    name = models.CharField(max_length=255)
+    tag = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         if self.tag:
@@ -110,10 +110,10 @@ class Vodplaylist(models.Model):
     def __str__(self):
         return f"{self.youtube_id} {self.name}"
 
-class CredentialsYoutube(models.Model):
-    token = models.CharField(max_length=255) 
-    refresh_token = models.CharField(max_length=255)
-    token_uri = models.CharField(max_length=255)
-    client_id = models.CharField(max_length=255)
-    client_secret = models.CharField(max_length=255) 
-    scopes = models.CharField(max_length=255) 
+# class CredentialsYoutube(models.Model):
+#     token = models.CharField(max_length=255) 
+#     refresh_token = models.CharField(max_length=255)
+#     token_uri = models.CharField(max_length=255)
+#     client_id = models.CharField(max_length=255)
+#     client_secret = models.CharField(max_length=255) 
+#     scopes = models.CharField(max_length=255) 

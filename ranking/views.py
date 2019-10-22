@@ -244,11 +244,12 @@ def update_with_smashgg(request):
 
 def oauth2callback(request):
     youtube.oauthcallback(request,request.session)
-    return redirect(reverse('test'))
+    return redirect(reverse('vodsmanage'))
 
 def authorize(request):
-    authorized_url = youtube.autorize(request.session)
+    authorized_url = youtube.autorize(request)
     return redirect(authorized_url)
 
 def test_youtube(request):
+    print(request.session.get('credentials'))
     return render(request, 'ranking/test_ytb.html', locals())

@@ -23,6 +23,15 @@
     </article>
     {% endif %}
 
+    <p>
+        Authorisation de Youtube : 
+        {% if request.session.credentials %} <button class="button is-primary">OK</button> 
+        {% else %} <button class=" button is-danger">NOT OK</button> 
+        {% endif %}
+        <br>
+        <a href="./autorize" class="button is-link is-light">Authentification</a>
+    </p>
+
     <form action="" method="GET">
         <div class="field">
             <label class="label" for="playlist_id">Playlist URL</label>
@@ -41,7 +50,8 @@
             </select>
         </div>        
         <div class="field">
-            <input class="button is-primary" type="submit" value="Ajouter VODs">
+            <input class="button is-primary" 
+            type="submit" value="Ajouter VODs" {% if not request.session.credentials %} disabled {% endif %}>
         </div>
         
     </form>

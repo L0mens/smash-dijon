@@ -17,7 +17,7 @@ client_secrets_file = "client_secret.json"
 api_version = "v3"
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
-def autorize(session):
+def autorize(request):
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -26,7 +26,7 @@ def autorize(session):
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
         client_secrets_file, scopes)
 
-    flow.redirect_uri = f"http://le-smash-dijonnais.fr{reverse('oauth')}"
+    flow.redirect_uri = f"http://{request.META['HTTP_HOST']}{reverse('oauth')}"
     authorization_url, state = flow.authorization_url(
     # Enable offline access so that you can refresh an access token without
     # re-prompting the user for permission. Recommended for web server apps.
@@ -34,7 +34,7 @@ def autorize(session):
     # Enable incremental authorization. Recommended as a best practice.
     include_granted_scopes='true')
 
-    session['state'] = state
+    request.session['state'] = state
     return authorization_url
 
 def oauthcallback(request, session):
@@ -42,7 +42,7 @@ def oauthcallback(request, session):
 
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
         client_secrets_file, scopes)
-    flow.redirect_uri = f"http://le-smash-dijonnais.fr{reverse('oauth')}"
+    flow.redirect_uri = f"http://{request.META['HTTP_HOST']}{reverse('oauth')}"
 
     # Use the authorization server's response to fetch the OAuth 2.0 tokens.
     authorization_response = request.build_absolute_uri()
