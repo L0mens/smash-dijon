@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required
 from django.views.decorators.csrf import csrf_exempt
+from django.urls import reverse
 
 from infos import smashgg as smash
 from infos import key as smashkey
@@ -239,3 +240,15 @@ def update_with_smashgg(request):
     # TODO Entrant is not serializable
     # dict_return['pseudo_inscrits'] = inscription
     return JsonResponse(dict_return)
+
+
+def oauth2callback(request):
+    youtube.oauthcallback(request,request.session)
+    return redirect(reverse('test'))
+
+def authorize(request):
+    authorized_url = youtube.autorize(request.session)
+    return redirect(authorized_url)
+
+def test_youtube(request):
+    return render(request, 'ranking/test_ytb.html', locals())

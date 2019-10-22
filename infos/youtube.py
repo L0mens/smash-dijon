@@ -10,20 +10,52 @@ import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
 import google.oauth2.credentials
+from django.urls import reverse
 
-
+api_service_name = "youtube"
+client_secrets_file = "client_secret.json"
+api_version = "v3"
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
-def get_playlist_items(session, playlist_id="", nb_result=32):
+def autorize(session):
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
-    api_service_name = "youtube"
-    api_version = "v3"
-    client_secrets_file = "client_secret.json"
-
     # Get credentials and create an API client
+    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        client_secrets_file, scopes)
+
+    flow.redirect_uri = f"http://le-smash-dijonnais.fr{reverse('oauth')}"
+    authorization_url, state = flow.authorization_url(
+    # Enable offline access so that you can refresh an access token without
+    # re-prompting the user for permission. Recommended for web server apps.
+    access_type='offline',
+    # Enable incremental authorization. Recommended as a best practice.
+    include_granted_scopes='true')
+
+    session['state'] = state
+    return authorization_url
+
+def oauthcallback(request, session):
+    state = session['state']
+
+    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        client_secrets_file, scopes)
+    flow.redirect_uri = f"http://le-smash-dijonnais.fr{reverse('oauth')}"
+
+    # Use the authorization server's response to fetch the OAuth 2.0 tokens.
+    authorization_response = request.build_absolute_uri()
+    flow.fetch_token(authorization_response=authorization_response)
+
+    # Store credentials in the session.
+    # ACTION ITEM: In a production app, you likely want to save these
+    #              credentials in a persistent database instead.
+    credentials = flow.credentials
+    session['credentials'] = credentials_to_dict(credentials)
+
+
+def get_playlist_items(session, playlist_id="", nb_result=32):
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
         client_secrets_file, scopes)
     if not session.get("credentials"):

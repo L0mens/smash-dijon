@@ -11,5 +11,7 @@ urlpatterns = [
     path('logout', views.deconnexion, name='logout'),
     path('about', views.about, name='about'),
     path('vod', views.vod, name='vod'),
-    path('test', views.test_post, name='test'),
+    path('test', views.test_youtube, name='test'),
+    path('authorize', views.authorize, name='authorize'),
+    path('oauth2callback', views.oauth2callback, name='oauth'),
 ]
