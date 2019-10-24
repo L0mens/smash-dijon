@@ -11,25 +11,19 @@
     </article>
     {% endif %}
 
-    {% if error_on_create_vod %} 
+    {% if succes == False %} 
     <article class="message is-danger">
-        <div class="message-body">Erreur sur certaines VODs</div>
-    </article>
-    {% endif %}
-
-    {% if playlist_exist %} 
-    <article class="message is-danger">
-        <div class="message-body">La playlist existe déjà</div>
+        <div class="message-body">{{ error_message }}</div>
     </article>
     {% endif %}
 
     <p>
         Authorisation de Youtube : 
-        {% if request.session.credentials %} <button class="button is-primary">OK</button> 
-        {% else %} <button class=" button is-danger">NOT OK</button> 
+        {% if request.session.credentials %} <button class="button is-primary" disabled>OK</button> 
+        {% else %} <button class=" button is-danger" disabled>NOT OK</button> 
         {% endif %}
         <br>
-        <a href="./autorize" class="button is-link is-light">Authentification</a>
+        <a href="./authorize" class="button is-link is-light">Authentification</a>
     </p>
 
     <form action="" method="GET">

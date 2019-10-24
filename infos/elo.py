@@ -15,6 +15,10 @@ class Elo_Sytem():
 
         return (modif_winner, modif_loser)
 
+    #TODO A réfléchir à réduire le K pour les grands elos ! 1900 ? 
+    def update_k_factor(self,k_value,elo_player):
+        pass
+
     def probability(self, diff):
         return 1 / (1 + ( 10**(diff/-400)))
 

@@ -90,10 +90,14 @@ def vods_manage(request):
     if request.GET.get('playlist_id') and request.GET.get('tournament_id'):
         tournament_of_vod = Tournament.objects.get(id=request.GET.get('tournament_id'))
         playlist_name = request.GET.get('playlist_name', "")
-        #TODO Gérer l'OAuth 2.0 pour éviter le prompt dans la console
         playlist_exist = Vodplaylist.objects.filter(youtube_id=request.GET.get('playlist_id'))
         if not playlist_exist:
             datas = (youtube.get_playlist_items(playlist_id=request.GET.get('playlist_id') , nb_result=32, session=request.session))
+            if not datas: 
+                succes = False
+                error_message = "Erreur d'authentification"
+                datas = {}
+
             if len(datas.get("items", 0)) > 0:
                 play = Vodplaylist.objects.create(name=playlist_name, youtube_id=request.GET.get('playlist_id'))
             
@@ -103,9 +107,14 @@ def vods_manage(request):
                 title = vid_infos['snippet']['title']
                 vod,created = Vod.objects.get_or_create(video_url=video_url, id_watch_video=video_id, title=title, playlist=play, tournament=tournament_of_vod)
                 if not created:
+                    succes = False
+                    error_message = "Erreurs sur certaines VODs"
                     error_on_create_vod[video_id] = title
             if not error_on_create_vod:
                 succes = True
+        else:
+            succes = False
+            error_message = "La playlist existe déjà"
     return render(request, 'ranking/vod_manage.html', locals())
 
 @csrf_exempt
@@ -241,6 +250,13 @@ def update_with_smashgg(request):
     # dict_return['pseudo_inscrits'] = inscription
     return JsonResponse(dict_return)
 
+def player_list(request):
+    saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
+    return render(request, 'ranking/player_list.html', locals())
+
+def tournament_list(request):
+    saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
+    return render(request, 'ranking/tn_list.html', locals())
 
 def oauth2callback(request):
     youtube.oauthcallback(request,request.session)

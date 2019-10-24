@@ -56,22 +56,20 @@ def oauthcallback(request, session):
 
 
 def get_playlist_items(session, playlist_id="", nb_result=32):
-    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
-        client_secrets_file, scopes)
-    if not session.get("credentials"):
-        credentials = flow.run_console()
-        session['credentials'] = credentials_to_dict(credentials)
-    else:
-        credentials = google.oauth2.credentials.Credentials(**session.get("credentials"))
-    youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, credentials=credentials)
 
-    request = youtube.playlistItems().list(
-        part="snippet,contentDetails",
-        maxResults=nb_result,
-        playlistId=playlist_id
-    )
-    response = request.execute()
+    if session.get("credentials"):
+        credentials = google.oauth2.credentials.Credentials(**session.get("credentials"))
+        youtube = googleapiclient.discovery.build(
+            api_service_name, api_version, credentials=credentials)
+
+        request = youtube.playlistItems().list(
+            part="snippet,contentDetails",
+            maxResults=nb_result,
+            playlistId=playlist_id
+        )
+        response = request.execute()
+    else:
+        response = None
 
     return (response)
 
