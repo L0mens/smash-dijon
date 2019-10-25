@@ -110,6 +110,7 @@ def vods_manage(request):
                     succes = False
                     error_message = "Erreurs sur certaines VODs"
                     error_on_create_vod[video_id] = title
+            print(error_on_create_vod)
             if not error_on_create_vod:
                 succes = True
         else:
@@ -228,8 +229,8 @@ def update_with_smashgg(request):
                     print(match)
                     elo_win = Elo.objects.get(competitor=Competitor.objects.get(name=match.winner.name), saison=saison)
                     elo_lose = Elo.objects.get(competitor=Competitor.objects.get(name=match.looser.name), saison=saison)
-                    print(elo_win, elo_lose)
                     modif = elo_system.calc(elo_win,elo_lose,match.fullRoundText)
+                    print(elo_win, modif, elo_lose)
                     elo_win.elo = elo_win.elo + modif[0]
                     elo_lose.elo = elo_lose.elo + modif[1]
                     elo_win.nb_match_win = elo_win.nb_match_win + 1

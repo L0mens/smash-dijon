@@ -8,9 +8,9 @@ class Smashgg():
     def __init__(self, api_token):
         self.token = api_token
         format_sort_64 = ['WR1','LR1','WR2','LR2','LR3','WR3','LR4','LR5','WQ','LR6','LR7','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
-        format_sort_48 = ['WR1','LR1','WR2','LR2','WR3','LR3','LR4','WQ','LR5','LR6','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
+        format_sort_48 = ['WR1','WR2','LR1','LR2','WR3','LR3','LR4','WQ','LR5','LR6','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
         format_sort_32 = ['WR1','LR1','WR2','LR2','LR3','WQ','LR4','LR5','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
-        format_sort_24 = ['WR1','LR1','WR2','LR2','LR3','WQ','LR4','LR5','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR'] # A revoir
+        format_sort_24 = ['WR1','WR2','LR1','LR2','WQ','LR3','LR4','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR'] # A revoir
         format_sort_16 = ['WR1','LR1','WQ','LR2','LR3','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
 
         self.format_sort = {
