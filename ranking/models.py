@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Competitor(models.Model):
     name = models.CharField(max_length=255)
-    tag = models.CharField(max_length=255, null=True)
+    tag = models.CharField(max_length=255, null=True, blank=True, default="")
 
     def __str__(self):
         if self.tag:

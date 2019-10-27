@@ -11,6 +11,9 @@
       <div class="message-body">
         {% for tournoi in tn_coming %}
         <p>{{ tournoi.date|date:"d M Y" }}</p>
+        {% if tournoi.state.state == "Provisoire" %}
+        <p title="Un tournoi provisoire n'as pas de smashgg valide et la date n'est pas assuré">{{ tournoi.state.state}} <i class="fa fa-question-circle"></i></p>
+        {% endif %}
         <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
         {% if tournoi.association.logo_url %}
         <a href="{{tournoi.association.site_url}}"><img src="{{ tournoi.association.logo_url }}"
@@ -24,7 +27,7 @@
     </article>
     <article class="message is-dark">
       <div class="message-header">
-        <p>Tounois terminés</p>
+        <p>Derniers Tounois</p>
       </div>
       <div class="message-body">
         {% for tournoi in tn_finish %}

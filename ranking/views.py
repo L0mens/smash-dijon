@@ -27,7 +27,7 @@ def home(request):
         nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
     
     tn_coming = Tournament.objects.filter(date__gt=timezone.now()).order_by('date')
-    tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).order_by('-date')
+    tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).order_by('-date')[:3]
     return render(request, 'ranking/home.html', locals())
 
 
