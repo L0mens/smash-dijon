@@ -60,6 +60,7 @@ class Tournament_state(models.Model):
 class Tournament_serie(models.Model):
     name = models.CharField(max_length=255)
     logo_url = models.URLField(default="", null=True, blank=True)
+    is_on_pr = models.BooleanField(default=True, verbose_name="Possède des tournois du Power Ranking")
     def __str__(self):
         return self.name
 
