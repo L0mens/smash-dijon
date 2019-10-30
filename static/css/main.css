@@ -67,3 +67,8 @@ header nav .navbar-brand{
 .all-tn-vods{
     padding: 0 !important;
 }
+
+
+.tn-card-body h2{
+    text-align: center;
+}
