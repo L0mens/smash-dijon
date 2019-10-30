@@ -44,8 +44,9 @@ class Tournament(models.Model):
     event = models.CharField(max_length=255)
     event_slug = models.CharField(max_length=255, null=True)
     state = models.ForeignKey('Tournament_state', on_delete=models.CASCADE)
+    serie = models.ForeignKey('Tournament_serie', on_delete=models.CASCADE, null=True, blank=True)
     saison = models.ManyToManyField(Saison, related_name='Saison')
-    city = models.ForeignKey('City', on_delete=models.CASCADE)
+    place = models.ForeignKey('Tournament_place', on_delete=models.CASCADE, null=True, blank=True)
     association = models.ForeignKey('Association', on_delete=models.CASCADE)
     date = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):
@@ -56,6 +57,20 @@ class Tournament_state(models.Model):
     def __str__(self):
         return self.state
 
+class Tournament_serie(models.Model):
+    name = models.CharField(max_length=255)
+    logo_url = models.URLField(default="", null=True, blank=True)
+    def __str__(self):
+        return self.name
+
+class Tournament_place(models.Model):
+    name = models.CharField(max_length=255)
+    logo_url = models.URLField(default="", null=True, blank=True)
+    adress = models.CharField(max_length=255)
+    city = models.ForeignKey('City', on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
+    
 class City(models.Model):
     name = models.CharField(max_length=255)
     def __str__(self):
