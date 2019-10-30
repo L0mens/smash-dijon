@@ -11,6 +11,7 @@ urlpatterns = [
     path('logout', views.deconnexion, name='logout'),
     path('about', views.about, name='about'),
     path('vod', views.vod, name='vod'),
+    path('vod/<str:tn_name_slug>', views.vod_by_tournament, name='vod_by_tn'),
     path('test', views.test_youtube, name='test'),
     path('tournaments', views.tournament_list, name='tnlist'),
     path('players', views.player_list, name='playerlist'),

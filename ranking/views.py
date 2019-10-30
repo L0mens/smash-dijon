@@ -61,14 +61,25 @@ def about(request):
 
 def vod(request):
     all_tournaments = Tournament.objects.all().order_by('date').reverse()
-    vods_by_tournament = {}
+    tn_with_vods = []
 
     for tournoi in all_tournaments:
         vods = Vod.objects.filter(tournament=tournoi)
         if vods:
-            vods_by_tournament[tournoi.name] = vods
+            tn_with_vods.append(tournoi)
 
     return render(request, 'ranking/vod.html', locals())
+
+def vod_by_tournament(request,tn_name_slug):
+    try:
+        tournament = Tournament.objects.get(slug=tn_name_slug)
+        vods = Vod.objects.filter(tournament=tournament)
+        if not vods:
+            error = "Le tournoi demandé ne possède pas de VODs"
+    except Tournament.DoesNotExist:
+        error = "Le tournoi demandé n'existe pas"
+
+    return render(request, 'ranking/vod_by_tn.html', locals())
 
 @permission_required('ranking.add_tournament')
 def tournament_manage(request):
