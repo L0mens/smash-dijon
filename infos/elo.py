@@ -4,20 +4,28 @@ class Elo_Sytem():
 
     def __init__(self):
         self.k = 40
+        self.k_winner = 40
+        self.k_looser = 40
 
     def calc(self, elo_winner, elo_loser, type_match):
         elodif = self.elo_dif(elo_winner, elo_loser)
+        self.update_k_factor(elo_winner, True)
+        self.update_k_factor(elo_loser, False)
         prob_winner = self.probability(elodif)
         prob_loser = 1 - prob_winner
         mod_match = self.get_value_of_match(type_match)
-        modif_winner = math.trunc(self.k*(1-prob_winner)*mod_match)
-        modif_loser = math.trunc(self.k*(0-prob_loser)*mod_match)
+        modif_winner = math.trunc(self.k_winner*(1-prob_winner)*mod_match)
+        modif_loser = math.trunc(self.k_looser*(0-prob_loser)*mod_match)
 
         return (modif_winner, modif_loser)
 
     #TODO A réfléchir à réduire le K pour les grands elos ! 1900 ? 
-    def update_k_factor(self,k_value,elo_player):
-        pass
+    def update_k_factor(self,elo_player, is_winner):
+        if elo_player.elo > 1900 and elo_player.elo < 2200 :
+            if is_winner:
+                self.k_winner = 30
+            else: 
+                self.k_looser = 30
 
     def probability(self, diff):
         return 1 / (1 + ( 10**(diff/-400)))

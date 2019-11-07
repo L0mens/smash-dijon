@@ -248,6 +248,7 @@ def update_with_smashgg(request):
                     elo_lose.nb_match_lose = elo_lose.nb_match_lose + 1
                     elo_win.save()
                     elo_lose.save()
+                    print(elo_win, elo_lose)
                 except :
                     print('error recording set')
                     set_with_problem.append(match)
