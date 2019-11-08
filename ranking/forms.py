@@ -14,7 +14,7 @@ class TounrmamentAddForm(forms.ModelForm):
         self.fields['event_slug'].widget.attrs.update({'class' : 'input'})
         self.fields['state'].widget.attrs.update({'class' : 'select'})
         self.fields['saison'].widget.attrs.update({'class' : ''})
-        self.fields['city'].widget.attrs.update({'class' : 'select'})
+        
         self.fields['association'].widget.attrs.update({'class' : 'select'})
 
 class ConnexionForm(forms.Form):
