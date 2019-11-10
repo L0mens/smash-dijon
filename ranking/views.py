@@ -263,8 +263,16 @@ def update_with_smashgg(request):
     # dict_return['pseudo_inscrits'] = inscription
     return JsonResponse(dict_return)
 
+def player_info(request, player_name):
+    return render(request, 'ranking/player_info.html', locals())
+
 def player_list(request):
-    saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
+    calculated = Tournament_state.objects.get(state="Calculé")
+    last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
+    elo_last_saison = Elo.objects.filter(saison=last_saison).order_by('elo').reverse()
+    total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
+    eligible = (total_tn/3)
+            
     return render(request, 'ranking/player_list.html', locals())
 
 def tournament_list(request):

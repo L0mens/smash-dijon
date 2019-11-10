@@ -15,6 +15,7 @@ urlpatterns = [
     path('test', views.test_youtube, name='test'),
     path('tournaments', views.tournament_list, name='tnlist'),
     path('players', views.player_list, name='playerlist'),
+    path('players/<str:player_name>', views.player_info, name='playerinfo'),
     path('authorize', views.authorize, name='authorize'),
     path('oauth2callback', views.oauth2callback, name='oauth'),
 ]

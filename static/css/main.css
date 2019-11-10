@@ -72,3 +72,38 @@ header nav .navbar-brand{
 .tn-card-body h2{
     text-align: center;
 }
+
+
+
+
+/*
+* Player List
+*/
+
+.player-list-card p{
+    border: black 1px solid;
+    border-radius: 15px;
+    background: #b6b4b4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3fada8, #b6b4b4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3fada8, #b6b4b4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 25px;
+    padding: 0 15px;
+}
+
+.not_eligible > a > p{
+    background: darkred;
+}
+
+.player-list-card img {
+    width: 20px;
+    float: right;
+    margin-top: 2px;
+}
+
+
+
+.player-list-card a, 
+.player-list-card a:visited,
+.player-list-card a:hover {
+    color: white;
+}

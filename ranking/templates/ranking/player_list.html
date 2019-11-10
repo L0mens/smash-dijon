@@ -2,7 +2,35 @@
 {% block title %}PR Dijonnais - Players List{% endblock %}
 {% block content %}
 <section class="section">
-    <h1 class="title">Liste des joueurs</h1>
-    <p>Coming Soon</p>
+    <h1 class="title is-2">Liste des joueurs</h1>
+
+    <h2 class="title is-3">{{ last_saison.0.prefix }} {{ last_saison.0.title }} {{ last_saison.0.number }}</h2>
+    <p class="content">
+        Liste des joueurs présents dans au moins un tournoi durant la saison en cours ! 
+        Si le pseudo est rouge, c'est que le joueur n'est pas éligible au Power Ranking, il lui faudra faire plus de tournois
+    </p>
+    <div class="columns is-multiline">
+    {% for elo in elo_last_saison %}
+    <div class="column is-2 player-list-card {% if elo.nb_tournament < eligible %} not_eligible {% endif %}">
+            <a href="{% url 'playerlist' %}/{{ elo.competitor.name }}">
+                <p>
+                    {{ elo.competitor.name }}
+                    {% if elo.third_char %}
+                    <img src="/static/img/stockimg/chara_2_{{ elo.third_char.icon_static }}_00.png"
+                        alt="{{ elo.third_char.name_en }}">
+                    {% endif %}
+                    {% if elo.second_char %}
+                    <img src="/static/img/stockimg/chara_2_{{ elo.second_char.icon_static }}_00.png"
+                        alt="{{ elo.second_char.name_en }}">
+                    {% endif %}
+                    {% if elo.main_char %}
+                    <img src="/static/img/stockimg/chara_2_{{ elo.main_char.icon_static }}_00.png"
+                        alt="{{ elo.main_char.name_en }}">
+                    {% endif %}
+                </p>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
 </section>
 {% endblock %}
