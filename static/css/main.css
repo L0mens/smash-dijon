@@ -2,6 +2,14 @@ body{
     margin : 0;
 }
 
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
 header nav .navbar-menu{
     background: #D20E8C;
 }

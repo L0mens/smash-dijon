@@ -1,5 +1,5 @@
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required
@@ -14,6 +14,7 @@ from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodp
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
+from math import *
 
 def home(request):
     saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
@@ -264,6 +265,13 @@ def update_with_smashgg(request):
     return JsonResponse(dict_return)
 
 def player_info(request, player_name):
+    last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
+    calculated = Tournament_state.objects.get(state="Calculé")
+    competitor = get_object_or_404(Competitor, name=player_name)
+    elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
+    total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
+    eligible = ceil(total_tn/3)
+    
     return render(request, 'ranking/player_info.html', locals())
 
 def player_list(request):

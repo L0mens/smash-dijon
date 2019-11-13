@@ -2,9 +2,70 @@
 {% block title %}PR Dijonnais - Players List{% endblock %}
 {% block content %}
 <section class="section">
-        <h1 class="title is-2">{{ player_name }}</h1>
-        <p class="content"> Coming soon</p>
+        <h1 class="title is-2">Page de {{ player_name }}</h1>
+        
+        <h2 class="title is-3"> Saison en cours</h2>
+        <div class="columns">
+            <section class="section column is-3">
+                <article class="message is-dark">
+                    <div class="message-header">
+                        <p>Statistiques</p>
+                    </div>
+                    <div class="message-body">
+                        <p>Matchs joués : {{ elo_player.nb_match_win|add:elo_player.nb_match_lose }}</p>
+                        <p>Matchs gagnés : {{ elo_player.nb_match_win }}</p>
+                        <p>Matchs perdus : {{ elo_player.nb_match_lose }}</p>
+                        <p>Nombre de participation : {{ elo_player.nb_tournament }}</p>
+                        <p>
+                            Eligible au PR <span title="Il faut avoir participé à {{ eligible }} tournois pour être éligible"><i class="fa fa-question-circle"></i></span> : 
+                            {% if elo_player.nb_tournament < eligible %} <span class="red">Non</span> 
+                            {% else %} <span class="green">Oui</span> 
+                            {% endif %}
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <section class="section column is-6">
+                <article class="message is-dark">
+                    <div class="message-header">
+                        <p>Historique</p>
+                    </div>
+                    <div class="message-body">
+                        <p>Ils arrivent bientôt ! (Décembre?)</p>
+                            {% for tournoi in tn_finish %}
+                            <p>{{ tournoi.date|date:"d M Y" }}</p>
+                            <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
+                            <hr>
+                            {% endfor %}
+                    </div>
+                </article>
+            </section>
+            <section class="section column is-3">
+                <article class="message is-dark">
+                    <div class="message-header">
+                        <p>Personnages</p>
+                    </div>
+                    <div class="message-body">
+                        {% if elo_player.main_char %}
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.main_char.icon_static }}_00.png"
+                                alt="{{ elo_player.main_char.name_en }}">
+                        {% endif %}
+                        
+                        {% if elo_player.second_char %}
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.second_char.icon_static }}_00.png"
+                            alt="{{ elo_player.second_char.name_en }}">
+                        {% endif %}
+                        {% if elo_player.third_char %}
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.third_char.icon_static }}_00.png"
+                            alt="{{ elo_player.third_char.name_en }}">
+                        {% endif %}
+                        
+                    </div>
+                    </article>
+            </section>
 
+        </div>
+        
 
         <p class="content"> <a href="{% url 'playerlist' %}">Retour à la liste</a></p>
 </section>
