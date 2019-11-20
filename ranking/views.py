@@ -5,12 +5,13 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
+from django.db.models import Q
 
 from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys
 from infos import youtube
-from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist
+from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -242,14 +243,20 @@ def update_with_smashgg(request):
                     elo_win = Elo.objects.get(competitor=Competitor.objects.get(name=match.winner.name), saison=saison)
                     elo_lose = Elo.objects.get(competitor=Competitor.objects.get(name=match.looser.name), saison=saison)
                     modif = elo_system.calc(elo_win,elo_lose,match.fullRoundText)
-                    print(elo_win, modif, elo_lose)
+                    new_match = Matchs(fullRoundText=match.fullRoundText, roundText=match.round,
+                                        winner=elo_win, looser=elo_lose, elo_win=modif[0],
+                                        elo_lose=modif[1], tournament=tn_bd, score=match.score,
+                                        winner_elo_value_before=elo_win.elo, looser_elo_value_before=elo_lose.elo)
                     elo_win.elo = elo_win.elo + modif[0]
                     elo_lose.elo = elo_lose.elo + modif[1]
                     elo_win.nb_match_win = elo_win.nb_match_win + 1
                     elo_lose.nb_match_lose = elo_lose.nb_match_lose + 1
                     elo_win.save()
                     elo_lose.save()
-                    print(elo_win, elo_lose)
+                    # print(elo_win, elo_lose)
+                    
+                    new_match.save()
+                    print(new_match)
                 except :
                     print('error recording set')
                     set_with_problem.append(match)
@@ -271,6 +278,8 @@ def player_info(request, player_name):
     elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
     eligible = ceil(total_tn/3)
+    elo_test = Elo.objects.get(saison=last_saison, competitor=competitor)
+    matches = reversed(Matchs.objects.filter(Q(winner=elo_test) | Q(looser=elo_test)))
     
     return render(request, 'ranking/player_info.html', locals())
 

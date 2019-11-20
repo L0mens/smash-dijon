@@ -26,6 +26,11 @@ class Elo_Sytem():
                 self.k_winner = 30
             else: 
                 self.k_looser = 30
+        elif elo_player.elo > 2200:
+            if is_winner:
+                self.k_winner = 20
+            else: 
+                self.k_looser = 20
 
     def probability(self, diff):
         return 1 / (1 + ( 10**(diff/-400)))

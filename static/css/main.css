@@ -115,3 +115,12 @@ header nav .navbar-brand{
 .player-list-card a:hover {
     color: white;
 }
+
+
+/*
+    Player info
+*/
+
+.elo-right{
+    float: right;
+}

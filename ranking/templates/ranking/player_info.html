@@ -31,12 +31,17 @@
                         <p>Historique</p>
                     </div>
                     <div class="message-body">
-                        <p>Ils arrivent bientôt ! (Décembre?)</p>
-                            {% for tournoi in tn_finish %}
-                            <p>{{ tournoi.date|date:"d M Y" }}</p>
-                            <a href="https://smash.gg/tournament/{{ tournoi.slug }}">{{ tournoi.name }}</a>
-                            <hr>
-                            {% endfor %}
+                        {% for match in matches %}
+                        <p>
+                            ({{ match.tournament.name }}) >>> <b>{{ match.winner.competitor.name }}</b> (+{{ match.elo_win }}) vs <b>{{ match.looser.competitor.name }}</b> ({{ match.elo_lose }}) / {{ match.score }}
+                            {% if match.winner.competitor == competitor %}
+                                <span class="elo-right"> <span class="green"><b>+{{ match.elo_win }}</b></span> => {{ match.winner_elo_value_before|add:match.elo_win }}</span>
+                            {% else %}
+                                <span class="elo-right"> <span class="red"><b>{{ match.elo_lose }}</b></span> => {{ match.looser_elo_value_before|add:match.elo_lose }}</span>
+                            {% endif %}
+                        </p>
+                        <hr>
+                        {% endfor %}
                     </div>
                 </article>
             </section>

@@ -85,14 +85,18 @@ class Association(models.Model):
         return self.name
 
 class Matchs(models.Model):
-    fullRoundText = models.CharField(max_length=255)
-    roundText = models.CharField(max_length=255)
-    winner = models.ForeignKey('Competitor', on_delete=models.CASCADE, related_name='winner')
-    looser = models.ForeignKey('Competitor', on_delete=models.CASCADE, related_name='looser')
+    fullRoundText = models.CharField(max_length=255, null=True, blank=True)
+    roundText = models.CharField(max_length=255, null=True, blank=True)
+    winner = models.ForeignKey('Elo', on_delete=models.CASCADE, related_name='winner')
+    looser = models.ForeignKey('Elo', on_delete=models.CASCADE, related_name='looser')
+    elo_win = models.IntegerField(default=0)
+    elo_lose = models.IntegerField(default=0)
+    winner_elo_value_before = models.IntegerField(default=0)
+    looser_elo_value_before = models.IntegerField(default=0)
     tournament = models.ForeignKey('Tournament', on_delete=models.CASCADE)
-    score = models.CharField(max_length=255)
+    score = models.CharField(max_length=255, null=True, blank=True)
     def __str__(self):
-        return f"{self.tournament.name} {self.roundText}   {self.winner} vs {self.looser} {self.score}"
+        return f"{self.tournament.name} / {self.roundText} / {self.winner.competitor.name} +{self.elo_win} vs {self.looser.competitor.name} {self.elo_lose} {self.score}"
 
 class Profil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)  # La liaison OneToOne vers le modèle User
