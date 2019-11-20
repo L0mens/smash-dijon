@@ -74,6 +74,7 @@ class Tournament_place(models.Model):
     
 class City(models.Model):
     name = models.CharField(max_length=255)
+    region = models.CharField(max_length=255, null=True, blank=True)
     def __str__(self):
         return self.name
 
