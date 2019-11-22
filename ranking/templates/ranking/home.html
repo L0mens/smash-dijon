@@ -80,6 +80,7 @@
         </thead>
         <tbody>
           {% for info in ranking %}
+          
           {% if forloop.counter == 1 %}
           <tr class="first-rank">
             {% elif forloop.counter == 2 %}
@@ -90,7 +91,7 @@
           <tr>
             {% endif %}
             <td>{{ forloop.counter }}</td>
-            <td>{{ info.competitor }}</td>
+            <td><a href="/rank/players/{{ info.competitor.name }}">{{ info.competitor }}</a></td>
             <td>
               {% if info.main_char %}
               <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_00.png"

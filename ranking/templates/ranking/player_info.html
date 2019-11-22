@@ -3,7 +3,7 @@
 {% block content %}
 <section class="section">
         <h1 class="title is-2">Page de {{ player_name }}</h1>
-        
+        <p class="content"> <a href="{% url 'playerlist' %}">Retour à la liste</a></p>
         <h2 class="title is-3"> Saison en cours</h2>
         <div class="columns">
             <section class="section column is-3">
@@ -12,6 +12,7 @@
                         <p>Statistiques</p>
                     </div>
                     <div class="message-body">
+                        <p>ELO : {{ elo_player.elo }}</p>
                         <p>Matchs joués : {{ elo_player.nb_match_win|add:elo_player.nb_match_lose }}</p>
                         <p>Matchs gagnés : {{ elo_player.nb_match_win }}</p>
                         <p>Matchs perdus : {{ elo_player.nb_match_lose }}</p>
@@ -31,17 +32,33 @@
                         <p>Historique</p>
                     </div>
                     <div class="message-body">
-                        {% for match in matches %}
-                        <p>
-                            ({{ match.tournament.name }}) >>> <b>{{ match.winner.competitor.name }}</b> (+{{ match.elo_win }}) vs <b>{{ match.looser.competitor.name }}</b> ({{ match.elo_lose }}) / {{ match.score }}
-                            {% if match.winner.competitor == competitor %}
-                                <span class="elo-right"> <span class="green"><b>+{{ match.elo_win }}</b></span> => {{ match.winner_elo_value_before|add:match.elo_win }}</span>
-                            {% else %}
-                                <span class="elo-right"> <span class="red"><b>{{ match.elo_lose }}</b></span> => {{ match.looser_elo_value_before|add:match.elo_lose }}</span>
-                            {% endif %}
-                        </p>
-                        <hr>
-                        {% endfor %}
+                    <table id="table-tournament-pl" class="table is-fullwidth">
+                            <thead>
+                                <th>Tournoi</th>
+                                <th>Winner</th>
+                                <th>Looser</th>
+                                <th>Score</th>
+                                <th>Mise à jour</th>
+                            </thead>
+                            <tbody>
+                            {% for match in matches %}
+                            <tr>
+                                <td>{{ match.tournament.name }}</td>
+                                <td><b>{{ match.winner.competitor.name }}</b> (+{{ match.elo_win }})</td>
+                                <td><b>{{ match.looser.competitor.name }}</b> ({{ match.elo_lose }}) </td>
+                                <td>{{ match.score.1 }} - {{ match.score.4 }}</td>
+                                <td>
+                                    {% if match.winner.competitor == competitor %}
+                                        <span class=""> <span class="green"><b>+{{ match.elo_win }}</b></span> => {{ match.winner_elo_value_before|add:match.elo_win }}</span>
+                                    {% else %}
+                                        <span class=""> <span class="red"><b>{{ match.elo_lose }}</b></span> => {{ match.looser_elo_value_before|add:match.elo_lose }}</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                            
+                        </table>
                     </div>
                 </article>
             </section>
@@ -72,6 +89,6 @@
         </div>
         
 
-        <p class="content"> <a href="{% url 'playerlist' %}">Retour à la liste</a></p>
+        
 </section>
 {% endblock %}

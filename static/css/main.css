@@ -37,6 +37,10 @@ header nav .navbar-brand{
     height: 20px;
 }
 
+.table-rank a{
+    color: black;
+}
+
 #side-home{
     color : black;
 }
@@ -56,6 +60,7 @@ header nav .navbar-brand{
 .third-rank{
     background: peru;
 }
+
 
 /* 
     VOD
