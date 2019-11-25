@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 from ranking import views
 
@@ -24,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('rank/', include('ranking.urls')),
     path('', views.redir_to_home),
+    re_path(r'^robots\.txt$', TemplateView.as_view(template_name="./robot.txt", content_type='text/plain')),
 ]
 # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
