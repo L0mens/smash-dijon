@@ -46,7 +46,11 @@
                                 <td>{{ match.tournament.name }}</td>
                                 <td><b>{{ match.winner.competitor.name }}</b> (+{{ match.elo_win }})</td>
                                 <td><b>{{ match.looser.competitor.name }}</b> ({{ match.elo_lose }}) </td>
+                                {% if 'DQ' in match.score %}
+                                <td>DQ</td>
+                                {% else %}
                                 <td>{{ match.score.1 }} - {{ match.score.4 }}</td>
+                                {% endif %}
                                 <td>
                                     {% if match.winner.competitor == competitor %}
                                         <span class=""> <span class="green"><b>+{{ match.elo_win }}</b></span> => {{ match.winner_elo_value_before|add:match.elo_win }}</span>
