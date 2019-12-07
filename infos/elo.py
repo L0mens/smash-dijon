@@ -46,10 +46,10 @@ class Elo_Sytem():
     def get_value_of_match(self, match_type):
         value = 1
 
-        if 'Winners' in match_type:
-            value = 1
-        else:
+        if 'Losers' in match_type:
             value = 0.85
+        else:
+            value = 1
 
         return value
 
