@@ -129,3 +129,32 @@ header nav .navbar-brand{
 .elo-right{
     float: right;
 }
+
+.table__wrapper {
+    overflow-x: auto;
+}
+
+#table-tournament-pl tr > td.center-td-pl-info{
+    text-align: center;
+}
+
+.paginator .paginator-item{
+    width: 15px;
+    background-color: rgb(236, 163, 211);
+    padding: 7px 5px;
+    margin: 0 3px;
+}
+
+.paginator .paginator-selected-item{
+    background-color: #363636;
+    color: white;
+}
+
+.paginator{
+    background-color: transparent;
+    height: 30px;
+}
+
+tr.hidden-row{
+    display: none;
+}

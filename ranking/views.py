@@ -9,13 +9,14 @@ from django.db.models import Q
 
 from infos import smashgg as smash
 from infos import key as smashkey
-from infos import elo as elosys
+from infos import elo as elosys, statistics
 from infos import youtube
 from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
 from math import *
+
 
 def home(request):
     saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
@@ -280,7 +281,8 @@ def player_info(request, player_name):
     eligible = ceil(total_tn/3)
     elo_test = Elo.objects.get(saison=last_saison, competitor=competitor)
     matches = reversed(Matchs.objects.filter(Q(winner=elo_test) | Q(looser=elo_test)))
-    
+    matches_loose = Matchs.objects.filter(looser=elo_test)
+    worst_en = statistics.get_worst_enemie(matches_loose)
     return render(request, 'ranking/player_info.html', locals())
 
 def player_list(request):

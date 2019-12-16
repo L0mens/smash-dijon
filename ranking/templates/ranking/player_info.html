@@ -23,6 +23,8 @@
                             {% else %} <span class="green">Oui</span> 
                             {% endif %}
                         </p>
+                        <br>
+                        <p>Pire Cauchemar : {{ worst_en }}</p>
                     </div>
                 </article>
             </section>
@@ -31,31 +33,35 @@
                     <div class="message-header">
                         <p>Historique</p>
                     </div>
-                    <div class="message-body">
-                    <table id="table-tournament-pl" class="table is-fullwidth">
+                    <div class="message-body table__wrapper">
+                    <table id="table-tournament-pl" class="table is-fullwidth pagination-table" data-pagecount="15">
                             <thead>
                                 <th>Tournoi</th>
-                                <th>Winner</th>
-                                <th>Looser</th>
+                                <th>Round</th>
+                                <th>Adversaire</th>
                                 <th>Score</th>
                                 <th>Mise à jour</th>
                             </thead>
                             <tbody>
                             {% for match in matches %}
-                            <tr>
+                            <tr class="">
                                 <td>{{ match.tournament.name }}</td>
-                                <td><b>{{ match.winner.competitor.name }}</b> (+{{ match.elo_win }})</td>
-                                <td><b>{{ match.looser.competitor.name }}</b> ({{ match.elo_lose }}) </td>
+                                <td class="center-td-pl-info">{{ match.roundText }}</td>
+                                {% if match.winner.competitor.name != player_name %}
+                                    <td><b class="red">{{ match.winner.competitor.name }}</b></td>
+                                    {% else %}
+                                    <td><b class="green">{{ match.looser.competitor.name }}</b></td>
+                                {% endif %}
                                 {% if 'DQ' in match.score %}
-                                <td>DQ</td>
-                                {% else %}
-                                <td>{{ match.score.1 }} - {{ match.score.4 }}</td>
+                                    <td class="center-td-pl-info">DQ</td>
+                                    {% else %}
+                                    <td class="center-td-pl-info">{{ match.score.1 }} - {{ match.score.4 }}</td>
                                 {% endif %}
                                 <td>
                                     {% if match.winner.competitor == competitor %}
-                                        <span class=""> <span class="green"><b>+{{ match.elo_win }}</b></span> => {{ match.winner_elo_value_before|add:match.elo_win }}</span>
+                                        <span class=""> <span class="green"><b>+{{ match.elo_win }}</b></span> &rarr; {{ match.winner_elo_value_before|add:match.elo_win }}</span>
                                     {% else %}
-                                        <span class=""> <span class="red"><b>{{ match.elo_lose }}</b></span> => {{ match.looser_elo_value_before|add:match.elo_lose }}</span>
+                                        <span class=""> <span class="red"><b>{{ match.elo_lose }}</b></span> &rarr; {{ match.looser_elo_value_before|add:match.elo_lose }}</span>
                                     {% endif %}
                                 </td>
                             </tr>
@@ -95,4 +101,5 @@
 
         
 </section>
+
 {% endblock %}
