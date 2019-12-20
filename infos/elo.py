@@ -31,11 +31,16 @@ class Elo_Sytem():
                 self.k_winner = 20
             else: 
                 self.k_looser = 20
+        else:
+            if is_winner:
+                self.k_winner = 40
+            else: 
+                self.k_looser = 40
 
     def probability(self, diff):
         return 1 / (1 + ( 10**(diff/-400)))
 
-    def elo_dif(self, elo_winner, elo_loser,):
+    def elo_dif(self, elo_winner, elo_loser):
         elodif = elo_winner.elo - elo_loser.elo
         if elodif > 400:
             elodif = 400
