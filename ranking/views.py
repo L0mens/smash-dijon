@@ -144,6 +144,42 @@ def test_post(request):
 
     return JsonResponse({"test": "test"})
 
+
+def revert_tournament(request):
+    tn_slug = request.GET.get('tn_slug', '')
+    dict_return = {}
+    try:
+        tn_found = Tournament.objects.get(slug=tn_slug)
+        dict_return['tournament_name'] = tn_found.name
+        matches = Matchs.objects.filter(tournament=tn_found)
+        list_set_player = set()
+        dict_return['nb_matches'] = len(matches)
+        for match in matches :
+            winner = match.winner
+            looser = match.looser
+            looser.elo -= match.elo_lose
+            looser.nb_match_lose -= 1
+            looser.save()
+            winner.elo -= match.elo_win
+            winner.nb_match_win -= 1
+            winner.save()
+            list_set_player.add(winner)
+            list_set_player.add(looser)
+
+        for elo_player in list_set_player:
+            elo_player.nb_tournament -= 1
+            elo_player.save()
+
+        matches.delete()
+        dict_return['nb_player'] = len(list_set_player)
+        dict_return['players'] = [x.competitor.name for x in list_set_player]
+
+    except Tournament.DoesNotExist:
+        dict_return['error'] : "Le tournoi n'existe pas"
+    
+    
+    return JsonResponse(dict_return)
+
 def reset_state_tournament(request):
     datapost = json.loads(request.body)
     dict_return = {

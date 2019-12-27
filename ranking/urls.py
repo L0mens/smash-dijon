@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('calculate-tournament', views.update_with_smashgg, name='calculate-tournament'),
     path('reset-tournament', views.reset_state_tournament, name='reset-tournament'),
+    path('revert-tournament', views.revert_tournament, name='revert-tournament'),
     path('tournaments-manage', views.tournament_manage, name='tnmanage'),
     path('vods-admin', views.vods_manage, name='vodsmanage'),
     path('login', views.connexion, name='login'),
