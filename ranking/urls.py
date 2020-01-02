@@ -19,4 +19,5 @@ urlpatterns = [
     path('players/<str:player_name>', views.player_info, name='playerinfo'),
     path('authorize', views.authorize, name='authorize'),
     path('oauth2callback', views.oauth2callback, name='oauth'),
+    path('api/players/<str:player_name>', views.discord_pr_player_info, name='disc_pl_info'),
 ]

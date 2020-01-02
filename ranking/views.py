@@ -345,3 +345,45 @@ def authorize(request):
 def test_youtube(request):
     print(request.session.get('credentials'))
     return render(request, 'ranking/test_ytb.html', locals())
+
+def discord_pr_player_info(request, player_name):
+    last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
+    calculated = Tournament_state.objects.get(state="Calculé")
+    
+    try:
+        competitor = Competitor.objects.get(name__iexact=player_name)
+        elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
+        total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
+        eligible = ceil(total_tn/3)
+        matches = Matchs.objects.filter(Q(winner=elo_player) | Q(looser=elo_player))[::-1][:10]
+        list_matches = [{'match' : f"{match.winner.competitor.name} vs {match.looser.competitor.name}",
+                         "score" : match.score}  for match in matches]
+        matches_loose = Matchs.objects.filter(looser=elo_player)
+        worst_en = statistics.get_worst_enemie(matches_loose)
+        if elo_player.nb_tournament < eligible :
+            is_eligible = False
+        else:
+            is_eligible = True
+
+        all_elo_eligible = Elo.objects.filter(saison=last_saison, nb_tournament__gte= eligible).order_by('-elo')
+        rank = -1
+        for index,elo in enumerate(all_elo_eligible):
+            if elo.competitor.name == competitor.name:
+                rank = index+1
+        dict_return = {
+            "player_name" : f"{competitor.__str__()}",
+            "season" : f"{last_saison[0].prefix} {last_saison[0].title} {last_saison[0].number}",
+            "elo_score" : elo_player.elo,
+            "rank" : rank,"is_eligible": is_eligible,
+            "records" : {
+                "worst_enemie" : worst_en
+            },
+            "last_matches": list_matches
+        }
+        
+    except :
+        dict_return = {
+            "error" : "This player didn't exist, or he didn't play this season"
+        }
+    
+    return JsonResponse(dict_return)
