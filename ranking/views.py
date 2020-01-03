@@ -403,5 +403,9 @@ def discord_pr_player_info(request, player_name):
         dict_return = {
             "error" : "This player didn't exist, or he didn't play this season"
         }
+    except Competitor.DoesNotExist:
+        dict_return = {
+            "error" : "This player didn't exist, or he didn't play this season"
+        }
     
     return JsonResponse(dict_return)
