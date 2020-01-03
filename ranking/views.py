@@ -370,18 +370,36 @@ def discord_pr_player_info(request, player_name):
         for index,elo in enumerate(all_elo_eligible):
             if elo.competitor.name == competitor.name:
                 rank = index+1
+        list_char = []
+        if elo_player.main_char:
+            list_char.append(elo_player.main_char.name_fr)
+        if elo_player.second_char:
+            list_char.append(elo_player.second_char.name_fr)
+        if elo_player.third_char:
+            list_char.append(elo_player.third_char.name_fr)
+        print(list_char)
+
         dict_return = {
-            "player_name" : f"{competitor.__str__()}",
+            "player_name" : f"{competitor.name}",
+            "player_tag" : f"{competitor.tag}",
+            "player_full_name" : f"{competitor.__str__()}",
             "season" : f"{last_saison[0].prefix} {last_saison[0].title} {last_saison[0].number}",
             "elo_score" : elo_player.elo,
-            "rank" : rank,"is_eligible": is_eligible,
+            "characters" : list_char,
+            "stats" : {
+                "nb_tournament" : elo_player.nb_tournament,
+                "nb_win" : elo_player.nb_match_win,
+                "nb_lose" : elo_player.nb_match_lose
+            },
+            "rank" : rank,
+            "is_eligible": is_eligible,
             "records" : {
                 "worst_enemie" : worst_en
             },
             "last_matches": list_matches
         }
         
-    except :
+    except Elo.DoesNotExist:
         dict_return = {
             "error" : "This player didn't exist, or he didn't play this season"
         }
