@@ -79,16 +79,16 @@
                     </div>
                     <div class="message-body">
                         {% if elo_player.main_char %}
-                            <img src="/static/img/stockimg/chara_2_{{ elo_player.main_char.icon_static }}_00.png"
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.main_char.icon_static }}_0{{ elo_player.main_char_skin}}.png"
                                 alt="{{ elo_player.main_char.name_en }}">
                         {% endif %}
                         
                         {% if elo_player.second_char %}
-                            <img src="/static/img/stockimg/chara_2_{{ elo_player.second_char.icon_static }}_00.png"
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.second_char.icon_static }}_0{{ elo_player.second_char_skin}}.png"
                             alt="{{ elo_player.second_char.name_en }}">
                         {% endif %}
                         {% if elo_player.third_char %}
-                            <img src="/static/img/stockimg/chara_2_{{ elo_player.third_char.icon_static }}_00.png"
+                            <img src="/static/img/stockimg/chara_2_{{ elo_player.third_char.icon_static }}_0{{ elo_player.third_char_skin}}.png"
                             alt="{{ elo_player.third_char.name_en }}">
                         {% endif %}
                         

@@ -32,8 +32,11 @@ class Elo(models.Model):
     nb_match_lose = models.IntegerField(default=0)
     competitor = models.ForeignKey(Competitor, on_delete=models.CASCADE)
     main_char = models.ForeignKey('Character', on_delete=models.CASCADE,blank=True, null=True, related_name='main_char')
+    main_char_skin = models.IntegerField(default=0)
     second_char = models.ForeignKey('Character', on_delete=models.CASCADE,blank=True, null=True, related_name='second_char')
+    second_char_skin = models.IntegerField(default=0)
     third_char = models.ForeignKey('Character', on_delete=models.CASCADE,blank=True, null=True, related_name='third_char')
+    third_char_skin = models.IntegerField(default=0)
     saison = models.ForeignKey(Saison, on_delete=models.CASCADE)
     def __str__(self):
         return f"({self.saison.prefix} {self.saison.title} {self.saison.number})   {self.competitor} : {self.elo}"

@@ -94,15 +94,15 @@
             <td><a href="/rank/players/{{ info.competitor.name }}">{{ info.competitor }}</a></td>
             <td>
               {% if info.main_char %}
-              <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_00.png"
+              <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_0{{ info.main_char_skin}}.png"
                 alt="{{ info.main_char.name_en }}">
               {% endif %}
               {% if info.second_char %}
-              <img src="/static/img/stockimg/chara_2_{{ info.second_char.icon_static }}_00.png"
+              <img src="/static/img/stockimg/chara_2_{{ info.second_char.icon_static }}_0{{ info.second_char_skin}}.png"
                 alt="{{ info.second_char.name_en }}">
               {% endif %}
               {% if info.third_char %}
-              <img src="/static/img/stockimg/chara_2_{{ info.third_char.icon_static }}_00.png"
+              <img src="/static/img/stockimg/chara_2_{{ info.third_char.icon_static }}_0{{ info.third_char_skin}}.png"
                 alt="{{ info.third_char.name_en }}">
               {% endif %}
             </td>
