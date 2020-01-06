@@ -10,22 +10,24 @@
         Si le pseudo est rouge, c'est que le joueur n'est pas éligible au Power Ranking, il lui faudra faire plus de tournois
     </p>
     <div class="columns is-multiline">
-    {% for elo in elo_last_saison %}
-    <div class="column is-2 player-list-card {% if elo.nb_tournament < eligible %} not_eligible {% endif %}">
-            <a href="{% url 'playerlist' %}/{{ elo.competitor.name }}">
+    {% for elo_player in elo_last_saison %}
+    <div class="column is-2 player-list-card {% if elo_player.nb_tournament < eligible %} not_eligible {% endif %}">
+            <a href="{% url 'playerlist' %}/{{ elo_player.competitor.name }}">
                 <p>
-                    {{ elo.competitor.name }}
-                    {% if elo.third_char %}
-                    <img src="/static/img/stockimg/chara_2_{{ elo.third_char.icon_static }}_00.png"
-                        alt="{{ elo.third_char.name_en }}">
+                    {{ elo_player.competitor.name }}
+                    {% if elo_player.third_char %}
+                        <img src="/static/img/stockimg/chara_2_{{ elo_player.third_char.icon_static }}_0{{ elo_player.third_char_skin}}.png"
+                            alt="{{ elo_player.third_char.name_en }}">
                     {% endif %}
-                    {% if elo.second_char %}
-                    <img src="/static/img/stockimg/chara_2_{{ elo.second_char.icon_static }}_00.png"
-                        alt="{{ elo.second_char.name_en }}">
+                        
+                    {% if elo_player.second_char %}
+                        <img src="/static/img/stockimg/chara_2_{{ elo_player.second_char.icon_static }}_0{{ elo_player.second_char_skin}}.png"
+                            alt="{{ elo_player.second_char.name_en }}">
                     {% endif %}
-                    {% if elo.main_char %}
-                    <img src="/static/img/stockimg/chara_2_{{ elo.main_char.icon_static }}_00.png"
-                        alt="{{ elo.main_char.name_en }}">
+                        
+                    {% if elo_player.main_char %}
+                        <img src="/static/img/stockimg/chara_2_{{ elo_player.main_char.icon_static }}_0{{ elo_player.main_char_skin}}.png"
+                            alt="{{ elo_player.main_char.name_en }}">
                     {% endif %}
                 </p>
             </a>
