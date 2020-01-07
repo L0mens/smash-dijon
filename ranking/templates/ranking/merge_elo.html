@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Site du Power Ranking Dijonnais - Merge{% endblock %}
+{% block content %}
+<section class="section">
+    <h1 class="title">Fusionner 2 comptes</h1>
+
+    {% if error %}
+    <p><strong>Error</strong></p>
+    {% endif %}
+    <form  method="post">
+    {% csrf_token %}
+    <select name="elo_from" id="elo_from" >
+        {% for player in elo_player_list %}
+            <option value="{{ player.id }}">{{player.competitor.name}}</option>
+        {% endfor %}
+    </select>
+    <select name="elo_to" id="elo_to" >
+        {% for player in elo_player_list %}
+            <option value="{{ player.id }}">{{player.competitor.name}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Fusionner">
+    </form>
+</section>
+{% endblock %}

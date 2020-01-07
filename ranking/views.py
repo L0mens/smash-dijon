@@ -346,6 +346,27 @@ def test_youtube(request):
     print(request.session.get('credentials'))
     return render(request, 'ranking/test_ytb.html', locals())
 
+def merge_elo(request):
+    if request.method == "POST":
+        try:
+            elo_to = Elo.objects.get(pk=request.POST['elo_to'])
+            elo_from = Elo.objects.get(pk=request.POST['elo_from'])
+            matches = reversed(Matchs.objects.filter(Q(winner=elo_from) | Q(looser=elo_from)))
+            print(elo_to)
+            for match in matches:
+                if match.looser == elo_from:
+                    elo_to.elo += match.elo_lose
+                    match.looser = elo_to
+                if match.winner == elo_from:
+                    elo_to.elo += match.elo_win
+                    match.winner = elo_to
+                print(match, elo_to)
+        except Elo.DoesNotExist:
+            error = "Elo id's not matching"
+    last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
+    elo_player_list = Elo.objects.filter(saison=last_saison)
+    return render(request, 'ranking/merge_elo.html', locals())
+
 def discord_pr_player_info(request, player_name):
     last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
     calculated = Tournament_state.objects.get(state="Calculé")
