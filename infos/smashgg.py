@@ -181,6 +181,10 @@ class Smashgg():
             data.append(item)
         return data
 
+    def get_index_of_sort_set(self, nb_entrant, roundText):
+        sort_order = self.__find_sort_format(nb_entrant)
+        return sort_order.index(roundText)
+
     def __sort_sets(self, list_sets, nb_entrant):
         """[summary]
         

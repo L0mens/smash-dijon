@@ -323,7 +323,7 @@ def player_info(request, player_name):
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
     eligible = ceil(total_tn/3)
     elo_test = Elo.objects.get(saison=last_saison, competitor=competitor)
-    matches = reversed(Matchs.objects.filter(Q(winner=elo_test) | Q(looser=elo_test)))
+    matches = Matchs.objects.filter(Q(winner=elo_test) | Q(looser=elo_test)).order_by('-tournament__date')
     matches_loose = Matchs.objects.filter(looser=elo_test)
     worst_en = statistics.get_worst_enemie(matches_loose)
     return render(request, 'ranking/player_info.html', locals())
@@ -350,8 +350,22 @@ def authorize(request):
     return redirect(authorized_url)
 
 def test_youtube(request):
-    print(request.session.get('credentials'))
-    return render(request, 'ranking/test_ytb.html', locals())
+    dict_return = {}
+    tn = Tournament.objects.get(slug="at-gaming-night-s2-8-1")
+    all_matches = Matchs.objects.filter(tournament=tn)
+    sma = smash.Smashgg("")
+    list_m = []
+    for match in all_matches:
+        o_m = {
+            "round" : match.roundText,
+            "weight" : sma.get_index_of_sort_set(64,match.roundText),
+            "tn" : match.tournament.name,
+            "winner" : match.winner.competitor.name,
+            "looser" : match.looser.competitor.name,
+        }
+        list_m.append(o_m)
+    dict_return['list'] = list_m
+    return JsonResponse(dict_return)
 
 @permission_required('ranking.add_tournament')
 def merge_elo(request):
