@@ -148,6 +148,7 @@ def test_post(request):
 def revert_tournament(request):
     tn_slug = request.GET.get('tn_slug', '')
     dict_return = {}
+    added = Tournament_state.objects.get(state="Ajouté")
     try:
         tn_found = Tournament.objects.get(slug=tn_slug)
         dict_return['tournament_name'] = tn_found.name
@@ -160,19 +161,25 @@ def revert_tournament(request):
             looser.elo -= match.elo_lose
             looser.nb_match_lose -= 1
             looser.save()
+            # print(looser.competitor.name, looser.nb_match_lose)
             winner.elo -= match.elo_win
             winner.nb_match_win -= 1
             winner.save()
-            list_set_player.add(winner)
-            list_set_player.add(looser)
+            list_set_player.add(winner.competitor.name)
+            list_set_player.add(looser.competitor.name)
 
-        for elo_player in list_set_player:
-            elo_player.nb_tournament -= 1
-            elo_player.save()
+        for elo_player_name in list_set_player:            
+            comp = Competitor.objects.get(name=elo_player_name)
+            for saison in tn_found.saison.all():
+                elo_player = Elo.objects.get(competitor=comp,saison=saison)
+                elo_player.nb_tournament -= 1
+                elo_player.save()
 
         matches.delete()
         dict_return['nb_player'] = len(list_set_player)
-        dict_return['players'] = [x.competitor.name for x in list_set_player]
+        dict_return['players'] = [x for x in list_set_player]
+        tn_found.state = added
+        tn_found.save()
 
     except Tournament.DoesNotExist:
         dict_return['error'] : "Le tournoi n'existe pas"
@@ -346,13 +353,19 @@ def test_youtube(request):
     print(request.session.get('credentials'))
     return render(request, 'ranking/test_ytb.html', locals())
 
+@permission_required('ranking.add_tournament')
 def merge_elo(request):
     if request.method == "POST":
         try:
             elo_to = Elo.objects.get(pk=request.POST['elo_to'])
             elo_from = Elo.objects.get(pk=request.POST['elo_from'])
             matches = reversed(Matchs.objects.filter(Q(winner=elo_from) | Q(looser=elo_from)))
-            print(elo_to)
+            elo_to.main_char = elo_from.main_char
+            elo_to.main_char_skin = elo_from.main_char_skin
+            elo_to.second_char = elo_from.second_char
+            elo_to.second_char_skin = elo_from.second_char_skin
+            elo_to.third_char = elo_from.third_char
+            elo_to.third_char_skin = elo_from.third_char_skin
             for match in matches:
                 if match.looser == elo_from:
                     elo_to.elo += match.elo_lose
@@ -360,7 +373,9 @@ def merge_elo(request):
                 if match.winner == elo_from:
                     elo_to.elo += match.elo_win
                     match.winner = elo_to
-                print(match, elo_to)
+                match.save()
+            elo_to.save()
+            elo_from.delete()
         except Elo.DoesNotExist:
             error = "Elo id's not matching"
     last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
