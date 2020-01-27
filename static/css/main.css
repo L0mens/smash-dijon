@@ -158,3 +158,7 @@ header nav .navbar-brand{
 tr.hidden-row{
     display: none;
 }
+
+#table-tournament-pl a {
+    text-decoration: none ;
+}

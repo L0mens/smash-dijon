@@ -44,13 +44,13 @@
                             </thead>
                             <tbody>
                             {% for match in matches %}
-                            <tr class="">
+                            <tr class="histo-row">
                                 <td>{{ match.tournament.name }}</td>
                                 <td class="center-td-pl-info">{{ match.roundText }}</td>
                                 {% if match.winner.competitor.name != player_name %}
-                                    <td><b class="red">{{ match.winner.competitor.name }}</b></td>
+                                    <td><a href="{% url 'playerlist' %}/{{ match.winner.competitor.name }}"><b class="red">{{ match.winner.competitor.name }}</b></a></td>
                                     {% else %}
-                                    <td><b class="green">{{ match.looser.competitor.name }}</b></td>
+                                    <td><a href="{% url 'playerlist' %}/{{ match.looser.competitor.name }}"><b class="green">{{ match.looser.competitor.name }}</b></a></td>
                                 {% endif %}
                                 {% if 'DQ' in match.score %}
                                     <td class="center-td-pl-info">DQ</td>
