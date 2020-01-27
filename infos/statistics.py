@@ -16,7 +16,7 @@ def get_worst_enemie(matches_loose):
     return ", ".join(worst_enemie)
 
 
-class Statistics():
+class OnePlStatistics():
 
     def __init__(self, list_matches):
         self.matches = list_matches

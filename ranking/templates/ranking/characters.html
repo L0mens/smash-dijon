@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}PR Dijonnais - Selection des Personnages{% endblock %}
+{% block content %}
+<section class="section">
+    <h1 class="title is-2">Selection des Personnages</h1>
+    <section class="section">
+        <form  method="post">
+        <h2 class="title is-4">Etape 1 : Choisissez votre compte</h2>
+        
+            {% csrf_token %}
+            <select name="player" id="player_elo" >
+                {% for player in elo_player_list %}
+                    <option value="{{ player.id }}">{{player.competitor.name}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Selectionner">
+            <hr>
+        </form>
+        <form  method="post">
+            {% csrf_token %}
+        <h2 class="title is-4">Etape 2 : Selectionnez personnages et skins</h2>
+            <hr>
+        <h2 class="title is-4">Etape 3 : Validez la demande</h2>
+            <input type="submit" value="Fusionner">
+        </form>
+    </section>
+</section>
+{% endblock %}
