@@ -401,6 +401,9 @@ def perso_select(request):
     elo_player_list = Elo.objects.filter(saison=last_saison)
     return render(request, 'ranking/characters.html', locals())
 
+def stage_select(request):
+    return render(request, 'ranking/stage.html', locals())
+
 def discord_pr_player_info(request, player_name):
     last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
     calculated = Tournament_state.objects.get(state="Calculé")
