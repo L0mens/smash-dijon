@@ -123,3 +123,26 @@ if(saisontabs){
     })
 
 }
+
+/* 
+    Stage List Click
+*/
+const stageCard = document.getElementsByClassName('stage-card');
+Array.from(stageCard).forEach((card) =>{
+    card.addEventListener("click", () =>{
+        card.classList.toggle("stage-selected");
+    })
+})
+
+const showStageButton = document.getElementById("show-stage-check");
+const figureStage = Array.from(document.getElementsByClassName("card-image"));
+console.log(figureStage)
+showStageButton.addEventListener('click', function() {
+        
+    figureStage.forEach((elt) => {
+        elt.classList.toggle("hide-stage-img");
+    })
+        
+})
+
+

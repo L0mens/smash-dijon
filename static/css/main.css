@@ -167,3 +167,17 @@ tr.hidden-row{
 /*
     Stage Select
 */
+
+.stage-selected{
+    opacity: 0.2;
+}
+
+.hide-stage-img{
+    display: none !important;
+}
+
+@media screen and (max-width: 1024px){
+       .stage-card .card-header-title{
+           font-size: 0.7em;
+       } 
+}

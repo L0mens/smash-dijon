@@ -3,6 +3,7 @@
 {% block content %}
 <section class="section">
     <h1 class="title is-2">Stages Select</h1>
+    <p class="content">Vous pouvez cliquer sur les stages pour les ban/unban</p>
     <h2 class="title is-3">AT Gaming at Night</h2>
     <h3 class="title is-4">Règle</h3>
         <p class="content">
@@ -10,8 +11,13 @@
             Autres stages : Le gagnant ban 2 maps dans tout le pool
         </p>
     <h3 class="title is-4">Pick</h3>
-        <div class="columns">
-            <div class="column">
+    <p class="content" id="show-stage-button">
+        <label  class="checkbox" >Afficher les images des Stages
+            <input type="checkbox" id="show-stage-check" checked>
+        </label>
+    </p>
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Champs de Bataille
@@ -25,7 +31,7 @@
                     
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Destination Finale
@@ -39,7 +45,7 @@
                     
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Smash Ville
@@ -53,7 +59,7 @@
                     
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Ville & Centre-ville
@@ -67,7 +73,7 @@
                     
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Pokemon Stadium 2 
@@ -83,8 +89,8 @@
             </div>
         </div>
     <h3 class="title is-4">Counter Pick</h3>
-        <div class="columns">
-            <div class="column is-one-fifth">
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-offset-one-fifth-desktop is-one-fifth-desktop is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Traversée de Lylat
@@ -98,10 +104,10 @@
                     
                 </div>
             </div>
-            <div class="column is-one-fifth">
+            <div class="column is-one-fifth-desktop is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
-                        Ligue Pokémon de Kalos
+                        Ligue de Kalos
                     </p>
                     <div class="card-image">
                     <figure class="image is-5by3">
@@ -112,7 +118,7 @@
                     
                 </div>
             </div>
-            <div class="column is-one-fifth">
+            <div class="column is-one-fifth-desktop is-half-mobile">
                 <div class="card stage-card">
                     <p class="card-header-title is-centered">
                         Yoshi's Island
@@ -129,7 +135,7 @@
         </div>
 
     
-    <h2 class="title is-3">Monthly Smash Glitch</h2>
-    <p>Coming soon</p>
+    <!-- <h2 class="title is-3">Monthly Smash Glitch</h2>
+    <p>Coming soon</p> -->
 </section>
 {% endblock %}
