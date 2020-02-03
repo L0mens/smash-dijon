@@ -136,7 +136,6 @@ Array.from(stageCard).forEach((card) =>{
 
 const showStageButton = document.getElementById("show-stage-check");
 const figureStage = Array.from(document.getElementsByClassName("card-image"));
-console.log(figureStage)
 showStageButton.addEventListener('click', function() {
         
     figureStage.forEach((elt) => {
