@@ -254,6 +254,10 @@ def update_with_smashgg(request):
                         print(already_competitor.tag, " va etre remplace par ", entr.team)
                         already_competitor.tag = entr.team
                         already_competitor.save()
+                    elif already_competitor and not entr.team : 
+                        print(already_competitor.tag, " va etre effacé")
+                        already_competitor.tag = None
+                        already_competitor.save()
                     try:
                         comp_elo = Elo.objects.get(competitor=already_competitor, saison=saison)
                         comp_elo.nb_tournament = comp_elo.nb_tournament + 1 
