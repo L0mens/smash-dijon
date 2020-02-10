@@ -22,10 +22,39 @@
         <form  method="post">
             {% csrf_token %}
         <h2 class="title is-4">Etape 2 : Selectionnez personnages et skins</h2>
+        <h3 class="title is-5">Personnage</h3>
+        <div id="stock-select" class="columns is-multiline is-centered">
+            
+            <div class="column is-half" id="nb-char-buttons">
+                <button class="button is-info char-1">Perso 1</button>
+                <button class="button is-success is-outlined char-2">Perso 2</button>
+                <button class="button is-danger is-outlined char-3">Perso 3</button>
+            </div>
+            <div class="column is-12">
+            {% for chara in chara_list %}
+            <img src="/static/img/stockimg/chara_2_{{ chara.icon_static }}_00.png"
+            alt="{{ chara.icon_static }}" height="64px" width="64px" class="stock-chara">
+            {% endfor %}
+            </div>
+        </div>
+        <h3 class="title is-5">Skin</h3>
+        <div id="skin-select" class="columns">
+            <div class="column is-12">
+                {% for nb_skin in nb_skin_range %}
+                <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                    alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock">
+                {% endfor %}
+            </div>
+        </div>
+        
             <hr>
         <h2 class="title is-4">Etape 3 : Validez la demande</h2>
-            <input type="submit" value="Fusionner">
+            <input type="submit" value="Demander">
         </form>
     </section>
 </section>
+{% endblock %}
+{% block addscript %}
+{% load static %}
+<script src="{% static '/js/manage-char.js' %}"></script>
 {% endblock %}

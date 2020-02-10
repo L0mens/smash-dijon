@@ -181,3 +181,21 @@ tr.hidden-row{
            font-size: 0.7em;
        } 
 }
+
+/*
+    Char Select
+*/
+
+#nb-char-buttons{
+    text-align: center;
+}
+
+#stock-select img{
+    height: 50px;
+    width: 50px;
+}
+
+#skin-select img{
+    height: 50px;
+    width: 50px;
+}

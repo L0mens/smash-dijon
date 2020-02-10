@@ -11,7 +11,7 @@ from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys, statistics
 from infos import youtube
-from .models import Competitor,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs
+from .models import Competitor,Character,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -403,6 +403,8 @@ def merge_elo(request):
 def perso_select(request):
     last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
     elo_player_list = Elo.objects.filter(saison=last_saison)
+    chara_list = Character.objects.all().order_by('name_en')
+    nb_skin_range = range(8)
     return render(request, 'ranking/characters.html', locals())
 
 def stage_select(request):
