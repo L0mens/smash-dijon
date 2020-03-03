@@ -1,19 +1,59 @@
 {% extends "base.html" %}
 {% block title %}Site du Power Ranking Dijonnais{% endblock %}
+{% block addcss %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/login.css' %}">
+{% endblock %}
 {% block content %}
-    <h1>Se connecter</h1>
-
-    {% if error %}
-    <p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
-    {% endif %}
+<section class="section">
+    <h1 class="title is-2">Se connecter</h1>
+    <article class="message is-info">
+        <div class="message-body">Les inscriptions seront bientôt disponibles ! Encore un peu de patience !</div>
+    </article>
+    {% for key, error in error_log.items %}
+    <article class="message is-danger">
+        <div class="message-body">{{ error }} </div>
+    </article>
+    {% endfor %}
 
     {% if user.is_authenticated %}
     Vous êtes connecté, {{ user.username }} !
     {% else %}
-    <form method="post" action="./login">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Se connecter" />
-    </form>
+    <div id="login-mod">
+        <div class="form-structor">
+            <form method="post" action="./login">
+            <div class="signup">
+                <h2 class="form-title" id="signup"><span></span>Connexion</h2>
+                <div class="form-holder">
+                    {% csrf_token %}
+                    <input type="text" name="username" class="input" placeholder="Nom d'utilisateur" />
+                    <input type="password" name="password" class="input" placeholder="Mot de passe" />
+                    <input type="hidden" name="connexion">
+                </div>
+                <input type="submit" class="submit-btn" value="Connexion"></input>
+            </div>
+            </form>
+            <form method="post" action="./register">
+                {% csrf_token %}
+            <div class="login slide-up">
+                <div class="center">
+                    <h2 class="form-title" id="login"><span></span>Inscription</h2>
+                    <div class="form-holder">
+                        <input type="hidden" name="inscription">
+                        <input type="text" name="username" class="input" placeholder="Nom d'utilisateur" />
+                        <input type="email" name="email" class="input" placeholder="Email" />
+                        <input type="password" name="password" class="input" placeholder="Mot de passe" />
+                    </div>
+                    <input type="submit" class="submit-btn" value="Inscription" disabled></input>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    
     {% endif %}
+</section>
+{% endblock %}
+{% block addscript %}
+<script src="{% static '/js/login.js' %}"></script>
 {% endblock %}

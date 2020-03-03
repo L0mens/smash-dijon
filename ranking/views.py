@@ -3,9 +3,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
 from django.db.models import Q
+from django.db import IntegrityError
 
 from infos import smashgg as smash
 from infos import key as smashkey
@@ -37,9 +39,29 @@ def home(request):
 def redir_to_home(request):
     return redirect(home)
 
-def connexion(request):
-    error = False
+def register_user(request):
+    # Tant que les inscriptions sont désactiver, laisser cette ligne !!!
+    return render(request, 'ranking/login.html', locals())
+    try:
+        user = User.objects.create_user(request.POST["username"], request.POST["email"], request.POST["password"])
+        login(request, user)  # nous connectons l'utilisateur
+        return redirect(user_page)
+    except IntegrityError as duplicate:
+        error_log = {
+            "already_exist" : "Le nom du compte existe déjà"
+        }
+        return render(request, 'ranking/login.html', locals())
+    except :
+        return redirect(connexion)
 
+def user_page(request):
+    if request.user:
+        return render(request, 'ranking/profile.html', locals())
+    else:
+        return redirect(connexion)
+
+def connexion(request):
+    error_log = []
     if request.method == "POST":
         form = ConnexionForm(request.POST)
         if form.is_valid():
@@ -48,8 +70,11 @@ def connexion(request):
             user = authenticate(username=username, password=password)  # Nous vérifions si les données sont correctes
             if user:  # Si l'objet renvoyé n'est pas None
                 login(request, user)  # nous connectons l'utilisateur
+                return redirect(user_page)
             else: # sinon une erreur sera affichée
-                error = True
+                error_log = {
+                    "error_loggin_in" : "Utilisateur inconnu ou mauvais de mot de passe."
+                }
     else:
         form = ConnexionForm()
 
