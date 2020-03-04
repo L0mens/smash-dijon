@@ -336,6 +336,7 @@ def update_with_smashgg(request):
             
             #Change tournament state
             tn_bd.state = tn_state_calc
+            tn_bd.nb_players = tn.nb_entrant
             tn_bd.save()
             dict_return['state'] = tn_state_calc.state
     else:
