@@ -52,6 +52,9 @@ class Tournament(models.Model):
     place = models.ForeignKey('Tournament_place', on_delete=models.CASCADE, null=True, blank=True)
     association = models.ForeignKey('Association', on_delete=models.CASCADE)
     date = models.DateTimeField(default=datetime.now, blank=True)
+    nb_players = models.IntegerField(default=0)
+    weight = models.IntegerField(default=1)
+
     def __str__(self):
         return self.name
 
@@ -63,6 +66,7 @@ class Tournament_state(models.Model):
 class Tournament_serie(models.Model):
     name = models.CharField(max_length=255)
     logo_url = models.URLField(default="", null=True, blank=True)
+    city = models.ForeignKey('City', on_delete=models.CASCADE, null=True, blank=True)
     is_on_pr = models.BooleanField(default=True, verbose_name="Possède des tournois du Power Ranking")
     def __str__(self):
         return self.name
