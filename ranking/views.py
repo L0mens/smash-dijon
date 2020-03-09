@@ -28,7 +28,7 @@ def home(request):
     for saison in saisons_dijon:
         total_tn = Tournament.objects.filter(saison=saison, state=calculated).count()
         eligible = (total_tn/3)
-        compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible).order_by('elo').reverse()
+        compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible, is_away=False).order_by('elo').reverse()
         nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
     
     tn_coming = Tournament.objects.filter(date__gt=timezone.now()).order_by('date')
@@ -324,6 +324,8 @@ def update_with_smashgg(request):
                     elo_lose.elo = elo_lose.elo + modif[1]
                     elo_win.nb_match_win = elo_win.nb_match_win + 1
                     elo_lose.nb_match_lose = elo_lose.nb_match_lose + 1
+                    elo_win.is_away = False
+                    elo_lose.is_away = False
                     elo_win.save()
                     elo_lose.save()
                     # print(elo_win, elo_lose)

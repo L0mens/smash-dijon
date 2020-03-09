@@ -11,7 +11,7 @@
     </p>
     <div class="columns is-multiline">
     {% for elo_player in elo_last_saison %}
-    <div class="column is-2 player-list-card {% if elo_player.nb_tournament < eligible %} not_eligible {% endif %}">
+    <div class="column is-2 player-list-card {% if elo_player.nb_tournament < eligible or elo_player.is_away %} not_eligible {% endif %}">
             <a href="{% url 'playerlist' %}/{{ elo_player.competitor.name }}">
                 <p>
                     {{ elo_player.competitor.name }}

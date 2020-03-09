@@ -19,7 +19,7 @@
                         <p>Nombre de participation : {{ elo_player.nb_tournament }}</p>
                         <p>
                             Eligible au PR <span title="Il faut avoir participé à {{ eligible }} tournois pour être éligible"><i class="fa fa-question-circle"></i></span> : 
-                            {% if elo_player.nb_tournament < eligible %} <span class="red">Non</span> 
+                            {% if elo_player.nb_tournament < eligible or elo_player.is_away %} <span class="red">Non</span> 
                             {% else %} <span class="green">Oui</span> 
                             {% endif %}
                         </p>

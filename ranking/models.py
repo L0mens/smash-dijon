@@ -37,6 +37,7 @@ class Elo(models.Model):
     second_char_skin = models.IntegerField(default=0)
     third_char = models.ForeignKey('Character', on_delete=models.CASCADE,blank=True, null=True, related_name='third_char')
     third_char_skin = models.IntegerField(default=0)
+    is_away = models.BooleanField(default=False, verbose_name="Ne participe plus")
     saison = models.ForeignKey(Saison, on_delete=models.CASCADE)
     def __str__(self):
         return f"({self.saison.prefix} {self.saison.title} {self.saison.number})   {self.competitor} : {self.elo}"
