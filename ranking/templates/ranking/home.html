@@ -10,7 +10,11 @@
       </div>
       <div class="message-body">
         {% for tournoi in tn_coming %}
-        <p>{{ tournoi.date|date:"d M Y" }}</p>
+        {% if tournoi.state.state != "Reported" %}
+          <p>{{ tournoi.date|date:"d M Y" }}</p>
+        {% else %}
+          <p><b>Date reporté</b></p>
+        {% endif %}
         {% if tournoi.state.state == "Provisoire" %}
         <p title="Un tournoi provisoire n'as pas de smashgg valide et la date n'est pas assuré">{{ tournoi.state.state}} <i class="fa fa-question-circle"></i></p>
         {% endif %}
@@ -43,8 +47,8 @@
       <h1 class="title">
         Classement Smash de Dijon
       </h1>
-      <article class="message is-info">
-          <div class="message-body">Les stages en tournoi sont arrivés !</div>
+      <article class="message is-warning">
+          <div class="message-body">La communauté en pause. Les tournois sont reportés</div>
       </article>
 
       <article class="message is-info">

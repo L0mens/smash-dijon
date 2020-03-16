@@ -21,6 +21,7 @@ class Saison(models.Model):
     prefix = models.CharField(max_length=255, default='Dijon')
     number = models.IntegerField()
     competitor = models.ManyToManyField(Competitor, through='Elo')
+    is_main_saison = models.BooleanField(default=False, verbose_name="Saison Principale")
 
     def __str__(self):
         return f"{self.id}|| {self.prefix} / {self.title} {self.number} ({self.start} => {self.end})"

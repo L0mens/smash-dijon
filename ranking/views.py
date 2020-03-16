@@ -348,7 +348,7 @@ def update_with_smashgg(request):
     return JsonResponse(dict_return)
 
 def player_info(request, player_name):
-    last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
+    last_saison = Saison.objects.filter(is_main_saison=True)[:1]
     calculated = Tournament_state.objects.get(state="Calculé")
     competitor = get_object_or_404(Competitor, name=player_name)
     elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
