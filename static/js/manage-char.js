@@ -6,7 +6,9 @@ const charImg = document.getElementsByClassName("stock-chara");
 
 const confirmSkinButton = document.getElementById("confirm-char")
 
-const saveCharUrl = 'http://' +window.location.host +'/rank/characters/save'
+let saveCharUrl = 'https://' +window.location.host +'/rank/characters/save'
+if (window.location.host == '127.0.0.1:8000') 
+    saveCharUrl = 'http://' +window.location.host +'/rank/characters/save'
 
 let char1, char2, char3, skin1, skin2, skin3 ;
 
