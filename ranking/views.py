@@ -382,7 +382,7 @@ def player_list_by_saison(request, saison_str):
     return render(request, 'ranking/player_list.html', locals())
 
 def player_list_choose_saison(request):
-    all_saison = Saison.objects.filter(annee_de_jeu__gt=0)
+    all_saison = Saison.objects.filter(annee_de_jeu__gt=0).order_by('-annee_de_jeu')
     all_saison_ordered = {}
     for saison in all_saison:
         if all_saison_ordered.get(saison.annee_de_jeu, None):
