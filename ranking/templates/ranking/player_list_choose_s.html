@@ -10,9 +10,11 @@
         {% for saison in all_saison_ordered|get_key:year %}
         
             <div class="column is-4 player-list-card">
-                <p>
-                    <a href="{% url 'playerlist' %}/{{ saison.prefix }}-{{ saison.title }}-{{ saison.number }}">{{ saison.prefix }} {{ saison.title }} {{ saison.number }}</a>
-                </p>
+                <a href="{% url 'playerlist' %}/{{ saison.prefix }}-{{ saison.title }}-{{ saison.number }}">
+                    <p>
+                        {{ saison.prefix }} {{ saison.title }} {{ saison.number }}
+                    </p>
+                </a>
             </div>
         
         {% endfor %}
