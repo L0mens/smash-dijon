@@ -23,6 +23,7 @@ from math import *
 def home(request):
     saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
     calculated = Tournament_state.objects.get(state="Calculé")
+    reported = Tournament_state.objects.get(state="Reported")
     compet_by_saison = {}
     nb_tn_by_saison = {}
     for saison in saisons_dijon:
@@ -32,7 +33,7 @@ def home(request):
         nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
     
     tn_coming = Tournament.objects.filter(date__gt=timezone.now()).order_by('date')
-    tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).order_by('-date')[:3]
+    tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).exclude(state=reported).order_by('-date')[:3]
     return render(request, 'ranking/home.html', locals())
 
 
