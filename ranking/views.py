@@ -353,11 +353,13 @@ def player_info(request, player_name):
     calculated = Tournament_state.objects.get(state="Calculé")
     competitor = get_object_or_404(Competitor, name=player_name)
     elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
+    print(elo_player)
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
     eligible = ceil(total_tn/3)
     elo_test = Elo.objects.get(saison=last_saison, competitor=competitor)
     matches = Matchs.objects.filter(Q(winner=elo_test) | Q(looser=elo_test)).order_by('-tournament__date')
     matches_loose = Matchs.objects.filter(looser=elo_test)
+    print(elo_test)
     worst_en = statistics.get_worst_enemie(matches_loose)
     return render(request, 'ranking/player_info.html', locals())
 
