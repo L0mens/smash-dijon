@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}PR Dijonnais - Players List - Choisir une saison{% endblock %}
+{% block content %}
+{% load ranking_extras %}
+<section class="section">
+    <h1 class="title is-2">Selectionnez une saison</h1>
+    {% for year in all_saison_ordered.keys %}
+        <h2 class="title is-2">Année {{ year }}</h2>
+        <div class="columns is-multiline">
+        {% for saison in all_saison_ordered|get_key:year %}
+        
+            <div class="column is-4 player-list-card">
+                <p>
+                    <a href="{% url 'playerlist' %}/{{ saison.prefix }}-{{ saison.title }}-{{ saison.number }}">{{ saison.prefix }} {{ saison.title }} {{ saison.number }}</a>
+                </p>
+            </div>
+        
+        {% endfor %}
+        </div>
+    {% endfor %}
+
+</section>
+{% endblock %}

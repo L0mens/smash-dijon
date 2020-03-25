@@ -21,6 +21,8 @@ class Saison(models.Model):
     prefix = models.CharField(max_length=255, default='Dijon')
     number = models.IntegerField()
     competitor = models.ManyToManyField(Competitor, through='Elo')
+    annee_de_jeu = models.IntegerField(default=2)
+    eligibilty_percent = models.IntegerField(default=33)
     is_main_saison = models.BooleanField(default=False, verbose_name="Saison Principale")
 
     def __str__(self):

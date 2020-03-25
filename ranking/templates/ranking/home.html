@@ -13,7 +13,7 @@
         {% if tournoi.state.state != "Reported" %}
           <p>{{ tournoi.date|date:"d M Y" }}</p>
         {% else %}
-          <p><b>Date reporté</b></p>
+          <p><b>Date reportée</b></p>
         {% endif %}
         {% if tournoi.state.state == "Provisoire" %}
         <p title="Un tournoi provisoire n'as pas de smashgg valide et la date n'est pas assuré">{{ tournoi.state.state}} <i class="fa fa-question-circle"></i></p>

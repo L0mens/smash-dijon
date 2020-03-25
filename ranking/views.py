@@ -27,7 +27,7 @@ def home(request):
     nb_tn_by_saison = {}
     for saison in saisons_dijon:
         total_tn = Tournament.objects.filter(saison=saison, state=calculated).count()
-        eligible = (total_tn/3)
+        eligible = (total_tn * saison.eligibilty_percent/100)
         compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible, is_away=False).order_by('elo').reverse()
         nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
     
@@ -365,9 +365,33 @@ def player_list(request):
     last_saison = Saison.objects.filter(prefix="Dijon").order_by('-number')[:1]
     elo_last_saison = Elo.objects.filter(saison=last_saison).order_by('elo').reverse()
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
-    eligible = (total_tn/3)
+    eligible = (total_tn * last_saison.eligibilty_percent/100)
             
     return render(request, 'ranking/player_list.html', locals())
+
+def player_list_by_saison(request, saison_str):
+    calculated = Tournament_state.objects.get(state="Calculé")
+    saison_info = saison_str.split('-')
+
+    last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
+    elo_last_saison = Elo.objects.filter(saison=last_saison).order_by('elo').reverse()
+    total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
+    eligible = (total_tn * last_saison.eligibilty_percent/100)
+
+    
+    return render(request, 'ranking/player_list.html', locals())
+
+def player_list_choose_saison(request):
+    all_saison = Saison.objects.filter(annee_de_jeu__gt=0)
+    all_saison_ordered = {}
+    for saison in all_saison:
+        if all_saison_ordered.get(saison.annee_de_jeu, None):
+            all_saison_ordered[saison.annee_de_jeu].append(saison)
+        else:
+            all_saison_ordered[saison.annee_de_jeu] = [saison]
+    print(all_saison_ordered)
+    return render(request, 'ranking/player_list_choose_s.html', locals())
+
 
 def tournament_list(request):
     saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
