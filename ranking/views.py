@@ -465,7 +465,10 @@ def perso_select(request):
 def perso_save(request): 
     datapost = json.loads(request.body)
     elo_p = Elo.objects.get(id=datapost['id_elo'])
-    print(datapost)
+    if datapost['reset']:
+        elo_p.main_char = None
+        elo_p.second_char = None
+        elo_p.third_char = None
     if len(datapost['char']) > 0 :
         try:
             char_un = Character.objects.get(icon_static=datapost['char'][0]['name'])

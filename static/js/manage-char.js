@@ -79,6 +79,9 @@ confirmSkinButton.addEventListener('click', function(e){
     if (char3 != undefined)
         data[2] = {"name" : char3.alt , "skin" : parseInt(skin3.alt)}
     sendData["char"] = data;
+
+    const reset = document.getElementById('reset-check')
+    sendData["reset"] = reset.checked
     fetch(saveCharUrl, {
         method: 'POST',
         body: JSON.stringify(sendData),

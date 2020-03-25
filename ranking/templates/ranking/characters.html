@@ -8,6 +8,9 @@
             <div class="message-body">Travail en cours :D</div>
         </article>
         <form  method="post">
+        <h2 class="title is-4">Etape 0 : Si besoin, remise à 0</h2>
+            <input type="checkbox" id="reset-check"> Valider pour reset vos persos avant de les mettre à jour</input>
+            <hr>
         <h2 class="title is-4">Etape 1 : Choisissez votre compte</h2>
         
             {% csrf_token %}
@@ -34,6 +37,7 @@
             <img src="/static/img/stockimg/chara_2_{{ chara.icon_static }}_00.png"
             alt="{{ chara.icon_static }}" height="64px" width="64px" class="stock-chara">
             {% endfor %}
+            
             </div>
         </div>
         <h3 class="title is-5">Skin Perso 1</h3>
