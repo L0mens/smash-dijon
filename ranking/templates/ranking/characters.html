@@ -16,7 +16,6 @@
                     <option value="{{ player.id }}">{{player.competitor.name}}</option>
                 {% endfor %}
             </select>
-            <input type="submit" value="Selectionner">
             <hr>
         </form>
         <form  method="post">
@@ -37,19 +36,38 @@
             {% endfor %}
             </div>
         </div>
-        <h3 class="title is-5">Skin</h3>
-        <div id="skin-select" class="columns">
-            <div class="column is-12">
+        <h3 class="title is-5">Skin Perso 1</h3>
+        <div id="skin-select-1" class="columns">
+            <div class="column is-12 skin-char-1 hidden">
                 {% for nb_skin in nb_skin_range %}
                 <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
-                    alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock">
+                    alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-1 {% endif %}">
                 {% endfor %}
             </div>
         </div>
-        
+
+        <h3 class="title is-5">Skin Perso 2</h3>
+        <div id="skin-select-2" class="columns">
+            <div class="column is-12 skin-char-2 hidden">
+                {% for nb_skin in nb_skin_range %}
+                <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                    alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-2 {% endif %}">
+                {% endfor %}
+            </div>
+        </div>
+
+        <h3 class="title is-5">Skin Perso 3</h3>
+        <div id="skin-select-3" class="columns">
+            <div class="column is-12 skin-char-3 hidden">
+                {% for nb_skin in nb_skin_range %}
+                <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                    alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-3 {% endif %}">
+                {% endfor %}
+            </div>
+        </div>
             <hr>
         <h2 class="title is-4">Etape 3 : Validez la demande</h2>
-            <input type="submit" value="Demander">
+            <input id="confirm-char" type="submit" value="Demander">
         </form>
     </section>
 </section>

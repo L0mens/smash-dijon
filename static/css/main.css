@@ -199,3 +199,31 @@ tr.hidden-row{
     height: 50px;
     width: 50px;
 }
+
+.char-select-1{
+    border : rgb(30, 92, 224) 4px solid;
+}
+
+.char-select-2{
+    border : rgb(39, 185, 95) 4px solid;
+}
+
+.char-select-3{
+    border : rgb(224, 44, 44) 4px solid;
+}
+
+.skin-selected-1{
+    border : rgb(30, 92, 224) 4px solid;
+}
+
+.skin-selected-2{
+    border : rgb(39, 185, 95) 4px solid;
+}
+
+.skin-selected-3{
+    border : rgb(224, 44, 44) 4px solid;
+}
+
+.hidden{
+    display: none !important;
+}

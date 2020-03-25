@@ -462,6 +462,36 @@ def perso_select(request):
     nb_skin_range = range(8)
     return render(request, 'ranking/characters.html', locals())
 
+def perso_save(request): 
+    datapost = json.loads(request.body)
+    elo_p = Elo.objects.get(id=datapost['id_elo'])
+    print(datapost)
+    if len(datapost['char']) > 0 :
+        try:
+            char_un = Character.objects.get(icon_static=datapost['char'][0]['name'])
+            elo_p.main_char = char_un
+            elo_p.main_char_skin = datapost['char'][0]['skin']
+        except Character.DoesNotExist : 
+            pass
+    if len(datapost['char']) > 1 :
+        try:
+            char_deux = Character.objects.get(icon_static=datapost['char'][1]['name'])
+            elo_p.second_char = char_deux
+            elo_p.second_char_skin = datapost['char'][1]['skin']
+        except Character.DoesNotExist : 
+            pass
+    if len(datapost['char']) > 2 :
+        try:
+            char_trois = Character.objects.get(icon_static=datapost['char'][2]['name'])
+            elo_p.third_char = char_trois
+            elo_p.third_char_skin = datapost['char'][2]['skin']
+        except Character.DoesNotExist : 
+            pass
+
+    elo_p.save()
+    dict_return = datapost
+    return JsonResponse(dict_return)
+
 def stage_select(request):
     return render(request, 'ranking/stage.html', locals())
 

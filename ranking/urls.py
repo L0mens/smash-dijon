@@ -14,6 +14,7 @@ urlpatterns = [
     path('profile', views.user_page, name='profile'),
     path('about', views.about, name='about'),
     path('characters', views.perso_select, name='perso_select'),
+    path('characters/save', views.perso_save, name='perso_save'),
     path('stage', views.stage_select, name='stage_select'),
     path('vod', views.vod, name='vod'),
     path('vod/<str:tn_name_slug>', views.vod_by_tournament, name='vod_by_tn'),
