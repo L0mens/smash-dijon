@@ -2,9 +2,19 @@
 {% block title %}Site du Power Ranking Dijonnais - {{ request.user }}{% endblock %}
 {% block content %}
 <section class="section">
-    <h1 class="title">Bienvenue {{ request.user }}</h1>
+    <h1 class="title is-2">Bienvenue {{ request.user }}</h1>
     <p>Si vous êtes arrivé jusqu'ici, bien joué, vous avez votre compte ;) ! Cependant cette page est encore 
         bien vide ! Elle devrait se remplir bientôt je l'espère !! 
     </p>
+    <section class="section">
+        <h2 class="title is-3">Section Compétiteur</h2>
+        {% if current_user_profil.competitor %}
+            {% include "ranking/profile_compet.html" %}
+        {% else %}
+            <p>Actuellement, votre compte n'est pas lié à un compétiteur </p>
+        {% endif %}
+        
+    </section>
 </section>
 {% endblock %}
+

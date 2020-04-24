@@ -61,7 +61,7 @@ Array.from(charImg).forEach((char) => {
 confirmSkinButton.addEventListener('click', function(e){
     e.preventDefault();
     var elo = document.getElementById("player_elo");
-    var idElo = elo.options[elo.selectedIndex].value;
+    var idElo = elo.value;
     sendData = {
         "id_elo" : idElo
     }

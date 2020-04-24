@@ -60,6 +60,11 @@
             <p class='navbar-item'> Bienvenue {{ user.username }}</p>
         </div>
         <div class="navbar-item">
+          <div class="buttons">
+              <a href="{% url 'profile' %}" class="button is-light">Profil</a>
+          </div>
+        </div>
+        <div class="navbar-item">
             <div class="buttons">
                 <a href="{% url 'logout' %}" class="button is-light">Logout</a>
             </div>

@@ -13,7 +13,7 @@ from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys, statistics
 from infos import youtube
-from .models import Competitor,Character,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs
+from .models import Competitor,Character,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs, Profil
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -57,12 +57,23 @@ def register_user(request):
 
 def user_page(request):
     if request.user:
+        try:
+            current_user_profil = Profil.objects.get(user=request.user)
+            last_saison = Saison.objects.get(is_main_saison=True)
+            elo_profile = Elo.objects.get(competitor=current_user_profil.competitor, saison=last_saison)
+            chara_list = Character.objects.all().order_by('name_en')
+            nb_skin_range = range(8)
+        except Profil.DoesNotExist :
+            current_user_profil = None
         return render(request, 'ranking/profile.html', locals())
     else:
         return redirect(connexion)
 
 def connexion(request):
     error_log = []
+    if request.user.is_authenticated:
+        return redirect(user_page)
+
     if request.method == "POST":
         form = ConnexionForm(request.POST)
         if form.is_valid():

@@ -1,0 +1,67 @@
+<p class="content">Votre compte est lié au compétiteur {{ current_user_profil.competitor }}</p>
+
+<h1 class="title is-4">Selection des Personnages</h1>
+<section class="section">
+
+    <form  method="post">
+    <h2 class="title is-5">Etape 0 : Si besoin, remise à 0</h2>
+        <input type="checkbox" id="reset-check"> Valider pour reset vos persos avant de les mettre à jour</input>
+        <input type="hidden" value="{{ elo_profile.id }}" name="player_elo" id="player_elo">
+        <hr>
+        
+        {% csrf_token %}
+    <h2 class="title is-5">Etape 1 : Selectionnez personnages et skins</h2>
+    <h3 class="title is-6">Personnage</h3>
+    <div id="stock-select" class="columns is-multiline is-centered">
+        
+        <div class="column is-half" id="nb-char-buttons">
+            <button class="button is-info char-1">Perso 1</button>
+            <button class="button is-success is-outlined char-2">Perso 2</button>
+            <button class="button is-danger is-outlined char-3">Perso 3</button>
+        </div>
+        <div class="column is-12">
+        {% for chara in chara_list %}
+        <img src="/static/img/stockimg/chara_2_{{ chara.icon_static }}_00.png"
+        alt="{{ chara.icon_static }}" height="64px" width="64px" class="stock-chara">
+        {% endfor %}
+        
+        </div>
+    </div>
+    <h3 class="title is-6">Skin Perso 1</h3>
+    <div id="skin-select-1" class="columns">
+        <div class="column is-12 skin-char-1 hidden">
+            {% for nb_skin in nb_skin_range %}
+            <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-1 {% endif %}">
+            {% endfor %}
+        </div>
+    </div>
+
+    <h3 class="title is-6">Skin Perso 2</h3>
+    <div id="skin-select-2" class="columns">
+        <div class="column is-12 skin-char-2 hidden">
+            {% for nb_skin in nb_skin_range %}
+            <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-2 {% endif %}">
+            {% endfor %}
+        </div>
+    </div>
+
+    <h3 class="title is-6">Skin Perso 3</h3>
+    <div id="skin-select-3" class="columns">
+        <div class="column is-12 skin-char-3 hidden">
+            {% for nb_skin in nb_skin_range %}
+            <img src="/static/img/stockimg/chara_2_peach_0{{ nb_skin }}.png"
+                alt="{{ nb_skin }}" height="64px" width="64px" class="skin-stock {% if nb_skin == 0 %} skin-selected-3 {% endif %}">
+            {% endfor %}
+        </div>
+    </div>
+        <hr>
+    <h2 class="title is-5">Etape 2 : Validez la demande</h2>
+        <input id="confirm-char" type="submit" value="Demander">
+    </form>
+</section>
+{% block addscript %}
+{% load static %}
+<script src="{% static '/js/manage-char.js' %}"></script>
+{% endblock %}
