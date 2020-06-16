@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Site du Power Ranking Dijonnais - {{ request.user }}{% endblock %}
+{% block addcss %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/user_profile.css' %}">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <h1 class="title is-2">Bienvenue {{ request.user }}</h1>
+    <div id="notif-zone" class="content"></div>
+    <p class="content">Si vous êtes arrivé jusqu'ici, bien joué, vous avez votre compte ;) ! Cependant cette page est encore 
+        bien vide ! Elle devrait se remplir bientôt je l'espère !! 
+    </p>
+    
+    <section class="columns">
+        <aside id="menu-user" class="menu column is-1">
+            <p class="menu-label">
+              General
+            </p>
+            <ul class="menu-list">
+              <li><a class="is-active" href="#user_competitor_section">Profil</a></li>
+              <li><a href="#user_character_section">Perso Select</a></li>
+            </ul>
+            {% if user.is_staff %}
+            <p class="menu-label">
+              Administration
+            </p>
+            <ul class="menu-list">
+              <li><a>Admin</a></li>
+              <li><a>Vods</a></li>
+              <li>
+                <a >Gestion des Tournois</a>
+                <ul>
+                  <li><a>Members</a></li>
+                  <li><a>Plugins</a></li>
+                  <li><a>Add a member</a></li>
+                </ul>
+              </li>
+            </ul>
+            {% endif %}
+          </aside>
+        <section class="column is-11">
+            
+            <section id="user_competitor_section" class="section">
+                
+                {% if current_user_profil.competitor %}
+                    {% include "ranking/users/profile_compet.html" %}
+                {% else %}
+                    <p>Actuellement, votre compte n'est pas lié à un compétiteur </p>
+                {% endif %}
+                
+            </section>
+            
+            <section id="user_character_section" class="section user-section-hidden">
+              {% include "ranking/users/profile_perso.html" %}
+            </section>
+
+        </section>
+    </section>
+    
+   
+</section>
+{% endblock %}
+
+{% block addscript %}
+{% load static %}
+<script src="{% static '/js/user_profile.js' %}"></script>
+<script src="{% static '/js/manage-char.js' %}"></script>
+{% endblock %}

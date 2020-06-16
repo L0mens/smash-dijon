@@ -1,6 +1,5 @@
-<p class="content">Votre compte est lié au compétiteur {{ current_user_profil.competitor }}</p>
 
-<h1 class="title is-4">Selection des Personnages</h1>
+<h1 class="title is-3">Selection des Personnages</h1>
 <section class="section">
 
     <form  method="post">
@@ -61,7 +60,3 @@
         <input id="confirm-char" type="submit" value="Demander">
     </form>
 </section>
-{% block addscript %}
-{% load static %}
-<script src="{% static '/js/manage-char.js' %}"></script>
-{% endblock %}

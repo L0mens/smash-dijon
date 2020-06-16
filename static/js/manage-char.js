@@ -90,5 +90,25 @@ confirmSkinButton.addEventListener('click', function(e){
     .then(data =>{return data.json();})
     .then(res=>{
         console.log(res)
+        
+        let notif = document.createElement("div")
+        notif.classList.add(...["notification","is-primary"])
+        let delButton = document.createElement("button")
+        delButton.classList.add("delete")
+        delButton.addEventListener('click', function(){
+            document.getElementById("notif-zone").children[0].remove()
+        })
+        if(res.char.length > 0)
+            var newContent = document.createTextNode("Changement validé"); 
+        else
+            var newContent = document.createTextNode("Aucun changement enregistré"); 
+        notif.appendChild(delButton)
+        notif.appendChild(newContent)
+        document.getElementById("notif-zone").appendChild(notif)
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
     })
 });

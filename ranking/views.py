@@ -56,7 +56,7 @@ def register_user(request):
         return redirect(connexion)
 
 def user_page(request):
-    if request.user:
+    if request.user and not request.user.is_anonymous:
         try:
             current_user_profil = Profil.objects.get(user=request.user)
             last_saison = Saison.objects.get(is_main_saison=True)
@@ -65,7 +65,7 @@ def user_page(request):
             nb_skin_range = range(8)
         except Profil.DoesNotExist :
             current_user_profil = None
-        return render(request, 'ranking/profile.html', locals())
+        return render(request, 'ranking/users/profile.html', locals())
     else:
         return redirect(connexion)
 
