@@ -46,13 +46,17 @@
                 {% if current_user_profil.competitor %}
                     {% include "ranking/users/profile_compet.html" %}
                 {% else %}
-                    <p>Actuellement, votre compte n'est pas lié à un compétiteur </p>
+                    <p>Actuellement, votre compte n'est pas lié à un compétiteur. Il faut en faire la demande à Lomens sur discord</p>
                 {% endif %}
                 
             </section>
             
             <section id="user_character_section" class="section user-section-hidden">
-              {% include "ranking/users/profile_perso.html" %}
+              {% if elo_profile %}
+                {% include "ranking/users/profile_perso.html" %}
+              {% else %}
+                <p>Vous ne pouvez pas choisir de personnages sans compte compétiteur et avoir participé à un tournoi cette saison</p>
+              {% endif %}
             </section>
 
         </section>

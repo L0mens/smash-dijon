@@ -60,7 +60,11 @@ def user_page(request):
         try:
             current_user_profil = Profil.objects.get(user=request.user)
             last_saison = Saison.objects.get(is_main_saison=True)
-            elo_profile = Elo.objects.get(competitor=current_user_profil.competitor, saison=last_saison)
+            try:
+                elo_profile = Elo.objects.get(competitor=current_user_profil.competitor, saison=last_saison)
+            except Elo.DoesNotExist:
+                elo_profile = None
+            
             chara_list = Character.objects.all().order_by('name_en')
             nb_skin_range = range(8)
         except Profil.DoesNotExist :
