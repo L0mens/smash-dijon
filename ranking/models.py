@@ -23,10 +23,15 @@ class Saison(models.Model):
     competitor = models.ManyToManyField(Competitor, through='Elo')
     annee_de_jeu = models.IntegerField(default=2)
     eligibilty_percent = models.IntegerField(default=33)
+    split_name = models.CharField(max_length=255, default="", blank=True,null=True)
+    split_number = models.IntegerField(null=True)
+    next_saison = models.ForeignKey('Saison', on_delete=models.CASCADE, blank=True, null=True, related_name="prochaine_saison")
+    previous_saison = models.ForeignKey('Saison', on_delete=models.CASCADE, blank=True, null=True, related_name="precedante_saison")
     is_main_saison = models.BooleanField(default=False, verbose_name="Saison Principale")
+    hidden =  models.BooleanField(default=False, verbose_name="Cacher la saison")
 
     def __str__(self):
-        return f"{self.id}|| {self.prefix} / {self.title} {self.number} ({self.start} => {self.end})"
+        return f"{self.id}|| {self.prefix} / {self.title} {self.number} / {self.split_name} ({self.start} => {self.end})"
 
 class Elo(models.Model):
     elo = models.IntegerField()

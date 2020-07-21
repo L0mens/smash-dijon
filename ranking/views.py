@@ -21,7 +21,7 @@ from math import *
 
 
 def home(request):
-    saisons_dijon = Saison.objects.filter(prefix="Dijon").order_by('-number')
+    saisons_dijon = Saison.objects.filter(prefix="Dijon", hidden=False).order_by('-number')
     calculated = Tournament_state.objects.get(state="Calculé")
     reported = Tournament_state.objects.get(state="Reported")
     compet_by_saison = {}

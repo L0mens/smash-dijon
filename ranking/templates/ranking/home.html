@@ -48,7 +48,7 @@
         Classement Smash de Dijon
       </h1>
       <article class="message is-warning">
-          <div class="message-body">La communauté en pause. Les tournois sont reportés</div>
+          <div class="message-body">Pause estivale ! On prépare la saison 3 ;) </div>
       </article>
 
       <article class="message is-info">
@@ -60,7 +60,7 @@
           {% for saison in saisons_dijon %}
           <li {% if forloop.counter == 1 %} class="is-active" {% endif %}>
             <a>
-              <span>{{ saison.title }} {{ saison.number }}</span>
+              <span>{{ saison.title }} {{ saison.number }}{% if saison.split_number %}.{{ saison.split_number }}{% endif %}</span>
             </a>
           </li>
           {% endfor %}

@@ -12,7 +12,7 @@
             <div class="column is-4 player-list-card">
                 <a href="{% url 'playerlist' %}/{{ saison.prefix }}-{{ saison.title }}-{{ saison.number }}">
                     <p>
-                        {{ saison.prefix }} {{ saison.title }} {{ saison.number }}
+                        {{ saison.prefix }} {{ saison.title }} {{ saison.number }} {% if saison.split_name %}| {{ saison.split_name }} {% endif %}
                     </p>
                 </a>
             </div>
