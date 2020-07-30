@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from ranking import views
-
+# handler404 = 'ranking.views.handler404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('rank/', include('ranking.urls')),

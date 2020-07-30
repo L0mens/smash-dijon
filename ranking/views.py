@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, render_to_response
 from django.utils import timezone
+from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.models import User
@@ -39,6 +40,12 @@ def home(request):
 
 def redir_to_home(request):
     return redirect(home)
+
+def handler404(request, *args, **argv):
+    response = render_to_response('error_404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
 
 def register_user(request):
     # Tant que les inscriptions sont désactiver, laisser cette ligne !!!
