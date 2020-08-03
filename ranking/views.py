@@ -400,7 +400,7 @@ def player_list_by_saison(request, saison_str):
     saison_info = saison_str.split('-')
 
     last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
-    elo_last_saison = Elo.objects.filter(saison=last_saison).order_by('elo').reverse()
+    elo_last_saison = Elo.objects.filter(saison=last_saison, nb_tournament__gt=0).order_by('elo').reverse()
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
     eligible = (total_tn * last_saison.eligibilty_percent/100)
 
@@ -584,3 +584,21 @@ def discord_pr_player_info(request, player_name):
         }
     
     return JsonResponse(dict_return)
+
+@permission_required('ranking.add_tournament')
+def next_saison_rescale(request):
+    
+    def scale_func(elo_value):
+        return round(elo_value * 0.3 + 1010)
+
+    saisons = Saison.objects.all()
+
+    if request.method == "POST":
+        prev_saison = Saison.objects.get(id=request.POST.get('saison_precedente'))
+        next_saison = Saison.objects.get(id=request.POST.get('saison_next'))
+        prev_elos = Elo.objects.filter(saison=prev_saison)
+        print(next_saison)
+        for elo in prev_elos:
+            new_elo = Elo(competitor=elo.competitor, saison=next_saison, elo=scale_func(elo.elo), nb_tournament=0)
+            new_elo.save()
+    return render(request, 'ranking/saison_rescale.html', locals())

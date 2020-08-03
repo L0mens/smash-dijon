@@ -10,6 +10,7 @@ urlpatterns = [
     path('revert-tournament', views.revert_tournament, name='revert-tournament'),
     path('tournaments-manage', views.tournament_manage, name='tnmanage'),
     path('vods-admin', views.vods_manage, name='vodsmanage'),
+    path('saison-scale', views.next_saison_rescale, name='saisonscale'),
     path('register', views.register_user, name='register_user'),
     path('login', views.connexion, name='login'),
     path('logout', views.deconnexion, name='logout'),

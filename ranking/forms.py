@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tournament, Tournament_state
+from .models import Tournament, Tournament_state, Saison
 
 class TounrmamentAddForm(forms.ModelForm):
     class Meta:
