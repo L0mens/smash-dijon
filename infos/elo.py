@@ -6,6 +6,7 @@ class Elo_Sytem():
         self.k = 40
         self.k_winner = 40
         self.k_looser = 40
+        self.elo_start = 1400
 
     def calc(self, elo_winner, elo_loser, type_match):
         elodif = self.elo_dif(elo_winner, elo_loser)

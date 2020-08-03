@@ -257,6 +257,7 @@ def reset_state_tournament(request):
 
 def update_with_smashgg(request):
     gg = smash.Smashgg(smashkey.key)
+    elo_system = elosys.Elo_Sytem()
     #Tournament management
     datapost = json.loads(request.body)
     dict_return = {
@@ -313,7 +314,7 @@ def update_with_smashgg(request):
                         comp_elo.save()
                     except Elo.DoesNotExist:                        
                         olds_elos = Elo.objects.filter(competitor=already_competitor)
-                        new_elo = Elo(competitor=already_competitor, saison=saison, elo=1500, nb_tournament=1)
+                        new_elo = Elo(competitor=already_competitor, saison=saison, elo=elo_system.elo_start, nb_tournament=1)
                         #Trouver les anciens persos
                         if olds_elos:
                             for old in olds_elos:
@@ -332,7 +333,7 @@ def update_with_smashgg(request):
 
             #Elo management
 
-            elo_system = elosys.Elo_Sytem()
+            
             set_with_problem = []
             for match in tn.sets[0]['sorted_sets']:
                 try:
@@ -597,7 +598,6 @@ def next_saison_rescale(request):
         prev_saison = Saison.objects.get(id=request.POST.get('saison_precedente'))
         next_saison = Saison.objects.get(id=request.POST.get('saison_next'))
         prev_elos = Elo.objects.filter(saison=prev_saison)
-        print(next_saison)
         for elo in prev_elos:
             new_elo = Elo(competitor=elo.competitor, saison=next_saison, elo=scale_func(elo.elo), nb_tournament=0)
             new_elo.save()
