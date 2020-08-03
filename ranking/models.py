@@ -147,3 +147,12 @@ class Vodplaylist(models.Model):
     def __str__(self):
         return f"{self.youtube_id} {self.name}"
 
+class MessageInfo(models.Model):
+    STATUS_CHOICE = [("active", "Active"), ("archive", "Archiver")]
+    TYPE_CHOICE = [("info", "Information"), ("warning", "Attention"), ("error", "Erreur")]
+    text = models.CharField(max_length=255, default="")
+    status = models.CharField(max_length=255, choices=STATUS_CHOICE)
+    message_type = models.CharField(max_length=255, choices=TYPE_CHOICE)
+
+    def __str__(self):
+        return f"({self.status} | {self.message_type}) {self.text}"

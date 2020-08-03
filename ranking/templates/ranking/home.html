@@ -47,13 +47,12 @@
       <h1 class="title">
         Classement Smash de Dijon
       </h1>
-      <article class="message is-warning">
-          <div class="message-body">Pause estivale ! On prépare la saison 3 ;) </div>
+      {% for message in messages_info %}
+      <article class="message is-{{ message.message_type }}">
+          <div class="message-body">{{ message.text }} </div>
       </article>
-
-      <article class="message is-info">
-        <div class="message-body">Si vous changez de pseudo smashgg, veuillez prévenir Lomens pour éviter les erreurs de calcul.</div>
-    </article>
+      {% endfor %}
+      
       
       <div id="saison-tabs" class="tabs is-centered is-boxed is-medium">
         <ul>

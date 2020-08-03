@@ -14,7 +14,7 @@ from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys, statistics
 from infos import youtube
-from .models import Competitor,Character,Elo,Saison,Tournament,Tournament_state, Vod, Vodplaylist, Matchs, Profil
+from .models import Competitor,Character,Elo,Saison,MessageInfo,Tournament,Tournament_state, Vod, Vodplaylist, Matchs, Profil
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -25,6 +25,7 @@ def home(request):
     saisons_dijon = Saison.objects.filter(prefix="Dijon", hidden=False).order_by('-number')
     calculated = Tournament_state.objects.get(state="Calculé")
     reported = Tournament_state.objects.get(state="Reported")
+    messages_info = MessageInfo.objects.filter(status="active")
     compet_by_saison = {}
     nb_tn_by_saison = {}
     for saison in saisons_dijon:
