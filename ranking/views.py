@@ -63,6 +63,9 @@ def register_user(request):
     except :
         return redirect(connexion)
 
+def stream(request):
+    return render(request, 'ranking/stream.html', locals())
+
 def user_page(request):
     if request.user and not request.user.is_anonymous:
         try:
