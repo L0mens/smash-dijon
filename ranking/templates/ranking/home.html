@@ -59,7 +59,7 @@
           {% for saison in saisons_dijon %}
           <li {% if forloop.counter == 1 %} class="is-active" {% endif %}>
             <a>
-              <span>{{ saison.title }} {{ saison.number }}{% if saison.split_number %}.{{ saison.split_number }}{% endif %}</span>
+              <span>{{ saison.title }} {{ saison.number }}.{{ saison.split_number }}</span>
             </a>
           </li>
           {% endfor %}

@@ -31,8 +31,8 @@ def home(request):
     for saison in saisons_dijon:
         total_tn = Tournament.objects.filter(saison=saison, state=calculated).count()
         eligible = (total_tn * saison.eligibilty_percent/100)
-        compet_by_saison[f"{saison.title}{saison.number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible, is_away=False).order_by('elo').reverse()
-        nb_tn_by_saison[f"{saison.title}{saison.number}"] = total_tn
+        compet_by_saison[f"{saison.title}{saison.number}{saison.split_number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible, is_away=False).order_by('elo').reverse()
+        nb_tn_by_saison[f"{saison.title}{saison.number}{saison.split_number}"] = total_tn
     
     tn_coming = Tournament.objects.filter(date__gt=timezone.now()).order_by('date')
     tn_finish = Tournament.objects.filter(date__lt=timezone.now(), saison=saisons_dijon[0]).exclude(state=reported).order_by('-date')[:3]
@@ -600,5 +600,11 @@ def next_saison_rescale(request):
         prev_elos = Elo.objects.filter(saison=prev_saison)
         for elo in prev_elos:
             new_elo = Elo(competitor=elo.competitor, saison=next_saison, elo=scale_func(elo.elo), nb_tournament=0)
+            new_elo.main_char = elo.main_char
+            new_elo.main_char_skin = elo.main_char_skin
+            new_elo.second_char = elo.second_char
+            new_elo.second_char_skin = elo.second_char_skin
+            new_elo.third_char = elo.third_char
+            new_elo.third_char_skin = elo.third_char_skin
             new_elo.save()
     return render(request, 'ranking/saison_rescale.html', locals())

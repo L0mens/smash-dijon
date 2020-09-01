@@ -119,6 +119,7 @@ if(saisontabs){
                 saisontabs.getElementsByClassName('is-active')[0].classList.toggle('is-active')
                 this.classList.toggle('is-active')
                 var idTableRank = ("table-rank-"+this.children[0].children[0].textContent.replace(' ', '').toLowerCase())
+                idTableRank = idTableRank.replace('.', '')
                 Array.from(document.getElementsByClassName('table-rank')).forEach(tableRank =>{
                     if(!tableRank.parentElement.classList.contains('not-display'))
                         tableRank.parentElement.classList.toggle('not-display')
