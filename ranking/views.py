@@ -14,7 +14,7 @@ from infos import smashgg as smash
 from infos import key as smashkey
 from infos import elo as elosys, statistics
 from infos import youtube
-from .models import Competitor,Character,Elo,Saison,MessageInfo,Tournament,Tournament_state, Vod, Vodplaylist, Matchs, Profil
+from .models import Competitor,Character,Elo,Saison,MessageInfo,Tournament,Tournament_state, SiteOptions, Vod, Vodplaylist, Matchs, Profil
 from .forms import TounrmamentAddForm, ConnexionForm
 
 import json
@@ -49,8 +49,10 @@ def handler404(request, *args, **argv):
     return response
 
 def register_user(request):
-    # Tant que les inscriptions sont désactiver, laisser cette ligne !!!
-    return render(request, 'ranking/login.html', locals())
+    register = SiteOptions.objects.filter(is_option_active=True).first()
+    is_register_open = register.is_inscription_open
+    if not is_register_open:
+        return render(request, 'ranking/login.html', locals())
     try:
         user = User.objects.create_user(request.POST["username"], request.POST["email"], request.POST["password"])
         login(request, user)  # nous connectons l'utilisateur
@@ -329,7 +331,7 @@ def update_with_smashgg(request):
                 except Competitor.DoesNotExist:
                     new = Competitor(name=entr.name, tag=entr.team)
                     new.save()
-                    new_elo = Elo(competitor=new, saison=saison, elo=1500, nb_tournament=1)
+                    new_elo = Elo(competitor=new, saison=saison, elo=elo_system.elo_start, nb_tournament=1)
                     new_elo.save()
                     print(f"Inscription de {new_elo.competitor} dans {saison.prefix} {saison.title} {saison.number} ")
                     inscription.append(entr)

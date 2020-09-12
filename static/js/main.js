@@ -20,14 +20,10 @@ function getCookie(c_name)
  */
 const optionsAdd = document.getElementsByClassName('option-add')
 const optionsEdit = document.getElementsByClassName('option-edit')
-if (window.location.host == '127.0.0.1:8000') {
-    const url = 'http://' +window.location.host +'/rank/calculate-tournament'
-    const editTnUrl = 'http://' +window.location.host +'/rank/reset-tournament'
-}
-else{
-    const url = 'https://' +window.location.host +'/rank/calculate-tournament'
-    const editTnUrl = 'https://' +window.location.host +'/rank/reset-tournament'
-}
+
+const url = 'http://' +window.location.host +'/rank/calculate-tournament'
+const editTnUrl = 'http://' +window.location.host +'/rank/reset-tournament'
+
 const hideAddTnForm = document.getElementById('hide-form-add-tn')
 console.log(hideAddTnForm)
 if(hideAddTnForm){

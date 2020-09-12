@@ -35,6 +35,7 @@ class Saison(models.Model):
 
 class Elo(models.Model):
     elo = models.IntegerField()
+    elo_initial = models.IntegerField(default=1400)
     nb_tournament = models.IntegerField(default=0)
     nb_match_win = models.IntegerField(default=0)
     nb_match_lose = models.IntegerField(default=0)
@@ -156,3 +157,11 @@ class MessageInfo(models.Model):
 
     def __str__(self):
         return f"({self.status} | {self.message_type}) {self.text}"
+
+class SiteOptions(models.Model):
+    option_name = models.CharField(max_length=255)
+    is_option_active = models.BooleanField(default=False, verbose_name="Système Actif")
+    is_inscription_open = models.BooleanField(default=False, verbose_name="Inscriptions Ouverte")
+    
+    def __str__(self):
+        return f"{self.option_name} | Active : {self.is_option_active}"

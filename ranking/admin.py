@@ -3,7 +3,7 @@ from django.forms import TextInput
 from django.db import models
 
 from .models import (Association, Character, City, Competitor, Elo, Matchs, MessageInfo,
-                     Profil, Saison, Tournament, Tournament_place,
+                     Profil, Saison, Tournament, Tournament_place, SiteOptions,
                      Tournament_serie, Tournament_state, Vod, Vodplaylist)
 
 class MessageModelAdmin(admin.ModelAdmin):
@@ -28,3 +28,4 @@ admin.site.register(Vodplaylist)
 admin.site.register(Tournament_state)
 admin.site.register(Tournament_serie)
 admin.site.register(Tournament_place)
+admin.site.register(SiteOptions)
