@@ -4,7 +4,9 @@
 <section class="section">
         <h1 class="title is-2">Page de {{ player_name }}</h1>
         <p class="content"> <a href="{% url 'playerlist' %}">Retour à la liste</a></p>
-        <h2 class="title is-3"> Saison en cours</h2>
+        <h2 class="title is-3"> 
+            {{ last_saison.prefix }} {{ last_saison.title }} {{ last_saison.number }} {% if last_saison.split_name %}| {{ last_saison.split_name }} {% endif %}
+        </h2>
         <div class="columns">
             <section class="section column is-3">
                 <article class="message is-dark">
@@ -48,9 +50,9 @@
                                 <td>{{ match.tournament.name }}</td>
                                 <td class="center-td-pl-info">{{ match.roundText }}</td>
                                 {% if match.winner.competitor.name != player_name %}
-                                    <td><a href="{% url 'playerinfo' player_name=match.winner.competitor.name %}"><b class="red">{{ match.winner.competitor.name }}</b></a></td>
+                                    <td><a href="{% url 'playerinfo' saison_str=saison_str player_name=match.winner.competitor.name %}"><b class="red">{{ match.winner.competitor.name }}</b></a></td>
                                     {% else %}
-                                    <td><a href="{% url 'playerinfo' player_name=match.looser.competitor.name %}"><b class="green">{{ match.looser.competitor.name }}</b></a></td>
+                                    <td><a href="{% url 'playerinfo' saison_str=saison_str player_name=match.looser.competitor.name %}"><b class="green">{{ match.looser.competitor.name }}</b></a></td>
                                 {% endif %}
                                 {% if 'DQ' in match.score %}
                                     <td class="center-td-pl-info">DQ</td>

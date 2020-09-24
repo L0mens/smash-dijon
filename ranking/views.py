@@ -377,8 +377,11 @@ def update_with_smashgg(request):
     # dict_return['pseudo_inscrits'] = inscription
     return JsonResponse(dict_return)
 
-def player_info(request, player_name):
-    last_saison = Saison.objects.filter(is_main_saison=True)[:1]
+def player_info(request, saison_str, player_name):
+    # last_saison = Saison.objects.filter(is_main_saison=True)[:1]
+    saison_info = saison_str.split('-')
+
+    last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
     calculated = Tournament_state.objects.get(state="Calculé")
     competitor = get_object_or_404(Competitor, name=player_name)
     elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
