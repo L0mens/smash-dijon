@@ -33,6 +33,8 @@ class Saison(models.Model):
     def __str__(self):
         return f"{self.id}|| {self.prefix} / {self.title} {self.number} / {self.split_name} ({self.start} => {self.end})"
 
+    def to_url(self):
+        return f"{self.prefix}-{self.title}-{self.number}-{self.split_number}"
 class Elo(models.Model):
     elo = models.IntegerField()
     elo_initial = models.IntegerField(default=1400)

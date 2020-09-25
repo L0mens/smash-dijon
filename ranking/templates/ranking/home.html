@@ -95,7 +95,7 @@
           <tr>
             {% endif %}
             <td>{{ forloop.counter }}</td>
-            <td><a href="{% url 'playerinfo' player_name=info.competitor.name %}">{{ info.competitor }}</a></td>
+            <td><a href="{% url 'playerinfo' saison_str=info.saison.to_url player_name=info.competitor.name %}">{{ info.competitor }}</a></td>
             <td>
               {% if info.main_char %}
               <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_0{{ info.main_char_skin}}.png"

@@ -381,7 +381,10 @@ def player_info(request, saison_str, player_name):
     # last_saison = Saison.objects.filter(is_main_saison=True)[:1]
     saison_info = saison_str.split('-')
 
-    last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
+    if len(saison_info) > 3:
+        last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2], split_number=saison_info[3])
+    else:
+        last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
     calculated = Tournament_state.objects.get(state="Calculé")
     competitor = get_object_or_404(Competitor, name=player_name)
     elo_player = Elo.objects.get(saison=last_saison, competitor=competitor)
@@ -407,8 +410,10 @@ def player_list(request):
 def player_list_by_saison(request, saison_str):
     calculated = Tournament_state.objects.get(state="Calculé")
     saison_info = saison_str.split('-')
-
-    last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
+    if len(saison_info) > 3:
+        last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2], split_number=saison_info[3])
+    else:
+        last_saison = get_object_or_404(Saison,prefix=saison_info[0], title=saison_info[1], number=saison_info[2])
     elo_last_saison = Elo.objects.filter(saison=last_saison, nb_tournament__gt=0).order_by('elo').reverse()
     total_tn = Tournament.objects.filter(saison=last_saison, state=calculated).count()
     eligible = (total_tn * last_saison.eligibilty_percent/100)
