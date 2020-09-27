@@ -48,6 +48,21 @@ def handler404(request, *args, **argv):
     response.status_code = 404
     return response
 
+def roa_main(request):
+    saisons_dijon = Saison.objects.filter(prefix="RoA", hidden=False).order_by('-number')
+    calculated = Tournament_state.objects.get(state="Calculé")
+    reported = Tournament_state.objects.get(state="Reported")
+    messages_info = MessageInfo.objects.filter(status="active")
+    compet_by_saison = {}
+    nb_tn_by_saison = {}
+    for saison in saisons_dijon:
+        total_tn = Tournament.objects.filter(saison=saison, state=calculated).count()
+        eligible = (total_tn * saison.eligibilty_percent/100)
+        compet_by_saison[f"{saison.title}{saison.number}{saison.split_number}"] = Elo.objects.filter(saison=saison, nb_tournament__gte=eligible, is_away=False).order_by('elo').reverse()
+        nb_tn_by_saison[f"{saison.title}{saison.number}{saison.split_number}"] = total_tn
+    
+    return render(request, 'ranking/roa.html', locals())
+
 def register_user(request):
     register = SiteOptions.objects.filter(is_option_active=True).first()
     is_register_open = register.is_inscription_open
@@ -274,7 +289,7 @@ def update_with_smashgg(request):
         "error" : None
     }
     try:
-        tn_bd = Tournament.objects.get(slug=datapost["tn_slug"])
+        tn_bd = Tournament.objects.get(slug=datapost["tn_slug"], event=datapost["event"])
     except Tournament.DoesNotExist:
         dict_return['error'] : "Le tournoi n'existe pas"
     tn_state_calc = Tournament_state.objects.get(state='Calculé')

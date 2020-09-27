@@ -54,8 +54,8 @@ class Elo(models.Model):
         return f"({self.saison.prefix} {self.saison.title} {self.saison.number})   {self.competitor} : {self.elo}"
 
 class Tournament(models.Model):
-    name = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
+    slug = models.CharField(max_length=255)
     event = models.CharField(max_length=255)
     event_slug = models.CharField(max_length=255, null=True)
     state = models.ForeignKey('Tournament_state', on_delete=models.CASCADE)

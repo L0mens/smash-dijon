@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Le smash dijonnais - Power Ranking{% endblock %}
+{% block content %}
+{% load ranking_extras %}
+<section class="section column is-12">
+    <div class="container">
+      <h1 class="title">
+        Classement Rival of Aether de Dijon
+      </h1>
+           
+      
+      <div id="saison-tabs" class="tabs is-centered is-boxed is-medium">
+        <ul>
+          {% for saison in saisons_dijon %}
+          <li {% if forloop.counter == 1 %} class="is-active" {% endif %}>
+            <a>
+              <span>{{ saison.title }} {{ saison.number }}.{{ saison.split_number }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% for key,ranking in compet_by_saison.items %}
+    <div class="table-container {% if forloop.counter > 1 %} not-display{% endif %}">
+      <table id="table-rank-{{ key|lower }}" class="table table-rank is-fullwidth ">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Pseudo</th>
+            <th>Persos</th>
+            <th>Tournois</th>
+            <th>Participation</th>
+            <th>Matchs joués</th>
+            <th>Gagné</th>
+            <th>Perdu</th>
+            <th>Elo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for info in ranking %}
+          
+          {% if forloop.counter == 1 %}
+          <tr class="first-rank">
+            {% elif forloop.counter == 2 %}
+          <tr class="second-rank">
+            {% elif forloop.counter == 3 %}
+          <tr class="third-rank">
+            {% else %}
+          <tr>
+            {% endif %}
+            <td>{{ forloop.counter }}</td>
+            <td><a href="{% url 'playerinfo' saison_str=info.saison.to_url player_name=info.competitor.name %}">{{ info.competitor }}</a></td>
+            <td>
+              {% if info.main_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.main_char.icon_static }}_0{{ info.main_char_skin}}.png"
+                alt="{{ info.main_char.name_en }}">
+              {% endif %}
+              {% if info.second_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.second_char.icon_static }}_0{{ info.second_char_skin}}.png"
+                alt="{{ info.second_char.name_en }}">
+              {% endif %}
+              {% if info.third_char %}
+              <img src="/static/img/stockimg/chara_2_{{ info.third_char.icon_static }}_0{{ info.third_char_skin}}.png"
+                alt="{{ info.third_char.name_en }}">
+              {% endif %}
+            </td>
+            <td>{{ info.nb_tournament }}</td>
+            <td><progress class="progress is-success"
+                value="{% divide_percent info.nb_tournament nb_tn_by_saison|get_key:key  %}" max="100"></progress></td>
+            <td>{{ info.nb_match_win|add:info.nb_match_lose }}</td>
+            <td>{{ info.nb_match_win }}</td>
+            <td>{{ info.nb_match_lose }}</td>
+            <td>{{ info.elo }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endfor %}
+  </section>
+{% endblock %}
