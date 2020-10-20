@@ -66,6 +66,7 @@ class Tournament(models.Model):
     date = models.DateTimeField(default=datetime.now, blank=True)
     nb_players = models.IntegerField(default=0)
     weight = models.IntegerField(default=1)
+    game = models.ForeignKey('Game', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
@@ -130,6 +131,7 @@ class Character(models.Model):
     name_en = models.CharField(max_length=255)
     icon_static = models.CharField(max_length=255)
     splash_url = models.URLField(default="", null=True, blank=True)
+    game = models.ForeignKey('Game', on_delete=models.CASCADE, null=True)
     def __str__(self):
         return f"{self.name_fr}"
 
@@ -167,3 +169,10 @@ class SiteOptions(models.Model):
     
     def __str__(self):
         return f"{self.option_name} | Active : {self.is_option_active}"
+
+
+class Game(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.name}"

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.forms import TextInput
 from django.db import models
 
-from .models import (Association, Character, City, Competitor, Elo, Matchs, MessageInfo,
+from .models import (Association, Character, City, Competitor, Elo, Game, Matchs, MessageInfo,
                      Profil, Saison, Tournament, Tournament_place, SiteOptions,
                      Tournament_serie, Tournament_state, Vod, Vodplaylist)
 
@@ -18,6 +18,7 @@ admin.site.register(Tournament)
 admin.site.register(Matchs)
 admin.site.register(Saison)
 admin.site.register(Elo)
+admin.site.register(Game)
 admin.site.register(City)
 admin.site.register(Profil)
 admin.site.register(Association)
