@@ -12,7 +12,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$150000$NIKqfcX7LDsT$DHgzvZGXCQ4YrR39P1woGTchYdrx/ShaH8+AP2PX/4E=",
-        "last_login": "2020-09-12T10:44:41.300",
+        "last_login": "2020-10-19T19:36:59.058",
         "is_superuser": true,
         "username": "lomens",
         "first_name": "",
@@ -135,6 +135,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "pjc4qng1fzn1pd1d947k8jri10unlv81",
+    "fields": {
+        "session_data": "MThhZDdjODM2YmUzNmQ0MTYxM2RlNTg4OGQzMWY4YTg1MDY5NWFkZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkYTRhNTUyOTZjNjQ1YmM0YWM3OGEyMTYzMmZkMjNlNjczNjg3N2Y3In0=",
+        "expire_date": "2020-10-23T18:19:53.471"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "q8dqj7hsckq5bhhcjw2pi4p7ut5tq2ox",
     "fields": {
         "session_data": "Yzc5MTZjMzViYjNmYmM2NjE3YzcwYzQyNWI2OTU4OTc1YWY5MDUwMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkYTRhNTUyOTZjNjQ1YmM0YWM3OGEyMTYzMmZkMjNlNjczNjg3N2Y3Iiwic3RhdGUiOiJ3TUFGTWdNMEljd1ZwakxhQjRsRFVVZUJiWlk5aHEiLCJjcmVkZW50aWFscyI6eyJ0b2tlbiI6InlhMjkuSWwtd0J4b2JmVTZ3X3otWml5VUJBUG9CQ25DTW4zelFYQWU2TmZRdUE5SlNCc0swNFRWakxCQ2ZHNnZmWjRKSnNiOHR5cmRrRV96SkkwVmFfZXdyVFg0Z2JCcnpLNUFvdTBQa01YVUhXVmp6SEVJZ3RwZDZ5eFpMYTJEank4RXBHQSIsInJlZnJlc2hfdG9rZW4iOiIxLy8wM3ZTaFA1R1A1eXpRQ2dZSUFSQUFHQU1TTndGLUw5SXJEdHpmV0RyUnVZaVhtQUd5cWstSm1QSlNxbktMRlc4VGVROUhXYWJsTFdKNFFxWDR6WTQ0WG9VLS1pT2hEY0lYTk80IiwidG9rZW5fdXJpIjoiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLCJjbGllbnRfaWQiOiI2MzAyMzc2MjI1MDgtb3VhaTFjbmhhMzg5bGo4NGtmYXFtdWk0dmpsZTY1OGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiNlViVHpWY0RWN2pUald2ZTNCNk0tWnp4Iiwic2NvcGVzIjpbImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgveW91dHViZS5mb3JjZS1zc2wiXX19",
@@ -155,6 +163,14 @@
     "fields": {
         "session_data": "N2FiNGE2NjgxZjc4NTEzM2RmNzg3YjQ2ZmNlZDAxNzI2YTU5MzQyMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkYTRhNTUyOTZjNjQ1YmM0YWM3OGEyMTYzMmZkMjNlNjczNjg3N2Y3Iiwic3RhdGUiOiI5U2FwdUUxeFZDb0tEMUJETU1qdXljVjZtSXBOOVkiLCJjcmVkZW50aWFscyI6eyJ0b2tlbiI6InlhMjkuSWwtMEI1MlBUOTl2aVd1ckdfdmtid2tiWmpTVVRLUWh0Q3dLckVIaS1YUXRudTdVYzBFTUJ2ZWtNc3Q5cmFtbjNLaU0yclgzd1diR0E4Q0NrZEZ2X1hkVGVqMnExaGh0NGNISmFqRGZDYWhJbHhNbzJRYWk3WjBqaHE0S01aSXdvUSIsInJlZnJlc2hfdG9rZW4iOiIxLy8wM2VHeDI1RE5sMEFUQ2dZSUFSQUFHQU1TTndGLUw5SXIxUWRjRU9LRWdjYjVwWS1URWcyLW1EVFdxdTJ6X1BTMXFnSTBIUFZnTHkyd2p2TlpsV2hRR1dmb2FSeThoNmt2TU5FIiwidG9rZW5fdXJpIjoiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLCJjbGllbnRfaWQiOiI2MzAyMzc2MjI1MDgtb3VhaTFjbmhhMzg5bGo4NGtmYXFtdWk0dmpsZTY1OGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiNlViVHpWY0RWN2pUald2ZTNCNk0tWnp4Iiwic2NvcGVzIjpbImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgveW91dHViZS5mb3JjZS1zc2wiXX19",
         "expire_date": "2019-12-23T17:23:01.571"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "styuebblrvhcog3dqofqs8bbruwxxpsx",
+    "fields": {
+        "session_data": "ZDljNjEyZWE2YWE2ODVjNjU4NDFmNzgzM2FmMmI1ZTVhY2IwNTZkYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkYTRhNTUyOTZjNjQ1YmM0YWM3OGEyMTYzMmZkMjNlNjczNjg3N2Y3Iiwic3RhdGUiOiIxNWdwZHNWWXZZM3VCZEFpUU0wa1BsV1pUcTR1aEQiLCJjcmVkZW50aWFscyI6eyJ0b2tlbiI6InlhMjkuYTBBZkg2U01Cc3ZONXR6T0tNaWl6bFNnT01lMFEteWZQSy1nVGxqUlZrM3QxdHhIM0NqVkgwRktpb2pvV21fSzY1UTg1N1JaYWF1aEY2UV9TTE83clhHWUJTdHRZZV9nQWtWRlNPdDhOT0RuRTNmckc5ZmFqMERnT2VyTTM3ZnE3ZXB4ZGxFaEZrNFN4a1NaSV91N3hZQVgzMXJ5R3ZtVDBVMjFnRjJ3IiwicmVmcmVzaF90b2tlbiI6bnVsbCwidG9rZW5fdXJpIjoiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLCJjbGllbnRfaWQiOiI2MzAyMzc2MjI1MDgtb3VhaTFjbmhhMzg5bGo4NGtmYXFtdWk0dmpsZTY1OGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjbGllbnRfc2VjcmV0IjoiNlViVHpWY0RWN2pUald2ZTNCNk0tWnp4Iiwic2NvcGVzIjpbImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgveW91dHViZS5mb3JjZS1zc2wiXX19",
+        "expire_date": "2020-11-02T19:44:04.135"
     }
 },
 {
@@ -330,7 +346,7 @@
     "pk": 1186,
     "fields": {
         "name": "DLord",
-        "tag": null
+        "tag": "KnK"
     }
 },
 {
@@ -394,7 +410,7 @@
     "pk": 1194,
     "fields": {
         "name": "Felker",
-        "tag": null
+        "tag": "EvozA"
     }
 },
 {
@@ -410,7 +426,7 @@
     "pk": 1196,
     "fields": {
         "name": "Nep",
-        "tag": null
+        "tag": "BL"
     }
 },
 {
@@ -578,7 +594,7 @@
     "pk": 1217,
     "fields": {
         "name": "ManZelda",
-        "tag": null
+        "tag": "CEW"
     }
 },
 {
@@ -778,7 +794,7 @@
     "pk": 1242,
     "fields": {
         "name": "Tomberry",
-        "tag": "D2S"
+        "tag": "Ades"
     }
 },
 {
@@ -1458,7 +1474,7 @@
     "pk": 1328,
     "fields": {
         "name": "Kazzers",
-        "tag": null
+        "tag": "LoS"
     }
 },
 {
@@ -1514,7 +1530,7 @@
     "pk": 1335,
     "fields": {
         "name": "Judas",
-        "tag": "GLT"
+        "tag": "GLITCH |"
     }
 },
 {
@@ -1626,7 +1642,7 @@
     "pk": 1349,
     "fields": {
         "name": "Ennaria",
-        "tag": "SVB"
+        "tag": null
     }
 },
 {
@@ -1738,6 +1754,142 @@
     "pk": 1363,
     "fields": {
         "name": "Citronche",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1364,
+    "fields": {
+        "name": "Tim Rocket",
+        "tag": "Nice Boys"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1365,
+    "fields": {
+        "name": "Aiikun",
+        "tag": ""
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1366,
+    "fields": {
+        "name": "NGP",
+        "tag": "Vegacy"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1367,
+    "fields": {
+        "name": "Nitroz",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1368,
+    "fields": {
+        "name": "Dependance",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1369,
+    "fields": {
+        "name": "NCLS",
+        "tag": ""
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1370,
+    "fields": {
+        "name": "Nayden-X",
+        "tag": "Nice Boys"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1371,
+    "fields": {
+        "name": "MonkeyDOzio",
+        "tag": ""
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1372,
+    "fields": {
+        "name": "Mazziel",
+        "tag": "Nice boys"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1373,
+    "fields": {
+        "name": "Nadyys",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1374,
+    "fields": {
+        "name": "Brapt",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1375,
+    "fields": {
+        "name": "Azey",
+        "tag": "MD3"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1376,
+    "fields": {
+        "name": "SiningNRV",
+        "tag": "MD3"
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1377,
+    "fields": {
+        "name": "Evolt",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1378,
+    "fields": {
+        "name": "Eydann",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1379,
+    "fields": {
+        "name": "Fariq",
+        "tag": null
+    }
+},
+{
+    "model": "ranking.competitor",
+    "pk": 1380,
+    "fields": {
+        "name": "Valium SH",
         "tag": null
     }
 },
@@ -7359,11 +7511,11 @@
     "model": "ranking.elo",
     "pk": 2866,
     "fields": {
-        "elo": 1578,
+        "elo": 1659,
         "elo_initial": 1537,
-        "nb_tournament": 2,
-        "nb_match_win": 7,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 17,
+        "nb_match_lose": 8,
         "competitor": 1243,
         "main_char": 46,
         "main_char_skin": 6,
@@ -7379,11 +7531,11 @@
     "model": "ranking.elo",
     "pk": 2867,
     "fields": {
-        "elo": 1475,
+        "elo": 1469,
         "elo_initial": 1481,
-        "nb_tournament": 1,
-        "nb_match_win": 2,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 5,
+        "nb_match_lose": 6,
         "competitor": 1171,
         "main_char": 18,
         "main_char_skin": 0,
@@ -7419,11 +7571,11 @@
     "model": "ranking.elo",
     "pk": 2869,
     "fields": {
-        "elo": 1590,
+        "elo": 1618,
         "elo_initial": 1562,
-        "nb_tournament": 2,
-        "nb_match_win": 6,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 13,
+        "nb_match_lose": 8,
         "competitor": 1197,
         "main_char": 28,
         "main_char_skin": 3,
@@ -7439,11 +7591,11 @@
     "model": "ranking.elo",
     "pk": 2870,
     "fields": {
-        "elo": 1495,
+        "elo": 1487,
         "elo_initial": 1504,
-        "nb_tournament": 2,
-        "nb_match_win": 3,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 7,
+        "nb_match_lose": 8,
         "competitor": 1186,
         "main_char": 61,
         "main_char_skin": 5,
@@ -7459,11 +7611,11 @@
     "model": "ranking.elo",
     "pk": 2871,
     "fields": {
-        "elo": 1621,
+        "elo": 1578,
         "elo_initial": 1572,
-        "nb_tournament": 2,
-        "nb_match_win": 9,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 13,
+        "nb_match_lose": 8,
         "competitor": 1196,
         "main_char": 55,
         "main_char_skin": 0,
@@ -7679,11 +7831,11 @@
     "model": "ranking.elo",
     "pk": 2882,
     "fields": {
-        "elo": 1490,
+        "elo": 1478,
         "elo_initial": 1489,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 7,
+        "nb_match_lose": 8,
         "competitor": 1237,
         "main_char": 15,
         "main_char_skin": 4,
@@ -7859,11 +8011,11 @@
     "model": "ranking.elo",
     "pk": 2891,
     "fields": {
-        "elo": 1466,
+        "elo": 1430,
         "elo_initial": 1461,
-        "nb_tournament": 2,
-        "nb_match_win": 5,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 7,
+        "nb_match_lose": 8,
         "competitor": 1223,
         "main_char": 31,
         "main_char_skin": 2,
@@ -7899,11 +8051,11 @@
     "model": "ranking.elo",
     "pk": 2893,
     "fields": {
-        "elo": 1694,
+        "elo": 1742,
         "elo_initial": 1606,
-        "nb_tournament": 2,
-        "nb_match_win": 10,
-        "nb_match_lose": 2,
+        "nb_tournament": 4,
+        "nb_match_win": 21,
+        "nb_match_lose": 6,
         "competitor": 1194,
         "main_char": 76,
         "main_char_skin": 3,
@@ -7919,11 +8071,11 @@
     "model": "ranking.elo",
     "pk": 2894,
     "fields": {
-        "elo": 1610,
+        "elo": 1641,
         "elo_initial": 1543,
-        "nb_tournament": 2,
-        "nb_match_win": 8,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 15,
+        "nb_match_lose": 8,
         "competitor": 1217,
         "main_char": 49,
         "main_char_skin": 1,
@@ -7939,11 +8091,11 @@
     "model": "ranking.elo",
     "pk": 2895,
     "fields": {
-        "elo": 1470,
+        "elo": 1517,
         "elo_initial": 1470,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 10,
+        "nb_match_lose": 8,
         "competitor": 1241,
         "main_char": 4,
         "main_char_skin": 6,
@@ -7959,11 +8111,11 @@
     "model": "ranking.elo",
     "pk": 2896,
     "fields": {
-        "elo": 1611,
+        "elo": 1631,
         "elo_initial": 1535,
-        "nb_tournament": 2,
-        "nb_match_win": 9,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 16,
+        "nb_match_lose": 8,
         "competitor": 1208,
         "main_char": 77,
         "main_char_skin": 5,
@@ -7979,11 +8131,11 @@
     "model": "ranking.elo",
     "pk": 2897,
     "fields": {
-        "elo": 1696,
+        "elo": 1824,
         "elo_initial": 1559,
-        "nb_tournament": 2,
-        "nb_match_win": 13,
-        "nb_match_lose": 3,
+        "nb_tournament": 4,
+        "nb_match_win": 26,
+        "nb_match_lose": 4,
         "competitor": 1242,
         "main_char": 70,
         "main_char_skin": 6,
@@ -8019,11 +8171,11 @@
     "model": "ranking.elo",
     "pk": 2899,
     "fields": {
-        "elo": 1545,
+        "elo": 1579,
         "elo_initial": 1490,
-        "nb_tournament": 2,
-        "nb_match_win": 8,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 15,
+        "nb_match_lose": 8,
         "competitor": 1173,
         "main_char": 46,
         "main_char_skin": 2,
@@ -8079,11 +8231,11 @@
     "model": "ranking.elo",
     "pk": 2902,
     "fields": {
-        "elo": 1405,
+        "elo": 1406,
         "elo_initial": 1449,
-        "nb_tournament": 2,
-        "nb_match_win": 1,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 4,
+        "nb_match_lose": 8,
         "competitor": 1249,
         "main_char": 43,
         "main_char_skin": 2,
@@ -8099,11 +8251,11 @@
     "model": "ranking.elo",
     "pk": 2903,
     "fields": {
-        "elo": 1351,
+        "elo": 1296,
         "elo_initial": 1409,
-        "nb_tournament": 2,
+        "nb_tournament": 4,
         "nb_match_win": 0,
-        "nb_match_lose": 4,
+        "nb_match_lose": 8,
         "competitor": 1248,
         "main_char": 55,
         "main_char_skin": 1,
@@ -8139,11 +8291,11 @@
     "model": "ranking.elo",
     "pk": 2905,
     "fields": {
-        "elo": 1490,
+        "elo": 1472,
         "elo_initial": 1490,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 7,
+        "nb_match_lose": 8,
         "competitor": 1189,
         "main_char": 53,
         "main_char_skin": 6,
@@ -8319,11 +8471,11 @@
     "model": "ranking.elo",
     "pk": 2914,
     "fields": {
-        "elo": 1473,
+        "elo": 1482,
         "elo_initial": 1485,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 9,
+        "nb_match_lose": 8,
         "competitor": 1174,
         "main_char": 21,
         "main_char_skin": 6,
@@ -8339,11 +8491,11 @@
     "model": "ranking.elo",
     "pk": 2915,
     "fields": {
-        "elo": 1422,
+        "elo": 1397,
         "elo_initial": 1434,
-        "nb_tournament": 2,
+        "nb_tournament": 3,
         "nb_match_win": 3,
-        "nb_match_lose": 4,
+        "nb_match_lose": 6,
         "competitor": 1181,
         "main_char": 73,
         "main_char_skin": 0,
@@ -8359,11 +8511,11 @@
     "model": "ranking.elo",
     "pk": 2916,
     "fields": {
-        "elo": 1419,
+        "elo": 1412,
         "elo_initial": 1454,
-        "nb_tournament": 1,
-        "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 3,
+        "nb_match_lose": 6,
         "competitor": 1221,
         "main_char": 25,
         "main_char_skin": 0,
@@ -8459,11 +8611,11 @@
     "model": "ranking.elo",
     "pk": 2921,
     "fields": {
-        "elo": 1367,
+        "elo": 1339,
         "elo_initial": 1430,
-        "nb_tournament": 2,
+        "nb_tournament": 3,
         "nb_match_win": 0,
-        "nb_match_lose": 4,
+        "nb_match_lose": 6,
         "competitor": 1262,
         "main_char": null,
         "main_char_skin": 0,
@@ -8519,11 +8671,11 @@
     "model": "ranking.elo",
     "pk": 2924,
     "fields": {
-        "elo": 1493,
+        "elo": 1453,
         "elo_initial": 1491,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 6,
+        "nb_match_lose": 8,
         "competitor": 1175,
         "main_char": 27,
         "main_char_skin": 0,
@@ -8539,11 +8691,11 @@
     "model": "ranking.elo",
     "pk": 2925,
     "fields": {
-        "elo": 1431,
+        "elo": 1386,
         "elo_initial": 1431,
-        "nb_tournament": 0,
+        "nb_tournament": 1,
         "nb_match_win": 0,
-        "nb_match_lose": 0,
+        "nb_match_lose": 2,
         "competitor": 1263,
         "main_char": null,
         "main_char_skin": 0,
@@ -8619,11 +8771,11 @@
     "model": "ranking.elo",
     "pk": 2929,
     "fields": {
-        "elo": 1523,
+        "elo": 1492,
         "elo_initial": 1481,
-        "nb_tournament": 2,
-        "nb_match_win": 6,
-        "nb_match_lose": 4,
+        "nb_tournament": 3,
+        "nb_match_win": 7,
+        "nb_match_lose": 6,
         "competitor": 1224,
         "main_char": 72,
         "main_char_skin": 0,
@@ -8919,11 +9071,11 @@
     "model": "ranking.elo",
     "pk": 2944,
     "fields": {
-        "elo": 1449,
+        "elo": 1379,
         "elo_initial": 1449,
-        "nb_tournament": 0,
+        "nb_tournament": 2,
         "nb_match_win": 0,
-        "nb_match_lose": 0,
+        "nb_match_lose": 4,
         "competitor": 1281,
         "main_char": null,
         "main_char_skin": 0,
@@ -8959,11 +9111,11 @@
     "model": "ranking.elo",
     "pk": 2946,
     "fields": {
-        "elo": 1551,
+        "elo": 1535,
         "elo_initial": 1500,
-        "nb_tournament": 1,
-        "nb_match_win": 4,
-        "nb_match_lose": 2,
+        "nb_tournament": 2,
+        "nb_match_win": 6,
+        "nb_match_lose": 4,
         "competitor": 1282,
         "main_char": 58,
         "main_char_skin": 1,
@@ -9019,11 +9171,11 @@
     "model": "ranking.elo",
     "pk": 2949,
     "fields": {
-        "elo": 1529,
+        "elo": 1520,
         "elo_initial": 1477,
-        "nb_tournament": 2,
-        "nb_match_win": 8,
-        "nb_match_lose": 4,
+        "nb_tournament": 3,
+        "nb_match_win": 10,
+        "nb_match_lose": 6,
         "competitor": 1284,
         "main_char": 9,
         "main_char_skin": 1,
@@ -9279,11 +9431,11 @@
     "model": "ranking.elo",
     "pk": 2962,
     "fields": {
-        "elo": 1375,
+        "elo": 1346,
         "elo_initial": 1442,
-        "nb_tournament": 2,
+        "nb_tournament": 3,
         "nb_match_win": 0,
-        "nb_match_lose": 4,
+        "nb_match_lose": 6,
         "competitor": 1319,
         "main_char": null,
         "main_char_skin": 0,
@@ -9319,11 +9471,11 @@
     "model": "ranking.elo",
     "pk": 2964,
     "fields": {
-        "elo": 1415,
+        "elo": 1436,
         "elo_initial": 1448,
-        "nb_tournament": 1,
-        "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 4,
+        "nb_match_lose": 6,
         "competitor": 1305,
         "main_char": 24,
         "main_char_skin": 5,
@@ -9359,11 +9511,11 @@
     "model": "ranking.elo",
     "pk": 2966,
     "fields": {
-        "elo": 1470,
+        "elo": 1425,
         "elo_initial": 1452,
-        "nb_tournament": 1,
-        "nb_match_win": 3,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 5,
+        "nb_match_lose": 6,
         "competitor": 1280,
         "main_char": 38,
         "main_char_skin": 0,
@@ -9519,17 +9671,17 @@
     "model": "ranking.elo",
     "pk": 2974,
     "fields": {
-        "elo": 1450,
+        "elo": 1505,
         "elo_initial": 1429,
-        "nb_tournament": 2,
-        "nb_match_win": 5,
-        "nb_match_lose": 4,
+        "nb_tournament": 3,
+        "nb_match_win": 10,
+        "nb_match_lose": 6,
         "competitor": 1328,
         "main_char": 43,
         "main_char_skin": 6,
-        "second_char": 76,
+        "second_char": 71,
         "second_char_skin": 5,
-        "third_char": 33,
+        "third_char": 74,
         "third_char_skin": 2,
         "is_away": false,
         "saison": 7
@@ -9659,11 +9811,11 @@
     "model": "ranking.elo",
     "pk": 2981,
     "fields": {
-        "elo": 1458,
+        "elo": 1426,
         "elo_initial": 1454,
-        "nb_tournament": 2,
-        "nb_match_win": 4,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 7,
+        "nb_match_lose": 8,
         "competitor": 1335,
         "main_char": 63,
         "main_char_skin": 7,
@@ -9899,11 +10051,11 @@
     "model": "ranking.elo",
     "pk": 2993,
     "fields": {
-        "elo": 1422,
+        "elo": 1389,
         "elo_initial": 1460,
-        "nb_tournament": 2,
+        "nb_tournament": 3,
         "nb_match_win": 2,
-        "nb_match_lose": 4,
+        "nb_match_lose": 6,
         "competitor": 1346,
         "main_char": 25,
         "main_char_skin": 0,
@@ -9979,11 +10131,11 @@
     "model": "ranking.elo",
     "pk": 2997,
     "fields": {
-        "elo": 1423,
+        "elo": 1368,
         "elo_initial": 1444,
-        "nb_tournament": 1,
+        "nb_tournament": 3,
         "nb_match_win": 1,
-        "nb_match_lose": 2,
+        "nb_match_lose": 6,
         "competitor": 1229,
         "main_char": 18,
         "main_char_skin": 5,
@@ -9999,11 +10151,11 @@
     "model": "ranking.elo",
     "pk": 2998,
     "fields": {
-        "elo": 1430,
+        "elo": 1398,
         "elo_initial": 1451,
-        "nb_tournament": 1,
+        "nb_tournament": 2,
         "nb_match_win": 1,
-        "nb_match_lose": 2,
+        "nb_match_lose": 4,
         "competitor": 1349,
         "main_char": 29,
         "main_char_skin": 3,
@@ -10099,11 +10251,11 @@
     "model": "ranking.elo",
     "pk": 3009,
     "fields": {
-        "elo": 1347,
+        "elo": 1327,
         "elo_initial": 1400,
-        "nb_tournament": 2,
-        "nb_match_win": 0,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 1,
+        "nb_match_lose": 8,
         "competitor": 1357,
         "main_char": null,
         "main_char_skin": 0,
@@ -10119,11 +10271,11 @@
     "model": "ranking.elo",
     "pk": 3010,
     "fields": {
-        "elo": 1368,
+        "elo": 1361,
         "elo_initial": 1400,
-        "nb_tournament": 2,
-        "nb_match_win": 1,
-        "nb_match_lose": 4,
+        "nb_tournament": 4,
+        "nb_match_win": 3,
+        "nb_match_lose": 8,
         "competitor": 1358,
         "main_char": null,
         "main_char_skin": 0,
@@ -10199,11 +10351,11 @@
     "model": "ranking.elo",
     "pk": 3014,
     "fields": {
-        "elo": 1372,
+        "elo": 1340,
         "elo_initial": 1400,
-        "nb_tournament": 1,
+        "nb_tournament": 2,
         "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_match_lose": 4,
         "competitor": 1362,
         "main_char": null,
         "main_char_skin": 0,
@@ -10239,10 +10391,10 @@
     "model": "ranking.elo",
     "pk": 3016,
     "fields": {
-        "elo": 1498,
+        "elo": 1625,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 5,
+        "nb_tournament": 3,
+        "nb_match_win": 14,
         "nb_match_lose": 0,
         "competitor": 1175,
         "main_char": null,
@@ -10259,11 +10411,11 @@
     "model": "ranking.elo",
     "pk": 3017,
     "fields": {
-        "elo": 1439,
+        "elo": 1464,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 4,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 9,
+        "nb_match_lose": 6,
         "competitor": 1186,
         "main_char": null,
         "main_char_skin": 0,
@@ -10279,11 +10431,11 @@
     "model": "ranking.elo",
     "pk": 3018,
     "fields": {
-        "elo": 1437,
+        "elo": 1511,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 4,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 13,
+        "nb_match_lose": 6,
         "competitor": 1217,
         "main_char": null,
         "main_char_skin": 0,
@@ -10299,11 +10451,11 @@
     "model": "ranking.elo",
     "pk": 3019,
     "fields": {
-        "elo": 1420,
+        "elo": 1443,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 3,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 8,
+        "nb_match_lose": 6,
         "competitor": 1243,
         "main_char": null,
         "main_char_skin": 0,
@@ -10319,11 +10471,11 @@
     "model": "ranking.elo",
     "pk": 3020,
     "fields": {
-        "elo": 1416,
+        "elo": 1412,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 3,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 7,
+        "nb_match_lose": 6,
         "competitor": 1189,
         "main_char": null,
         "main_char_skin": 0,
@@ -10339,11 +10491,11 @@
     "model": "ranking.elo",
     "pk": 3021,
     "fields": {
-        "elo": 1416,
+        "elo": 1429,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 3,
-        "nb_match_lose": 2,
+        "nb_tournament": 2,
+        "nb_match_win": 6,
+        "nb_match_lose": 4,
         "competitor": 1240,
         "main_char": null,
         "main_char_skin": 0,
@@ -10359,11 +10511,11 @@
     "model": "ranking.elo",
     "pk": 3022,
     "fields": {
-        "elo": 1399,
+        "elo": 1381,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 2,
-        "nb_match_lose": 2,
+        "nb_tournament": 2,
+        "nb_match_win": 3,
+        "nb_match_lose": 4,
         "competitor": 1196,
         "main_char": null,
         "main_char_skin": 0,
@@ -10379,11 +10531,11 @@
     "model": "ranking.elo",
     "pk": 3023,
     "fields": {
-        "elo": 1399,
+        "elo": 1380,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 2,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 5,
+        "nb_match_lose": 6,
         "competitor": 1280,
         "main_char": null,
         "main_char_skin": 0,
@@ -10499,11 +10651,11 @@
     "model": "ranking.elo",
     "pk": 3029,
     "fields": {
-        "elo": 1363,
+        "elo": 1301,
         "elo_initial": 1400,
-        "nb_tournament": 1,
+        "nb_tournament": 3,
         "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_match_lose": 6,
         "competitor": 1249,
         "main_char": null,
         "main_char_skin": 0,
@@ -10519,11 +10671,11 @@
     "model": "ranking.elo",
     "pk": 3030,
     "fields": {
-        "elo": 1363,
+        "elo": 1331,
         "elo_initial": 1400,
-        "nb_tournament": 1,
-        "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_tournament": 3,
+        "nb_match_win": 1,
+        "nb_match_lose": 6,
         "competitor": 1181,
         "main_char": null,
         "main_char_skin": 0,
@@ -10539,11 +10691,11 @@
     "model": "ranking.elo",
     "pk": 3031,
     "fields": {
-        "elo": 1363,
+        "elo": 1331,
         "elo_initial": 1400,
-        "nb_tournament": 1,
+        "nb_tournament": 2,
         "nb_match_win": 0,
-        "nb_match_lose": 2,
+        "nb_match_lose": 4,
         "competitor": 1248,
         "main_char": null,
         "main_char_skin": 0,
@@ -10553,6 +10705,466 @@
         "third_char_skin": 0,
         "is_away": false,
         "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3032,
+    "fields": {
+        "elo": 1463,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 4,
+        "nb_match_lose": 2,
+        "competitor": 1364,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3033,
+    "fields": {
+        "elo": 1447,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 4,
+        "nb_match_lose": 2,
+        "competitor": 1365,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3034,
+    "fields": {
+        "elo": 1440,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 3,
+        "nb_match_lose": 2,
+        "competitor": 1366,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3035,
+    "fields": {
+        "elo": 1458,
+        "elo_initial": 1400,
+        "nb_tournament": 2,
+        "nb_match_win": 5,
+        "nb_match_lose": 4,
+        "competitor": 1367,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3036,
+    "fields": {
+        "elo": 1430,
+        "elo_initial": 1400,
+        "nb_tournament": 2,
+        "nb_match_win": 5,
+        "nb_match_lose": 4,
+        "competitor": 1368,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3037,
+    "fields": {
+        "elo": 1428,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 3,
+        "nb_match_lose": 2,
+        "competitor": 1369,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3038,
+    "fields": {
+        "elo": 1400,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1370,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3039,
+    "fields": {
+        "elo": 1405,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1371,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3040,
+    "fields": {
+        "elo": 1408,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1372,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3041,
+    "fields": {
+        "elo": 1408,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1373,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3042,
+    "fields": {
+        "elo": 1364,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 0,
+        "nb_match_lose": 2,
+        "competitor": 1374,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3043,
+    "fields": {
+        "elo": 1368,
+        "elo_initial": 1400,
+        "nb_tournament": 2,
+        "nb_match_win": 1,
+        "nb_match_lose": 4,
+        "competitor": 1375,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3044,
+    "fields": {
+        "elo": 1396,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1241,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3045,
+    "fields": {
+        "elo": 1389,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 1,
+        "nb_match_lose": 2,
+        "competitor": 1242,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3046,
+    "fields": {
+        "elo": 1382,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 1,
+        "nb_match_lose": 2,
+        "competitor": 1328,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3047,
+    "fields": {
+        "elo": 1396,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1208,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3048,
+    "fields": {
+        "elo": 1358,
+        "elo_initial": 1400,
+        "nb_tournament": 2,
+        "nb_match_win": 1,
+        "nb_match_lose": 4,
+        "competitor": 1174,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3049,
+    "fields": {
+        "elo": 1384,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 1,
+        "nb_match_lose": 2,
+        "competitor": 1229,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 8
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3050,
+    "fields": {
+        "elo": 1443,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 4,
+        "nb_match_lose": 2,
+        "competitor": 1376,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3051,
+    "fields": {
+        "elo": 1412,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 2,
+        "nb_match_lose": 2,
+        "competitor": 1377,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3052,
+    "fields": {
+        "elo": 1393,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 1,
+        "nb_match_lose": 2,
+        "competitor": 1378,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3053,
+    "fields": {
+        "elo": 1398,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 1,
+        "nb_match_lose": 2,
+        "competitor": 1379,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
+    }
+},
+{
+    "model": "ranking.elo",
+    "pk": 3054,
+    "fields": {
+        "elo": 1366,
+        "elo_initial": 1400,
+        "nb_tournament": 1,
+        "nb_match_win": 0,
+        "nb_match_lose": 2,
+        "competitor": 1380,
+        "main_char": null,
+        "main_char_skin": 0,
+        "second_char": null,
+        "second_char_skin": 0,
+        "third_char": null,
+        "third_char_skin": 0,
+        "is_away": false,
+        "saison": 7
     }
 },
 {
@@ -10570,6 +11182,7 @@
         "date": "2019-02-15T18:00:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             1
         ]
@@ -10590,6 +11203,7 @@
         "date": "2019-03-15T18:00:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             1
         ]
@@ -10610,6 +11224,7 @@
         "date": "2019-04-13T18:00:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             1
         ]
@@ -10630,6 +11245,7 @@
         "date": "2019-05-17T18:00:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             1
         ]
@@ -10650,6 +11266,7 @@
         "date": "2019-09-13T18:00:00",
         "nb_players": 37,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10670,6 +11287,7 @@
         "date": "2019-09-24T20:00:00",
         "nb_players": 34,
         "weight": 1,
+        "game": null,
         "saison": [
             5,
             2
@@ -10691,6 +11309,7 @@
         "date": "2019-09-26T19:30:00",
         "nb_players": 24,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10711,6 +11330,7 @@
         "date": "2019-10-10T19:30:00",
         "nb_players": 28,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10731,6 +11351,7 @@
         "date": "2019-10-22T20:00:00",
         "nb_players": 37,
         "weight": 1,
+        "game": null,
         "saison": [
             5,
             2
@@ -10752,6 +11373,7 @@
         "date": "2019-10-24T19:00:00",
         "nb_players": 39,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10772,6 +11394,7 @@
         "date": "2019-11-07T19:00:00",
         "nb_players": 41,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10792,6 +11415,7 @@
         "date": "2019-11-21T19:30:00",
         "nb_players": 38,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10812,6 +11436,7 @@
         "date": "2019-11-26T19:30:00",
         "nb_players": 39,
         "weight": 1,
+        "game": null,
         "saison": [
             5,
             2
@@ -10833,6 +11458,7 @@
         "date": "2019-09-15T18:00:00",
         "nb_players": 36,
         "weight": 1,
+        "game": null,
         "saison": [
             6
         ]
@@ -10853,6 +11479,7 @@
         "date": "2019-12-06T19:00:00",
         "nb_players": 30,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10873,6 +11500,7 @@
         "date": "2019-12-19T19:00:00",
         "nb_players": 57,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10893,6 +11521,7 @@
         "date": "2020-01-23T19:00:00",
         "nb_players": 42,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10913,6 +11542,7 @@
         "date": "2020-02-06T19:00:00",
         "nb_players": 36,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10933,6 +11563,7 @@
         "date": "2020-02-21T19:00:00",
         "nb_players": 42,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10953,6 +11584,7 @@
         "date": "2020-02-25T19:00:00",
         "nb_players": 28,
         "weight": 1,
+        "game": null,
         "saison": [
             5,
             2
@@ -10974,6 +11606,7 @@
         "date": "2020-03-06T19:00:00",
         "nb_players": 38,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -10994,6 +11627,7 @@
         "date": "2020-03-24T19:30:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             5,
             2
@@ -11015,6 +11649,7 @@
         "date": "2020-03-19T18:00:00",
         "nb_players": 0,
         "weight": 1,
+        "game": null,
         "saison": [
             2
         ]
@@ -11035,6 +11670,7 @@
         "date": "2020-09-10T18:00:00",
         "nb_players": 49,
         "weight": 1,
+        "game": 1,
         "saison": [
             7
         ]
@@ -11055,6 +11691,7 @@
         "date": "2020-09-24T18:00:00",
         "nb_players": 51,
         "weight": 1,
+        "game": 1,
         "saison": [
             7
         ]
@@ -11068,13 +11705,14 @@
         "slug": "at-gaming-night-s3-3",
         "event": "Smash Bi-Monthly",
         "event_slug": "smash-bi-monthly",
-        "state": 4,
+        "state": 2,
         "serie": 4,
         "place": 2,
         "association": 1,
         "date": "2020-10-08T18:00:00",
-        "nb_players": 0,
+        "nb_players": 47,
         "weight": 1,
+        "game": 1,
         "saison": [
             7
         ]
@@ -11095,6 +11733,70 @@
         "date": "2020-09-24T18:29:18",
         "nb_players": 16,
         "weight": 1,
+        "game": 2,
+        "saison": [
+            8
+        ]
+    }
+},
+{
+    "model": "ranking.tournament",
+    "pk": 28,
+    "fields": {
+        "name": "RoA S1 #2",
+        "slug": "at-gaming-night-s3-3",
+        "event": "Side Event RoA Singles",
+        "event_slug": "side-event-roa-singles",
+        "state": 2,
+        "serie": 5,
+        "place": 2,
+        "association": 1,
+        "date": "2020-10-08T18:20:30",
+        "nb_players": 17,
+        "weight": 1,
+        "game": 2,
+        "saison": [
+            8
+        ]
+    }
+},
+{
+    "model": "ranking.tournament",
+    "pk": 29,
+    "fields": {
+        "name": "AT Gaming Night S3#4",
+        "slug": "at-gaming-night-s3-4",
+        "event": "Smash Bi-Monthly",
+        "event_slug": "smash-bi-monthly",
+        "state": 2,
+        "serie": 4,
+        "place": 2,
+        "association": 1,
+        "date": "2020-10-22T18:00:00",
+        "nb_players": 36,
+        "weight": 1,
+        "game": 1,
+        "saison": [
+            7
+        ]
+    }
+},
+{
+    "model": "ranking.tournament",
+    "pk": 30,
+    "fields": {
+        "name": "RoA S1 #3",
+        "slug": "at-gaming-night-s3-4",
+        "event": "Side Event RoA Singles",
+        "event_slug": "side-event-roa-singles",
+        "state": 2,
+        "serie": 5,
+        "place": 2,
+        "association": 1,
+        "date": "2020-10-22T18:00:00",
+        "nb_players": 9,
+        "weight": 1,
+        "game": 2,
         "saison": [
             8
         ]
@@ -35753,6 +36455,3382 @@
     }
 },
 {
+    "model": "ranking.matchs",
+    "pk": 6010,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2902,
+        "looser": 2993,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1405,
+        "looser_elo_value_before": 1422,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6011,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3041,
+        "looser": 2966,
+        "elo_win": 23,
+        "elo_lose": -23,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1470,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6012,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3033,
+        "looser": 2964,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1415,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6013,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3040,
+        "looser": 2962,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1375,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6014,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2974,
+        "looser": 3009,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1450,
+        "looser_elo_value_before": 1347,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6015,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3010,
+        "looser": 3042,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1368,
+        "looser_elo_value_before": 1400,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6016,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2882,
+        "looser": 2998,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1490,
+        "looser_elo_value_before": 1430,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6017,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2916,
+        "looser": 2944,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1419,
+        "looser_elo_value_before": 1449,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6018,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3037,
+        "looser": 2929,
+        "elo_win": 26,
+        "elo_lose": -26,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1523,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6019,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3036,
+        "looser": 2997,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1423,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6020,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2914,
+        "looser": 2921,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1473,
+        "looser_elo_value_before": 1367,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6021,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 2891,
+        "looser": 3043,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1466,
+        "looser_elo_value_before": 1400,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6022,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3039,
+        "looser": 3014,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1372,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6023,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3035,
+        "looser": 2981,
+        "elo_win": 23,
+        "elo_lose": -23,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1458,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6024,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3032,
+        "looser": 2903,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1351,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6025,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2866,
+        "looser": 2914,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1578,
+        "looser_elo_value_before": 1487,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6026,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2894,
+        "looser": 2891,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1610,
+        "looser_elo_value_before": 1482,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6027,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2870,
+        "looser": 3039,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1495,
+        "looser_elo_value_before": 1418,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6028,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2946,
+        "looser": 3035,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1551,
+        "looser_elo_value_before": 1423,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6029,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3032,
+        "looser": 2924,
+        "elo_win": 24,
+        "elo_lose": -24,
+        "winner_elo_value_before": 1417,
+        "looser_elo_value_before": 1493,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6030,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2893,
+        "looser": 2902,
+        "elo_win": 7,
+        "elo_lose": -7,
+        "winner_elo_value_before": 1694,
+        "looser_elo_value_before": 1425,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6031,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2905,
+        "looser": 2867,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1490,
+        "looser_elo_value_before": 1475,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6032,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2869,
+        "looser": 3041,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1590,
+        "looser_elo_value_before": 1423,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6033,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3033,
+        "looser": 3038,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1420,
+        "looser_elo_value_before": 1400,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6034,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2871,
+        "looser": 3040,
+        "elo_win": 9,
+        "elo_lose": -9,
+        "winner_elo_value_before": 1621,
+        "looser_elo_value_before": 1418,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6035,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2899,
+        "looser": 2974,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1545,
+        "looser_elo_value_before": 1464,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6036,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2896,
+        "looser": 3010,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1611,
+        "looser_elo_value_before": 1389,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6037,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2882,
+        "looser": 2949,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1506,
+        "looser_elo_value_before": 1529,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6038,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2897,
+        "looser": 2916,
+        "elo_win": 7,
+        "elo_lose": -7,
+        "winner_elo_value_before": 1696,
+        "looser_elo_value_before": 1440,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6039,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2895,
+        "looser": 3037,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1470,
+        "looser_elo_value_before": 1426,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6040,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3034,
+        "looser": 3036,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1421,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6041,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2924,
+        "looser": 2993,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1469,
+        "looser_elo_value_before": 1402,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6042,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3039,
+        "looser": 2966,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1403,
+        "looser_elo_value_before": 1447,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6043,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2964,
+        "looser": 2891,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1395,
+        "looser_elo_value_before": 1470,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6044,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2914,
+        "looser": 2962,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1473,
+        "looser_elo_value_before": 1357,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6045,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3036,
+        "looser": 3009,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1333,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6046,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3037,
+        "looser": 3042,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1409,
+        "looser_elo_value_before": 1379,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6047,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2916,
+        "looser": 2998,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1433,
+        "looser_elo_value_before": 1414,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6048,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2949,
+        "looser": 2944,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1508,
+        "looser_elo_value_before": 1428,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6049,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2929,
+        "looser": 3010,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1497,
+        "looser_elo_value_before": 1381,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6050,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2974,
+        "looser": 2997,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1449,
+        "looser_elo_value_before": 1402,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6051,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3040,
+        "looser": 2921,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1409,
+        "looser_elo_value_before": 1353,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6052,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3038,
+        "looser": 3043,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1382,
+        "looser_elo_value_before": 1384,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6053,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3041,
+        "looser": 3014,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1412,
+        "looser_elo_value_before": 1354,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6054,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2981,
+        "looser": 2867,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1435,
+        "looser_elo_value_before": 1456,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6055,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2902,
+        "looser": 2903,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1418,
+        "looser_elo_value_before": 1334,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6056,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3035,
+        "looser": 2924,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1411,
+        "looser_elo_value_before": 1482,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6057,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2964,
+        "looser": 3039,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1415,
+        "looser_elo_value_before": 1422,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6058,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3036,
+        "looser": 2914,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1413,
+        "looser_elo_value_before": 1484,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6059,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3037,
+        "looser": 2916,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1424,
+        "looser_elo_value_before": 1449,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6060,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2949,
+        "looser": 2929,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1521,
+        "looser_elo_value_before": 1508,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6061,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2974,
+        "looser": 3040,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1463,
+        "looser_elo_value_before": 1423,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6062,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3038,
+        "looser": 3041,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1399,
+        "looser_elo_value_before": 1426,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6063,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2981,
+        "looser": 2902,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1453,
+        "looser_elo_value_before": 1430,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6064,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2893,
+        "looser": 2905,
+        "elo_win": 9,
+        "elo_lose": -9,
+        "winner_elo_value_before": 1701,
+        "looser_elo_value_before": 1509,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6065,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2869,
+        "looser": 3033,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1601,
+        "looser_elo_value_before": 1438,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6066,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2871,
+        "looser": 2899,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1630,
+        "looser_elo_value_before": 1560,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6067,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2896,
+        "looser": 2882,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1619,
+        "looser_elo_value_before": 1527,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6068,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2897,
+        "looser": 2895,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1703,
+        "looser_elo_value_before": 1487,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6069,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2866,
+        "looser": 3034,
+        "elo_win": 10,
+        "elo_lose": -10,
+        "winner_elo_value_before": 1592,
+        "looser_elo_value_before": 1421,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6070,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2894,
+        "looser": 2870,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1622,
+        "looser_elo_value_before": 1510,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6071,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 3032,
+        "looser": 2946,
+        "elo_win": 26,
+        "elo_lose": -26,
+        "winner_elo_value_before": 1441,
+        "looser_elo_value_before": 1563,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6072,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3035,
+        "looser": 2882,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1431,
+        "looser_elo_value_before": 1513,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6073,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2899,
+        "looser": 2964,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1544,
+        "looser_elo_value_before": 1432,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6074,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3033,
+        "looser": 3036,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1427,
+        "looser_elo_value_before": 1433,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6075,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2905,
+        "looser": 3037,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1500,
+        "looser_elo_value_before": 1442,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6076,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2946,
+        "looser": 2949,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1537,
+        "looser_elo_value_before": 1537,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6077,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2974,
+        "looser": 2870,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1478,
+        "looser_elo_value_before": 1497,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6078,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3034,
+        "looser": 3038,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1411,
+        "looser_elo_value_before": 1417,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6079,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2895,
+        "looser": 2981,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1479,
+        "looser_elo_value_before": 1468,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6080,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 2899,
+        "looser": 3035,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1555,
+        "looser_elo_value_before": 1451,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6081,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 3033,
+        "looser": 2905,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1444,
+        "looser_elo_value_before": 1514,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6082,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 2974,
+        "looser": 2946,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1495,
+        "looser_elo_value_before": 1554,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6083,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 3034,
+        "looser": 2895,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1428,
+        "looser_elo_value_before": 1495,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6084,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2869,
+        "looser": 2893,
+        "elo_win": 25,
+        "elo_lose": -25,
+        "winner_elo_value_before": 1612,
+        "looser_elo_value_before": 1710,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6085,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2896,
+        "looser": 2871,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1633,
+        "looser_elo_value_before": 1646,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6086,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2897,
+        "looser": 2866,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1711,
+        "looser_elo_value_before": 1602,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6087,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2894,
+        "looser": 3032,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1635,
+        "looser_elo_value_before": 1467,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6088,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2866,
+        "looser": 2899,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1589,
+        "looser_elo_value_before": 1567,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6089,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 3032,
+        "looser": 3033,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1456,
+        "looser_elo_value_before": 1464,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6090,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2893,
+        "looser": 2974,
+        "elo_win": 9,
+        "elo_lose": -9,
+        "winner_elo_value_before": 1685,
+        "looser_elo_value_before": 1514,
+        "tournament": 26,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6091,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2871,
+        "looser": 3034,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1626,
+        "looser_elo_value_before": 1448,
+        "tournament": 26,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6092,
+    "fields": {
+        "fullRoundText": "Losers Round 6",
+        "roundText": "LR6",
+        "winner": 2866,
+        "looser": 3032,
+        "elo_win": 10,
+        "elo_lose": -10,
+        "winner_elo_value_before": 1604,
+        "looser_elo_value_before": 1473,
+        "tournament": 26,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6093,
+    "fields": {
+        "fullRoundText": "Losers Round 6",
+        "roundText": "LR6",
+        "winner": 2893,
+        "looser": 2871,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1694,
+        "looser_elo_value_before": 1634,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6094,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 2896,
+        "looser": 2869,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1653,
+        "looser_elo_value_before": 1637,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6095,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 2897,
+        "looser": 2894,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1724,
+        "looser_elo_value_before": 1646,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6096,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 2866,
+        "looser": 2869,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1614,
+        "looser_elo_value_before": 1618,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6097,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 2893,
+        "looser": 2894,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1708,
+        "looser_elo_value_before": 1631,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6098,
+    "fields": {
+        "fullRoundText": "Losers Semi-Final",
+        "roundText": "LS",
+        "winner": 2893,
+        "looser": 2866,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1721,
+        "looser_elo_value_before": 1631,
+        "tournament": 26,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6099,
+    "fields": {
+        "fullRoundText": "Winners Final",
+        "roundText": "WF",
+        "winner": 2897,
+        "looser": 2896,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1739,
+        "looser_elo_value_before": 1672,
+        "tournament": 26,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6100,
+    "fields": {
+        "fullRoundText": "Losers Final",
+        "roundText": "LF",
+        "winner": 2896,
+        "looser": 2893,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1656,
+        "looser_elo_value_before": 1733,
+        "tournament": 26,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6101,
+    "fields": {
+        "fullRoundText": "Grand Final",
+        "roundText": "GF",
+        "winner": 2897,
+        "looser": 2896,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1755,
+        "looser_elo_value_before": 1676,
+        "tournament": 26,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6102,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3049,
+        "looser": 3031,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1363,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6103,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3016,
+        "looser": 3049,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1498,
+        "looser_elo_value_before": 1417,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6104,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3045,
+        "looser": 3046,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1400,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6105,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3018,
+        "looser": 3022,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1437,
+        "looser_elo_value_before": 1399,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6106,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3021,
+        "looser": 3030,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1416,
+        "looser_elo_value_before": 1363,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6107,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3017,
+        "looser": 3029,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1439,
+        "looser_elo_value_before": 1363,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6108,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3023,
+        "looser": 3044,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1399,
+        "looser_elo_value_before": 1400,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6109,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3019,
+        "looser": 3048,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1420,
+        "looser_elo_value_before": 1400,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6110,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3020,
+        "looser": 3047,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1416,
+        "looser_elo_value_before": 1400,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6111,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3047,
+        "looser": 3031,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1381,
+        "looser_elo_value_before": 1346,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6112,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3047,
+        "looser": 3048,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1396,
+        "looser_elo_value_before": 1382,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6113,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3044,
+        "looser": 3029,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1380,
+        "looser_elo_value_before": 1348,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6114,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3022,
+        "looser": 3030,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1382,
+        "looser_elo_value_before": 1347,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6115,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3046,
+        "looser": 3049,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1380,
+        "looser_elo_value_before": 1402,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6116,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3016,
+        "looser": 3045,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1513,
+        "looser_elo_value_before": 1420,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6117,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3018,
+        "looser": 3021,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1454,
+        "looser_elo_value_before": 1432,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6118,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3017,
+        "looser": 3023,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1454,
+        "looser_elo_value_before": 1419,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6119,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3019,
+        "looser": 3020,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1438,
+        "looser_elo_value_before": 1435,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6120,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3023,
+        "looser": 3046,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1402,
+        "looser_elo_value_before": 1398,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6121,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3021,
+        "looser": 3047,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1414,
+        "looser_elo_value_before": 1412,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6122,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3044,
+        "looser": 3045,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1395,
+        "looser_elo_value_before": 1406,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6123,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3020,
+        "looser": 3022,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1416,
+        "looser_elo_value_before": 1397,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6124,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 3021,
+        "looser": 3044,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1430,
+        "looser_elo_value_before": 1412,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6125,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 3020,
+        "looser": 3023,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1432,
+        "looser_elo_value_before": 1418,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6126,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 3016,
+        "looser": 3018,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1527,
+        "looser_elo_value_before": 1472,
+        "tournament": 28,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6127,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 3017,
+        "looser": 3019,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1471,
+        "looser_elo_value_before": 1457,
+        "tournament": 28,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6128,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 3019,
+        "looser": 3021,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1438,
+        "looser_elo_value_before": 1446,
+        "tournament": 28,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6129,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 3018,
+        "looser": 3020,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1456,
+        "looser_elo_value_before": 1448,
+        "tournament": 28,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6130,
+    "fields": {
+        "fullRoundText": "Losers Semi-Final",
+        "roundText": "LS",
+        "winner": 3018,
+        "looser": 3019,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1472,
+        "looser_elo_value_before": 1455,
+        "tournament": 28,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6131,
+    "fields": {
+        "fullRoundText": "Winners Final",
+        "roundText": "WF",
+        "winner": 3016,
+        "looser": 3017,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1543,
+        "looser_elo_value_before": 1490,
+        "tournament": 28,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6132,
+    "fields": {
+        "fullRoundText": "Losers Final",
+        "roundText": "LF",
+        "winner": 3018,
+        "looser": 3017,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1488,
+        "looser_elo_value_before": 1474,
+        "tournament": 28,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6133,
+    "fields": {
+        "fullRoundText": "Grand Final",
+        "roundText": "GF",
+        "winner": 3016,
+        "looser": 3018,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1559,
+        "looser_elo_value_before": 1504,
+        "tournament": 28,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6134,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3043,
+        "looser": 3054,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1367,
+        "looser_elo_value_before": 1400,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6135,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3009,
+        "looser": 2925,
+        "elo_win": 26,
+        "elo_lose": -26,
+        "winner_elo_value_before": 1320,
+        "looser_elo_value_before": 1431,
+        "tournament": 29,
+        "score": "('DQ', 'DQ')"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6136,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3053,
+        "looser": 2944,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1415,
+        "tournament": 29,
+        "score": "('DQ', 'DQ')"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6137,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3052,
+        "looser": 2903,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1400,
+        "looser_elo_value_before": 1322,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6138,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2897,
+        "looser": 3043,
+        "elo_win": 3,
+        "elo_lose": -3,
+        "winner_elo_value_before": 1770,
+        "looser_elo_value_before": 1388,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6139,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2964,
+        "looser": 3050,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1421,
+        "looser_elo_value_before": 1400,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6140,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2899,
+        "looser": 3051,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1552,
+        "looser_elo_value_before": 1400,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6141,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2895,
+        "looser": 2981,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1475,
+        "looser_elo_value_before": 1452,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6142,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2866,
+        "looser": 3009,
+        "elo_win": 6,
+        "elo_lose": -6,
+        "winner_elo_value_before": 1619,
+        "looser_elo_value_before": 1346,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6143,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2882,
+        "looser": 2916,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1493,
+        "looser_elo_value_before": 1431,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6144,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2871,
+        "looser": 2915,
+        "elo_win": 9,
+        "elo_lose": -9,
+        "winner_elo_value_before": 1620,
+        "looser_elo_value_before": 1422,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6145,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3035,
+        "looser": 2966,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1439,
+        "looser_elo_value_before": 1428,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6146,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2893,
+        "looser": 3053,
+        "elo_win": 6,
+        "elo_lose": -6,
+        "winner_elo_value_before": 1713,
+        "looser_elo_value_before": 1420,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6147,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2924,
+        "looser": 2891,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1462,
+        "looser_elo_value_before": 1450,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6148,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2869,
+        "looser": 2902,
+        "elo_win": 10,
+        "elo_lose": -10,
+        "winner_elo_value_before": 1601,
+        "looser_elo_value_before": 1415,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6149,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2905,
+        "looser": 3010,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1494,
+        "looser_elo_value_before": 1370,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6150,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2896,
+        "looser": 3052,
+        "elo_win": 7,
+        "elo_lose": -7,
+        "winner_elo_value_before": 1661,
+        "looser_elo_value_before": 1415,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6151,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 3036,
+        "looser": 2914,
+        "elo_win": 22,
+        "elo_lose": -22,
+        "winner_elo_value_before": 1416,
+        "looser_elo_value_before": 1464,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6152,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2894,
+        "looser": 2997,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1618,
+        "looser_elo_value_before": 1388,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6153,
+    "fields": {
+        "fullRoundText": "Winners Round 2",
+        "roundText": "WR2",
+        "winner": 2867,
+        "looser": 2870,
+        "elo_win": 22,
+        "elo_lose": -22,
+        "winner_elo_value_before": 1438,
+        "looser_elo_value_before": 1480,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6154,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2870,
+        "looser": 3054,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1458,
+        "looser_elo_value_before": 1379,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6155,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3010,
+        "looser": 2925,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1357,
+        "looser_elo_value_before": 1405,
+        "tournament": 29,
+        "score": "('DQ', 'DQ')"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6156,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2966,
+        "looser": 2944,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1409,
+        "looser_elo_value_before": 1395,
+        "tournament": 29,
+        "score": "('DQ', 'DQ')"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6157,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 2981,
+        "looser": 2903,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1434,
+        "looser_elo_value_before": 1307,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6158,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2870,
+        "looser": 2997,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1471,
+        "looser_elo_value_before": 1380,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6159,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2914,
+        "looser": 3052,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1442,
+        "looser_elo_value_before": 1408,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6160,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2902,
+        "looser": 3010,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1405,
+        "looser_elo_value_before": 1376,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6161,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2891,
+        "looser": 3053,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1431,
+        "looser_elo_value_before": 1414,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6162,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2966,
+        "looser": 2915,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1425,
+        "looser_elo_value_before": 1413,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6163,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 2916,
+        "looser": 3009,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1415,
+        "looser_elo_value_before": 1340,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6164,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3051,
+        "looser": 2981,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1389,
+        "looser_elo_value_before": 1445,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6165,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3050,
+        "looser": 3043,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1382,
+        "looser_elo_value_before": 1385,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6166,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2896,
+        "looser": 3036,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1668,
+        "looser_elo_value_before": 1438,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6167,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2894,
+        "looser": 2867,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1626,
+        "looser_elo_value_before": 1460,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6168,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2897,
+        "looser": 2964,
+        "elo_win": 5,
+        "elo_lose": -5,
+        "winner_elo_value_before": 1773,
+        "looser_elo_value_before": 1439,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6169,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2899,
+        "looser": 2895,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1563,
+        "looser_elo_value_before": 1493,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6170,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2866,
+        "looser": 2882,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1625,
+        "looser_elo_value_before": 1509,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6171,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 3035,
+        "looser": 2871,
+        "elo_win": 29,
+        "elo_lose": -29,
+        "winner_elo_value_before": 1458,
+        "looser_elo_value_before": 1629,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6172,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2893,
+        "looser": 2924,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1719,
+        "looser_elo_value_before": 1481,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6173,
+    "fields": {
+        "fullRoundText": "Winners Round 3",
+        "roundText": "WR3",
+        "winner": 2869,
+        "looser": 2905,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1611,
+        "looser_elo_value_before": 1507,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6174,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2870,
+        "looser": 2871,
+        "elo_win": 22,
+        "elo_lose": -22,
+        "winner_elo_value_before": 1483,
+        "looser_elo_value_before": 1600,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6175,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2914,
+        "looser": 2882,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1457,
+        "looser_elo_value_before": 1496,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6176,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2895,
+        "looser": 2902,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1477,
+        "looser_elo_value_before": 1420,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6177,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2964,
+        "looser": 2891,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1434,
+        "looser_elo_value_before": 1447,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6178,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 2867,
+        "looser": 2966,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1449,
+        "looser_elo_value_before": 1441,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6179,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3036,
+        "looser": 2916,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1430,
+        "looser_elo_value_before": 1428,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6180,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3051,
+        "looser": 2905,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1408,
+        "looser_elo_value_before": 1493,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6181,
+    "fields": {
+        "fullRoundText": "Losers Round 3",
+        "roundText": "LR3",
+        "winner": 3050,
+        "looser": 2924,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1399,
+        "looser_elo_value_before": 1473,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6182,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 2914,
+        "looser": 2870,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1475,
+        "looser_elo_value_before": 1505,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6183,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 2895,
+        "looser": 2964,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1491,
+        "looser_elo_value_before": 1451,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6184,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 2867,
+        "looser": 3036,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1465,
+        "looser_elo_value_before": 1446,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6185,
+    "fields": {
+        "fullRoundText": "Losers Round 4",
+        "roundText": "LR4",
+        "winner": 3050,
+        "looser": 3051,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1419,
+        "looser_elo_value_before": 1429,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6186,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2897,
+        "looser": 2899,
+        "elo_win": 9,
+        "elo_lose": -9,
+        "winner_elo_value_before": 1778,
+        "looser_elo_value_before": 1579,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6187,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2866,
+        "looser": 3035,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1638,
+        "looser_elo_value_before": 1487,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6188,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2893,
+        "looser": 2869,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1727,
+        "looser_elo_value_before": 1625,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6189,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 2894,
+        "looser": 2896,
+        "elo_win": 22,
+        "elo_lose": -22,
+        "winner_elo_value_before": 1637,
+        "looser_elo_value_before": 1676,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6190,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2869,
+        "looser": 2914,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1611,
+        "looser_elo_value_before": 1493,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6191,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2895,
+        "looser": 2896,
+        "elo_win": 23,
+        "elo_lose": -23,
+        "winner_elo_value_before": 1506,
+        "looser_elo_value_before": 1654,
+        "tournament": 29,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6192,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 2899,
+        "looser": 2867,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1570,
+        "looser_elo_value_before": 1481,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6193,
+    "fields": {
+        "fullRoundText": "Losers Round 5",
+        "roundText": "LR5",
+        "winner": 3050,
+        "looser": 3035,
+        "elo_win": 18,
+        "elo_lose": -18,
+        "winner_elo_value_before": 1436,
+        "looser_elo_value_before": 1476,
+        "tournament": 29,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6194,
+    "fields": {
+        "fullRoundText": "Losers Round 6",
+        "roundText": "LR6",
+        "winner": 2869,
+        "looser": 2895,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1622,
+        "looser_elo_value_before": 1529,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6195,
+    "fields": {
+        "fullRoundText": "Losers Round 6",
+        "roundText": "LR6",
+        "winner": 2899,
+        "looser": 3050,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1582,
+        "looser_elo_value_before": 1454,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6196,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 2897,
+        "looser": 2866,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1787,
+        "looser_elo_value_before": 1649,
+        "tournament": 29,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6197,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 2893,
+        "looser": 2894,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1741,
+        "looser_elo_value_before": 1659,
+        "tournament": 29,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6198,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 2866,
+        "looser": 2869,
+        "elo_win": 16,
+        "elo_lose": -16,
+        "winner_elo_value_before": 1637,
+        "looser_elo_value_before": 1634,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6199,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 2894,
+        "looser": 2899,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1644,
+        "looser_elo_value_before": 1593,
+        "tournament": 29,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6200,
+    "fields": {
+        "fullRoundText": "Losers Semi-Final",
+        "roundText": "LS",
+        "winner": 2866,
+        "looser": 2894,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1653,
+        "looser_elo_value_before": 1658,
+        "tournament": 29,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6201,
+    "fields": {
+        "fullRoundText": "Winners Final",
+        "roundText": "WF",
+        "winner": 2893,
+        "looser": 2897,
+        "elo_win": 22,
+        "elo_lose": -22,
+        "winner_elo_value_before": 1756,
+        "looser_elo_value_before": 1799,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6202,
+    "fields": {
+        "fullRoundText": "Losers Final",
+        "roundText": "LF",
+        "winner": 2897,
+        "looser": 2866,
+        "elo_win": 11,
+        "elo_lose": -11,
+        "winner_elo_value_before": 1777,
+        "looser_elo_value_before": 1670,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6203,
+    "fields": {
+        "fullRoundText": "Grand Final",
+        "roundText": "GF",
+        "winner": 2897,
+        "looser": 2893,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1788,
+        "looser_elo_value_before": 1778,
+        "tournament": 29,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6204,
+    "fields": {
+        "fullRoundText": "Grand Final Reset",
+        "roundText": "GFR",
+        "winner": 2897,
+        "looser": 2893,
+        "elo_win": 17,
+        "elo_lose": -17,
+        "winner_elo_value_before": 1807,
+        "looser_elo_value_before": 1759,
+        "tournament": 29,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6205,
+    "fields": {
+        "fullRoundText": "Winners Round 1",
+        "roundText": "WR1",
+        "winner": 3030,
+        "looser": 3029,
+        "elo_win": 20,
+        "elo_lose": -20,
+        "winner_elo_value_before": 1332,
+        "looser_elo_value_before": 1333,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6206,
+    "fields": {
+        "fullRoundText": "Losers Round 1",
+        "roundText": "LR1",
+        "winner": 3023,
+        "looser": 3029,
+        "elo_win": 12,
+        "elo_lose": -12,
+        "winner_elo_value_before": 1402,
+        "looser_elo_value_before": 1313,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6207,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3016,
+        "looser": 3030,
+        "elo_win": 8,
+        "elo_lose": -8,
+        "winner_elo_value_before": 1575,
+        "looser_elo_value_before": 1352,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6208,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3019,
+        "looser": 3020,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1439,
+        "looser_elo_value_before": 1432,
+        "tournament": 30,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6209,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3017,
+        "looser": 3048,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1458,
+        "looser_elo_value_before": 1366,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6210,
+    "fields": {
+        "fullRoundText": "Winners Quarter-Final",
+        "roundText": "WQ",
+        "winner": 3018,
+        "looser": 3023,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1488,
+        "looser_elo_value_before": 1414,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6211,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3048,
+        "looser": 3023,
+        "elo_win": 19,
+        "elo_lose": -19,
+        "winner_elo_value_before": 1352,
+        "looser_elo_value_before": 1399,
+        "tournament": 30,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6212,
+    "fields": {
+        "fullRoundText": "Losers Round 2",
+        "roundText": "LR2",
+        "winner": 3020,
+        "looser": 3030,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1413,
+        "looser_elo_value_before": 1344,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6213,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 3016,
+        "looser": 3019,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1583,
+        "looser_elo_value_before": 1458,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6214,
+    "fields": {
+        "fullRoundText": "Winners Semi-Final",
+        "roundText": "WS",
+        "winner": 3017,
+        "looser": 3018,
+        "elo_win": 21,
+        "elo_lose": -21,
+        "winner_elo_value_before": 1472,
+        "looser_elo_value_before": 1503,
+        "tournament": 30,
+        "score": "(2, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6215,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 3019,
+        "looser": 3048,
+        "elo_win": 13,
+        "elo_lose": -13,
+        "winner_elo_value_before": 1445,
+        "looser_elo_value_before": 1371,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6216,
+    "fields": {
+        "fullRoundText": "Losers Quarter-Final",
+        "roundText": "LQ",
+        "winner": 3018,
+        "looser": 3020,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1482,
+        "looser_elo_value_before": 1426,
+        "tournament": 30,
+        "score": "(2, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6217,
+    "fields": {
+        "fullRoundText": "Losers Semi-Final",
+        "roundText": "LS",
+        "winner": 3018,
+        "looser": 3019,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1496,
+        "looser_elo_value_before": 1458,
+        "tournament": 30,
+        "score": "(3, 1)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6218,
+    "fields": {
+        "fullRoundText": "Winners Final",
+        "roundText": "WF",
+        "winner": 3016,
+        "looser": 3017,
+        "elo_win": 14,
+        "elo_lose": -14,
+        "winner_elo_value_before": 1596,
+        "looser_elo_value_before": 1493,
+        "tournament": 30,
+        "score": "(3, 0)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6219,
+    "fields": {
+        "fullRoundText": "Losers Final",
+        "roundText": "LF",
+        "winner": 3018,
+        "looser": 3017,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1511,
+        "looser_elo_value_before": 1479,
+        "tournament": 30,
+        "score": "(3, 2)"
+    }
+},
+{
+    "model": "ranking.matchs",
+    "pk": 6220,
+    "fields": {
+        "fullRoundText": "Grand Final",
+        "roundText": "GF",
+        "winner": 3016,
+        "looser": 3018,
+        "elo_win": 15,
+        "elo_lose": -15,
+        "winner_elo_value_before": 1610,
+        "looser_elo_value_before": 1526,
+        "tournament": 30,
+        "score": "(3, 2)"
+    }
+},
+{
     "model": "ranking.profil",
     "pk": 2,
     "fields": {
@@ -35779,7 +39857,8 @@
         "name_fr": "Mario",
         "name_en": "Mario",
         "icon_static": "mario",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35789,7 +39868,8 @@
         "name_fr": "Bayonetta",
         "name_en": "Bayonetta",
         "icon_static": "bayonetta",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35799,7 +39879,8 @@
         "name_fr": "H\u00e9ros",
         "name_en": "Hero",
         "icon_static": "brave",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35809,7 +39890,8 @@
         "name_fr": "Banjo Kazooie",
         "name_en": "Banjo Kazooie",
         "icon_static": "buddy",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35819,7 +39901,8 @@
         "name_fr": "Captain Falcon",
         "name_en": "Captain Falcon",
         "icon_static": "captain",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35829,7 +39912,8 @@
         "name_fr": "Chrom",
         "name_en": "Chrom",
         "icon_static": "chrom",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35839,7 +39923,8 @@
         "name_fr": "Cloud",
         "name_en": "Cloud",
         "icon_static": "cloud",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35849,7 +39934,8 @@
         "name_fr": "Daisy",
         "name_en": "Daisy",
         "icon_static": "daisy",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35859,7 +39945,8 @@
         "name_fr": "Roi Dadidou",
         "name_en": "King Dedede",
         "icon_static": "dedede",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35869,7 +39956,8 @@
         "name_fr": "Diddy Kong",
         "name_en": "Diddy Kong",
         "icon_static": "diddy",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35879,7 +39967,8 @@
         "name_fr": "Donkey Kong",
         "name_en": "Donkey Kong",
         "icon_static": "donkey",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35889,7 +39978,8 @@
         "name_fr": "Duck Hunt",
         "name_en": "Duck Hunt",
         "icon_static": "duckhunt",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35899,7 +39989,8 @@
         "name_fr": "Falco",
         "name_en": "Falco",
         "icon_static": "falco",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35909,7 +40000,8 @@
         "name_fr": "Fox",
         "name_en": "Fox",
         "icon_static": "fox",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35919,7 +40011,8 @@
         "name_fr": "Game & Watch",
         "name_en": "Game & Watch",
         "icon_static": "gamewatch",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35929,7 +40022,8 @@
         "name_fr": "Ganondorf",
         "name_en": "Ganondorf",
         "icon_static": "ganon",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35939,7 +40033,8 @@
         "name_fr": "F\u00e9linferno",
         "name_en": "Incineroar",
         "icon_static": "gaogaen",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35949,7 +40044,8 @@
         "name_fr": "Amphinobi",
         "name_en": "Greninja",
         "icon_static": "gekkouga",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35959,7 +40055,8 @@
         "name_fr": "Ice Climbers",
         "name_en": "Ice Climbers",
         "icon_static": "ice_climber",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35969,7 +40066,8 @@
         "name_fr": "Ike",
         "name_en": "Ike",
         "icon_static": "ike",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35979,7 +40077,8 @@
         "name_fr": "Inkling",
         "name_en": "Inkling",
         "icon_static": "inkling",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35989,7 +40088,8 @@
         "name_fr": "Joker",
         "name_en": "Joker",
         "icon_static": "jack",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -35999,7 +40099,8 @@
         "name_fr": "Corrin",
         "name_en": "Corrin",
         "icon_static": "kamui",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36009,7 +40110,8 @@
         "name_fr": "Ken",
         "name_en": "Ken",
         "icon_static": "ken",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36019,7 +40121,8 @@
         "name_fr": "Kirby",
         "name_en": "Kirby",
         "icon_static": "kirby",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36029,7 +40132,8 @@
         "name_fr": "Bowser",
         "name_en": "Bowser",
         "icon_static": "koopa",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36039,7 +40143,8 @@
         "name_fr": "Bowser Jr",
         "name_en": "Bowser Jr",
         "icon_static": "koopajr",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36049,7 +40154,8 @@
         "name_fr": "King K Rool",
         "name_en": "King K Rool",
         "icon_static": "krool",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36059,7 +40165,8 @@
         "name_fr": "Link",
         "name_en": "Link",
         "icon_static": "link",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36069,7 +40176,8 @@
         "name_fr": "Little Mac",
         "name_en": "Little Mac",
         "icon_static": "littlemac",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36079,7 +40187,8 @@
         "name_fr": "Lucario",
         "name_en": "Lucario",
         "icon_static": "lucario",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36089,7 +40198,8 @@
         "name_fr": "Lucas",
         "name_en": "Lucas",
         "icon_static": "lucas",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36099,7 +40209,8 @@
         "name_fr": "Lucina",
         "name_en": "Lucina",
         "icon_static": "lucina",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36109,7 +40220,8 @@
         "name_fr": "Luigi",
         "name_en": "Luigi",
         "icon_static": "luigi",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36119,7 +40231,8 @@
         "name_fr": "Dr Mario",
         "name_en": "Dr Mario",
         "icon_static": "mariod",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36129,7 +40242,8 @@
         "name_fr": "Marth",
         "name_en": "Marth",
         "icon_static": "marth",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36139,7 +40253,8 @@
         "name_fr": "Meta Knight",
         "name_en": "Meta Knight",
         "icon_static": "metaknight",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36149,7 +40264,8 @@
         "name_fr": "Mewtwo",
         "name_en": "Mewtwo",
         "icon_static": "mewtwo",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36159,7 +40275,8 @@
         "name_fr": "Mii Fighter",
         "name_en": "Mii Fighter",
         "icon_static": "miifighter",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36169,7 +40286,8 @@
         "name_fr": "Mii Gunner",
         "name_en": "Mii Gunner",
         "icon_static": "miigunner",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36179,7 +40297,8 @@
         "name_fr": "Mii Swordsman",
         "name_en": "Mii Swordsman",
         "icon_static": "miiswordsman",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36189,7 +40308,8 @@
         "name_fr": "Villageois",
         "name_en": "Villager",
         "icon_static": "murabito",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36199,7 +40319,8 @@
         "name_fr": "Ness",
         "name_en": "Ness",
         "icon_static": "ness",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36209,7 +40330,8 @@
         "name_fr": "Plante Piranha",
         "name_en": "Piranha Plant",
         "icon_static": "packun",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36219,7 +40341,8 @@
         "name_fr": "Pacman",
         "name_en": "Pacman",
         "icon_static": "pacman",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36229,7 +40352,8 @@
         "name_fr": "Palutena",
         "name_en": "Palutena",
         "icon_static": "palutena",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36239,7 +40363,8 @@
         "name_fr": "Peach",
         "name_en": "Peach",
         "icon_static": "peach",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36249,7 +40374,8 @@
         "name_fr": "Pichu",
         "name_en": "Pichu",
         "icon_static": "pichu",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36259,7 +40385,8 @@
         "name_fr": "Pikachu",
         "name_en": "Pikachu",
         "icon_static": "pikachu",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36269,7 +40396,8 @@
         "name_fr": "Olimar",
         "name_en": "Olimar",
         "icon_static": "pikmin",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36279,7 +40407,8 @@
         "name_fr": "Pit",
         "name_en": "Pit",
         "icon_static": "pit",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36289,7 +40418,8 @@
         "name_fr": "Dark Pit",
         "name_en": "Dark Pit",
         "icon_static": "pitb",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36299,7 +40429,8 @@
         "name_fr": "Dresseur de Pok\u00e9mon",
         "name_en": "Pokemon Trainer",
         "icon_static": "ptrainer",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36309,7 +40440,8 @@
         "name_fr": "Rondoudou",
         "name_en": "Jigglypuff",
         "icon_static": "purin",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36319,7 +40451,8 @@
         "name_fr": "Daraen",
         "name_en": "Robin",
         "icon_static": "reflet",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36329,7 +40462,8 @@
         "name_fr": "Richter",
         "name_en": "Richter",
         "icon_static": "richter",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36339,7 +40473,8 @@
         "name_fr": "Ridley",
         "name_en": "Ridley",
         "icon_static": "ridley",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36349,7 +40484,8 @@
         "name_fr": "ROB",
         "name_en": "ROB",
         "icon_static": "robot",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36359,7 +40495,8 @@
         "name_fr": "Megaman",
         "name_en": "Megaman",
         "icon_static": "rockman",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36369,7 +40506,8 @@
         "name_fr": "Harmonie",
         "name_en": "Rosalina",
         "icon_static": "rosetta",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36379,7 +40517,8 @@
         "name_fr": "Roy",
         "name_en": "Roy",
         "icon_static": "roy",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36389,7 +40528,8 @@
         "name_fr": "Ryu",
         "name_en": "Ryu",
         "icon_static": "ryu",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36399,7 +40539,8 @@
         "name_fr": "Samus",
         "name_en": "Samus",
         "icon_static": "samus",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36409,7 +40550,8 @@
         "name_fr": "Samus sombre",
         "name_en": "Dark Samus",
         "icon_static": "samusd",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36419,7 +40561,8 @@
         "name_fr": "Sheik",
         "name_en": "Sheik",
         "icon_static": "sheik",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36429,7 +40572,8 @@
         "name_fr": "Marie",
         "name_en": "Isabelle",
         "icon_static": "shizue",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36439,7 +40583,8 @@
         "name_fr": "Shulk",
         "name_en": "Shulk",
         "icon_static": "shulk",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36449,7 +40594,8 @@
         "name_fr": "Simon",
         "name_en": "Simon",
         "icon_static": "simon",
-        "splash_url": null
+        "splash_url": null,
+        "game": null
     }
 },
 {
@@ -36459,7 +40605,8 @@
         "name_fr": "Sonic",
         "name_en": "Sonic",
         "icon_static": "sonic",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36469,7 +40616,8 @@
         "name_fr": "Samus sans armure",
         "name_en": "Zero Suit Samus",
         "icon_static": "szerosuit",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36479,7 +40627,8 @@
         "name_fr": "Link Cartoon",
         "name_en": "Toon Link",
         "icon_static": "toonlink",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36489,7 +40638,8 @@
         "name_fr": "Wario",
         "name_en": "Wario",
         "icon_static": "wario",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36499,7 +40649,8 @@
         "name_fr": "Entra\u00eeneur Wii Fit",
         "name_en": "Wii Fit Trainer",
         "icon_static": "wiifit",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36509,7 +40660,8 @@
         "name_fr": "Wolf",
         "name_en": "Wolf",
         "icon_static": "wolf",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36519,7 +40671,8 @@
         "name_fr": "Yoshi",
         "name_en": "Yoshi",
         "icon_static": "yoshi",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36529,7 +40682,8 @@
         "name_fr": "Link Enfant",
         "name_en": "Young Link",
         "icon_static": "younglink",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36539,7 +40693,8 @@
         "name_fr": "Snake",
         "name_en": "Snake",
         "icon_static": "snake",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36549,7 +40704,8 @@
         "name_fr": "Zelda",
         "name_en": "Zelda",
         "icon_static": "zelda",
-        "splash_url": ""
+        "splash_url": "",
+        "game": null
     }
 },
 {
@@ -36559,7 +40715,8 @@
         "name_fr": "Terry",
         "name_en": "Terry",
         "icon_static": "terry",
-        "splash_url": "https://www.ssbwiki.com/images/thumb/c/c4/Terry_Palette_%28SSBU%29.png/1000px-Terry_Palette_%28SSBU%29.png"
+        "splash_url": "https://www.ssbwiki.com/images/thumb/c/c4/Terry_Palette_%28SSBU%29.png/1000px-Terry_Palette_%28SSBU%29.png",
+        "game": null
     }
 },
 {
@@ -36569,7 +40726,8 @@
         "name_fr": "Byleth",
         "name_en": "Byleth",
         "icon_static": "byleth",
-        "splash_url": null
+        "splash_url": null,
+        "game": null
     }
 },
 {
@@ -36579,7 +40737,8 @@
         "name_fr": "Min Min",
         "name_en": "Min Min",
         "icon_static": "tantan",
-        "splash_url": null
+        "splash_url": null,
+        "game": null
     }
 },
 {
@@ -39146,6 +43305,226 @@
     }
 },
 {
+    "model": "ranking.vod",
+    "pk": 236,
+    "fields": {
+        "video_url": "https://youtu.be/i3pQ3erCnco",
+        "id_watch_video": "i3pQ3erCnco",
+        "title": "ATGN S3 #3 Shinshikun vs Evoza | Felker LSF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 237,
+    "fields": {
+        "video_url": "https://youtu.be/Y5d0dWs9b0U",
+        "id_watch_video": "Y5d0dWs9b0U",
+        "title": "ATGN S3 #3 - Hasuk\u00ef Phoenix vs Tomberry GF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 238,
+    "fields": {
+        "video_url": "https://youtu.be/gVNqJXrsmFA",
+        "id_watch_video": "gVNqJXrsmFA",
+        "title": "ATGN S3 #3 6 Hasuk\u00ef | Phoenix vs Evoza | Felker LF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 239,
+    "fields": {
+        "video_url": "https://youtu.be/7LXMhe2kiwM",
+        "id_watch_video": "7LXMhe2kiwM",
+        "title": "ATGN S3 #3 - Hasuk\u00ef | Phoenix Tomberry WF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 240,
+    "fields": {
+        "video_url": "https://youtu.be/WjtxVfL_QyU",
+        "id_watch_video": "WjtxVfL_QyU",
+        "title": "ATGN S3 #3 Manzelda vs Evoza | Felker LQF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 241,
+    "fields": {
+        "video_url": "https://youtu.be/Vyicy83ch_4",
+        "id_watch_video": "Vyicy83ch_4",
+        "title": "ATGN S3 #3 Kazzers vs Evoza | Felker LR5",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 242,
+    "fields": {
+        "video_url": "https://youtu.be/eFU8fnYyHAk",
+        "id_watch_video": "eFU8fnYyHAk",
+        "title": "ATGN S3 #3  Tim rocket vs Aiikun LR5",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 243,
+    "fields": {
+        "video_url": "https://youtu.be/ZSc4X9wjOGA",
+        "id_watch_video": "ZSc4X9wjOGA",
+        "title": "ATGN S3 #3 Shinshikun vs Tim Rocket LR6",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 244,
+    "fields": {
+        "video_url": "https://youtu.be/L_9PwzYTWFc",
+        "id_watch_video": "L_9PwzYTWFc",
+        "title": "ATGN S3 #3- Hasuk\u00ef | Phoenix vs Scyro WSF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 245,
+    "fields": {
+        "video_url": "https://youtu.be/dG1w6T8H-0g",
+        "id_watch_video": "dG1w6T8H-0g",
+        "title": "ATGN S3 #3 NGP vs Nep LR5",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 246,
+    "fields": {
+        "video_url": "https://youtu.be/omilSqtezgA",
+        "id_watch_video": "omilSqtezgA",
+        "title": "ATGN S3 #3 Manzelda vs Ades Tombery WSF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 247,
+    "fields": {
+        "video_url": "https://youtu.be/_ASBxTh_pUE",
+        "id_watch_video": "_ASBxTh_pUE",
+        "title": "ATGN S3 #3 Tim Rocket vs Eizzah WR1",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 248,
+    "fields": {
+        "video_url": "https://youtu.be/83x3sYhT8cs",
+        "id_watch_video": "83x3sYhT8cs",
+        "title": "ATGN S3 #3 - Shinshikun vs Ades Tomberry WQF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 249,
+    "fields": {
+        "video_url": "https://youtu.be/2Pnd8rQTUHs",
+        "id_watch_video": "2Pnd8rQTUHs",
+        "title": "ATGN S3 #3 Shinshikun vs NGP WR4",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 250,
+    "fields": {
+        "video_url": "https://youtu.be/Ue7Ipz-U_cY",
+        "id_watch_video": "Ue7Ipz-U_cY",
+        "title": "ATGN S3 #3 Scyro vs Aiikun WR2",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 251,
+    "fields": {
+        "video_url": "https://youtu.be/DJfijo-NoNg",
+        "id_watch_video": "DJfijo-NoNg",
+        "title": "ATGN S3 #3 - Ha\u00efsuki |Phoenix Kyogah WR2",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 252,
+    "fields": {
+        "video_url": "https://youtu.be/HEFNRHAPmSU",
+        "id_watch_video": "HEFNRHAPmSU",
+        "title": "ATGN S3 #3 Nep vs Mazziel WR2",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 253,
+    "fields": {
+        "video_url": "https://youtu.be/D1jDrdowd2Q",
+        "id_watch_video": "D1jDrdowd2Q",
+        "title": "ATGN S3 #3 Kazzers vs Mazziel LR2",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 254,
+    "fields": {
+        "video_url": "https://youtu.be/ogE9tPa92HY",
+        "id_watch_video": "ogE9tPa92HY",
+        "title": "ATGN S3 #3  Scyro vs  EvozA | Felker WQF",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
+    "model": "ranking.vod",
+    "pk": 255,
+    "fields": {
+        "video_url": "https://youtu.be/ja2kSrbECyg",
+        "id_watch_video": "ja2kSrbECyg",
+        "title": "ATGN S3 #3 Batry vs Tim Rocket WR3",
+        "playlist": 14,
+        "tournament": 26
+    }
+},
+{
     "model": "ranking.vodplaylist",
     "pk": 1,
     "fields": {
@@ -39250,6 +43629,14 @@
     }
 },
 {
+    "model": "ranking.vodplaylist",
+    "pk": 14,
+    "fields": {
+        "youtube_id": "PL4huRo0jwsITTo9eSCwlMulEygDYI3Td5",
+        "name": "AT Gaming Night S3 #3"
+    }
+},
+{
     "model": "ranking.messageinfo",
     "pk": 1,
     "fields": {
@@ -39262,7 +43649,7 @@
     "model": "ranking.messageinfo",
     "pk": 2,
     "fields": {
-        "text": "La saison 3 est arriv\u00e9 ! N'h\u00e9sitez pas \u00e0 consulter le discord pour plus d'informations !",
+        "text": "La saison 3 est en pause en novembre ! Le couvre-feu est en place ! Rdv en d\u00e9cembre",
         "status": "active",
         "message_type": "warning"
     }
@@ -39274,6 +43661,20 @@
         "option_name": "Defaut",
         "is_option_active": true,
         "is_inscription_open": false
+    }
+},
+{
+    "model": "ranking.game",
+    "pk": 1,
+    "fields": {
+        "name": "Smash Ultimate"
+    }
+},
+{
+    "model": "ranking.game",
+    "pk": 2,
+    "fields": {
+        "name": "Rivals of Aether"
     }
 },
 {
@@ -104632,6 +109033,366 @@
         "object_repr": "(RoA Saison 1)   Eizzah : 1363",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"main_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3632,
+    "fields": {
+        "action_time": "2020-10-09T18:21:36.716",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "28",
+        "object_repr": "RoA S1 #2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3633,
+    "fields": {
+        "action_time": "2020-10-09T18:29:49.105",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3048",
+        "object_repr": "(RoA Saison 1)   KnK | Lomens : 1366",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\", \"second_char\", \"third_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3634,
+    "fields": {
+        "action_time": "2020-10-09T18:30:02.977",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3049",
+        "object_repr": "(RoA Saison 1)   Lord_Poulpax : 1384",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3635,
+    "fields": {
+        "action_time": "2020-10-09T18:30:26.520",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3047",
+        "object_repr": "(RoA Saison 1)   Hasuk\u00ef | Phoenix : 1396",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3636,
+    "fields": {
+        "action_time": "2020-10-09T18:30:35.646",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3046",
+        "object_repr": "(RoA Saison 1)   LoS | Kazzers : 1382",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\", \"second_char\", \"third_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3637,
+    "fields": {
+        "action_time": "2020-10-09T18:30:46.149",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3045",
+        "object_repr": "(RoA Saison 1)   Ades | Tomberry : 1389",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\", \"second_char\", \"third_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3638,
+    "fields": {
+        "action_time": "2020-10-09T18:30:51.599",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "3044",
+        "object_repr": "(RoA Saison 1)   SVB | Diggito : 1396",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"main_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3639,
+    "fields": {
+        "action_time": "2020-10-09T18:31:35.133",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "elo"
+        ],
+        "object_id": "2974",
+        "object_repr": "(Dijon Saison 3)   LoS | Kazzers : 1505",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"second_char\", \"third_char\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3640,
+    "fields": {
+        "action_time": "2020-10-19T19:38:07.558",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "29",
+        "object_repr": "AT Gaming Night S3#4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3641,
+    "fields": {
+        "action_time": "2020-10-19T19:38:58.245",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "30",
+        "object_repr": "RoA S1 #3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3642,
+    "fields": {
+        "action_time": "2020-10-19T19:42:12.884",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "game"
+        ],
+        "object_id": "1",
+        "object_repr": "Smash Ultimate",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3643,
+    "fields": {
+        "action_time": "2020-10-19T19:42:21.466",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "game"
+        ],
+        "object_id": "2",
+        "object_repr": "Rivals of Aether",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3644,
+    "fields": {
+        "action_time": "2020-10-19T19:43:03.707",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "27",
+        "object_repr": "RoA S1 #1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3645,
+    "fields": {
+        "action_time": "2020-10-19T19:43:10.318",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "28",
+        "object_repr": "RoA S1 #2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3646,
+    "fields": {
+        "action_time": "2020-10-19T19:43:14.724",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "30",
+        "object_repr": "RoA S1 #3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3647,
+    "fields": {
+        "action_time": "2020-10-19T19:43:19.733",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "24",
+        "object_repr": "AT Gaming Night S3#1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3648,
+    "fields": {
+        "action_time": "2020-10-19T19:43:25.423",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "25",
+        "object_repr": "AT Gaming Night S3#2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3649,
+    "fields": {
+        "action_time": "2020-10-19T19:43:30.402",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "26",
+        "object_repr": "AT Gaming Night S3#3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3650,
+    "fields": {
+        "action_time": "2020-10-19T19:43:34.670",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "tournament"
+        ],
+        "object_id": "29",
+        "object_repr": "AT Gaming Night S3#4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"game\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3651,
+    "fields": {
+        "action_time": "2020-10-23T14:48:44.445",
+        "user": [
+            "lomens"
+        ],
+        "content_type": [
+            "ranking",
+            "messageinfo"
+        ],
+        "object_id": "2",
+        "object_repr": "(active | warning) La saison 3 est en pause en novembre ! Le couvre-feu est en place ! Rdv en d\u00e9cembre",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"text\"]}}]"
     }
 }
 ]
