@@ -7,6 +7,7 @@ class Smashgg():
 
     def __init__(self, api_token):
         self.token = api_token
+        format_sort_72 = ['WR1','LR1','WR2','LR2','LR3','WR3','LR4','WR4','LR5','WQ','LR6','LR7','WS','LR8','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
         format_sort_64 = ['WR1','LR1','WR2','LR2','LR3','WR3','LR4','LR5','WQ','LR6','LR7','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
         format_sort_48 = ['WR1','WR2','LR1','LR2','WR3','LR3','LR4','WQ','LR5','LR6','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
         format_sort_32 = ['WR1','LR1','WR2','LR2','LR3','WQ','LR4','LR5','WS','LQ', 'LS', 'WF', 'LF', 'GF', 'GFR']
@@ -18,7 +19,8 @@ class Smashgg():
             "24" : format_sort_24,
             "32" : format_sort_32,
             "48" : format_sort_48,
-            "64" : format_sort_64
+            "64" : format_sort_64,
+            "72" : format_sort_72,
         }
 
     def run_query(self, query): # A simple function to use requests.post to make the API call. Note the json= section.
@@ -225,8 +227,10 @@ class Smashgg():
             return self.format_sort['48']
         elif nb_entrant > 48 and nb_entrant <= 64 :
             return self.format_sort['64']
+        elif nb_entrant > 64 and nb_entrant <= 72 :
+            return self.format_sort['72']
         else:
-            return self.format_sort['64']
+            return self.format_sort['72']
 
 class Entrant():
 
