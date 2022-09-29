@@ -274,7 +274,7 @@ def reset_state_tournament(request):
 
     return JsonResponse(dict_return)
         
-
+@csrf_exempt
 def update_with_smashgg(request):
     gg = smash.Smashgg(smashkey.key)
     elo_system = elosys.Elo_Sytem()
