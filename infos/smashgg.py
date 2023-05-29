@@ -286,6 +286,8 @@ class Smashset():
         return (winner,looser)
 
     def find_score(self, str_score):
+        if 'SUS - SJT' in str_score:
+            str_score = str_score.replace('SUS - SJT', 'SUS SJT')
         if str_score == 'DQ':
             return ('DQ', 'DQ')
         str_sc = str_score.split(' - ')
